@@ -1,0 +1,18 @@
+\usepackage[framemethod=TikZ]{mdframed}
+
+\newenvironment{Frame}[1][]{%
+
+    \begin{mdframed}[%
+        frametitle={\textsf{#1}},
+        skipabove=\baselineskip plus 2pt minus 1pt,
+        skipbelow=\baselineskip plus 2pt minus 1pt,
+        linewidth=0.5pt,
+        frametitlerule=true,
+        frametitlebackgroundcolor=Silver,
+        roundcorner=10pt,
+        nobreak=true
+    ]%
+    \rmfamily
+}{%
+    \end{mdframed}
+}

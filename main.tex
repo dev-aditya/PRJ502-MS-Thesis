@@ -1,0 +1,294 @@
+\documentclass[a4paper, 12pt,  twoside,]{report}  
+% Specify required margin widths and setup geometry of the thesis
+\usepackage{geometry}
+\geometry{
+ a4paper,
+ left=1.25in,
+ right=1in,
+ top=1in,
+ bottom=1in
+ }
+
+%%
+\usepackage{titlesec}
+% Format section headings with sans-serif font
+\titleformat{\section}
+  {\Large\bfseries\sffamily}
+  {\thesection}{1em}{}
+
+% Format chapter headings with sans-serif font
+\titleformat{\chapter}[display]
+  {\Huge\bfseries\sffamily}
+  {\chaptertitlename\ \thechapter}{20pt}{\Huge}
+
+% Format subsection headings with sans-serif font
+\titleformat{\subsection}
+ {\large\bfseries\sffamily}
+ {\thesubsection}{1em}{}
+
+% Format subsubsection headings with sans-serif font
+\titleformat{\subsubsection}
+  {\bfseries\sffamily}
+  {\thesubsubsection}{1em}{}
+
+\usepackage[svgnames]{xcolor}
+\usepackage[pdfauthor={Aditya Dev},
+            pdftitle={},
+            pdfsubject={MS19022 MS Thesis},
+            pdfkeywords={},
+            ]{hyperref}
+\hypersetup{
+    colorlinks = true,
+    linkcolor={red!50!black},
+    citecolor={blue!50!black},
+    urlcolor={blue!80!black}
+}
+%%
+%$$ FOR DRAFT VERSION: INCLUDING LINE NUMBERS$$
+\usepackage[right]{lineno}
+\linenumbers
+
+\usepackage{fancyhdr}
+\usepackage{float}
+% List of required packages for graphics
+\usepackage{graphicx, pdfpages}
+% Set path/directory where all figures are stored.
+\graphicspath{ {figures/} }
+ % Set required line spacing.
+% A factor of 1.3 corresponds to 1.5 line spacing.
+\linespread{1.3}
+%%
+\input{styles/custom_quoation}
+\input{styles/custom_frame}
+\input{styles/custom_font}
+
+\begin{document}
+
+
+
+
+\date{\today}
+
+% Use '\thispagestyle{empty}' to ensure that this page
+% is not counted in page numbering.
+\thispagestyle{empty}
+
+% Set required margin widths for first few pages.
+\newgeometry{top = 2.5in, left = 1.25in, right = 1in, bottom = 1in}
+\begin{titlepage}
+
+\begin{center}
+    \sffamily
+    \LARGE
+    \textbf{[Title of MS Thesis]}
+    \vspace{1cm}
+    
+    \Large
+    \textbf{[Name of the Student]}
+
+    \vspace{1cm}
+    \large
+    
+    \textit{A dissertation submitted for the partial fulfilment of
+    BS-MS dual degree in Science}
+    
+    \vspace{3.5cm}
+
+    \includegraphics[trim={5mm 5mm 5mm 5mm},clip,width=8cm]{HighResolutionLogo.jpg}
+    \vspace{1cm}
+    
+    \large
+    \textbf{Indian Institute of Science Education and Research, Mohali}\\
+    \large
+    \textbf{[Enter Relevant Date]} 
+
+\end{center}
+
+
+\end{titlepage}
+
+% Use '\thispagestyle{empty}' to ensure that this page
+% is not counted in page numbering.
+\thispagestyle{empty}
+\cleardoublepage
+
+% Use Roman Page Numbering for first few pages.
+\pagenumbering{Roman}
+
+\sffamily
+% Certificate of Examination.
+\begin{center}
+    \textbf{\Large Certificate of Examination}
+\end{center}
+
+This is to certify that the dissertation titled \textbf{[Title of MS Thesis]} submitted by \textbf{Aditya Dev} (Reg. No. MS19022) for the partial fulfillment of BS- MS Dual Degree programme of the institute, has been examined by the thesis committee duly appointed by the institute. The committee finds the work done by the candidate satisfactory and recommends that the report be accepted.
+
+\vspace{4cm}
+
+[Thesis Committee Member 1] \hspace{1.5cm} [Member 2] \hspace{1.5cm} [Member 3]
+
+\vspace{4cm}
+
+\begin{flushright}
+    Dr. Abhishek Chaudhuri
+    \\
+    (Supervisor)
+    \\
+    \vspace{4cm}
+    Dated: [Enter Relevant Date]
+\end{flushright}
+
+\cleardoublepage
+
+% Declaration.
+\begin{center}
+    \textbf{\Large Declaration}
+\end{center}
+The work presented in this dissertation has been carried out by me under the joint supervision of \textbf{Dr. Abhishek Chaudhuri} at the Indian Institute of Science Education and Research, Mohali, and \textbf{Prof. Dr.  Jan Micheal Rost} at Max Planck Institute for the Physics of Complex Systems, Dresden Germany. 
+
+\vspace{0.4cm}
+
+This work has not been submitted in part or in full for a degree, a diploma, or a fellowship to any other university or institute. Whenever contributions of others are involved, every effort is made to indicate this clearly, with due acknowledgment of collaborative research and discussions. This thesis is a bonafide record of my original work, and all sources listed within have been detailed in the bibliography.
+
+\vspace{2cm}
+
+\begin{flushright}
+Aditya Dev
+\\
+(Candidate)
+\\
+Dated: [Enter Relevant Date]
+\end{flushright}
+
+In my capacity as the supervisor of the candidate's project work, I certify that the above statements by the candidate are true to the best of my knowledge.
+
+\vspace{2cm}
+
+\begin{flushright}
+Dr. Abhishek Chaudhuri
+\\
+(Supervisor)
+\\
+Dated: [Enter Relevant Date]
+\end{flushright}
+
+\cleardoublepage
+
+% Acknowledgements.
+\begin{center}
+\textbf{\Large Acknowledgements}
+\end{center}
+
+Use this section to acknowledge the help/contribution of others.
+
+
+\newpage
+% Abstract of the Thesis
+\addcontentsline{toc}{chapter}{\textbf{Abstract}}
+\begin{center}
+    \textbf{\Large Abstract}
+\end{center}
+
+Use this section to include an abstract of the thesis.
+
+\newpage
+\restoregeometry
+
+% Creates a List of All Figures.
+\addcontentsline{toc}{chapter}{\textbf{List of Figures}}
+\listoffigures
+
+\newpage
+
+% Creates a List of All Tables.
+\addcontentsline{toc}{chapter}{\textbf{List of Tables}}
+\listoftables
+
+% Creates a Table of Contents.
+\tableofcontents
+
+\newpage
+
+% Use Arabic Page Numbering for the rest of the thesis.
+\pagenumbering{arabic} 
+\rmfamily
+% Chapter 1 - Introduction.
+
+\include{chapters/1_introduction}
+
+\clearpage
+
+\newpage
+\chapter{Name of Chapter 2}\label{chap:chapter2}
+
+%%%
+% This code snippet takes care of the required  
+% Equation/Figure numbering scheme.
+\renewcommand\thefigure{\thechapter.\arabic{figure}}    
+\renewcommand{\theequation}{\thechapter.\arabic{equation}}
+\setcounter{equation}{0}
+\setcounter{figure}{0}
+%%%
+
+Include as many chapters as required by using the \verb!\chapter{}! command.
+
+
+
+\clearpage
+
+\newpage
+\chapter{Summary}\label{chap:summary}
+
+%%%
+% This code snippet takes care of the required  
+% Equation/Figure numbering scheme.
+\renewcommand\thefigure{\thechapter.\arabic{figure}}    
+\renewcommand{\theequation}{\thechapter.\arabic{equation}}
+\setcounter{equation}{0}
+\setcounter{figure}{0}
+%%%
+
+Use this section to include a summary of the thesis.
+
+
+\newpage
+\appendix
+
+
+\chapter{Name of the Appendix Chapter}\label{app:appendix1}
+
+%%%
+% This code snippet takes care of the required  
+% Equation/Figure numbering scheme.
+\renewcommand\thefigure{\thechapter.\arabic{figure}}    
+\renewcommand{\theequation}{\thechapter.\arabic{equation}}
+\setcounter{equation}{0}
+\setcounter{figure}{0}
+%%%
+
+If required, include an appendix section.
+
+
+\clearpage
+
+\newpage
+
+\addcontentsline{toc}{chapter}{Bibliography}
+\bibliographystyle{styles/bibsty.bst}
+\bibliography{refrences}
+
+
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
