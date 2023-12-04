@@ -1,0 +1,64 @@
+\chapter{Super-Selection Rule\label{appen:superselection}}
+
+
+In quantum theory, physically measurable quantities of a microscopic system are represented by self-adjoint operators. However, not all of the self-adjoint operators correspond to measurable quantities. The super-selection rule is a criterion to distinguish measurable self-adjoint operator from the un-measurable ones, i.e., any measurable quantity must obey the superselection rules. By contraposition, any quantity which does not obey the superselection rules cannot be measured. It should be noted that
+such a statement implies that the set of (physically realizable) observables is strictly
+smaller than the set of all self-adjoint operators on Hilbert space. The notion of superselection rule (henceforth abbreviated SSR) was first introduced
+in 1952 by Wick, Wightman, and Wigner~\cite{Wick:1952nb} in connection with the problem of consistently assigning intrinsic parity to elementary particles.
+
+
+In the context of quantum field theory, the electric current \( J^\mu  = \overline{\psi}\gamma^\mu \psi\) is defined in terms of the Dirac spinor field operator \(\psi\) for electrons. The electric current $J^\mu$ is self-adjoint and measurable. However, the operators
+\begin{equation}
+	\frac{1}{2}\left(\psi + \psid \right) \qquad \frac{1}{2i}\left(\psi - \psid \right)
+\end{equation}
+are also self-adjoint but they are not measurable even via indirect methods.
+
+
+
+
+A SSR is stated as follows: There is an operator $\oper{J}$, which we call the
+superselection charge. If a self-adjoint operator $\oper{A}$ represents a measurable quantity, it must
+satisfy the commutativity~\cite{TanimuraSuperSelection}
+
+\begin{equation}
+	\label{eq:superselection_law}
+	\comm{\oper{J}}{\oper{A}} = 0
+\end{equation}
+
+This is a SSR, which is a necessary condition for the measurability of $\oper{A}$.
+The SSR can be compared with a conservation law. The conservation of
+$\oper{J}$ is formulated as
+
+\begin{equation}
+	\label{eq:conservation_law}
+	\comm{\oper{J}}{\oper{H}} = 0
+\end{equation}
+where $\oper{H}$ is the Hamiltonian $\oper{H}$ of the system. The conservation law ~(\refeq{eq:conservation_law}) requires that
+$\oper{J}$ commutes with the Hamiltonian $\oper{H}$ while the superselection rule ~(\refeq{eq:superselection_law}) requires that $\oper{J}$ commutes with all of the measurable quantities. Thus, the superselection rule is a stronger requirement for $\oper{J}$ than the conservation law. It can be said that the superselection rule is an extreme form of conservation laws.
+
+Notice that the SSR~(Eq~\refeq{eq:superselection_law}) implies that, for all  physically measurable observables $\oper{A}$ and  any eigenvector \(\ket{\psi _i}\) of $\oper{J}$ with charge $q_i$\footnote{we assume $\oper{J}$ is non degenerate}.
+\begin{equation}
+	\label{eq:sSSR_orthoganility}
+	\begin{gathered}
+		\bra{\psi_i}\oper{J}\oper{A}\ket{\psi_j} - \bra{\psi_i}\oper{A}\oper{J}\ket{\psi_j} = 0\\
+		(q_i - q_j)\bra{\psi_i}\oper{A}\ket{\psi_j} = 0\\
+		\bra{\psi_i}\oper{A}\ket{\psi_j} = 0 \quad (\text{for } i\not = j)
+	\end{gathered}
+\end{equation}
+So,  if we have a quantum state in a coherent superposition of eigenstates of superselection charge $\oper{J}$ i.e. \(\ket{\psi _+} = \frac{\ket{\psi _1} + \ket{\psi_2}}{\sqrt{2}}\). One can check that:
+\begin{equation}
+	\begin{gathered}
+		\bra{\psi_+}\oper{A}\ket{\psi_+} =  \frac{\bra{\psi_1}\oper{A}\ket{\psi_1} +  \bra{\psi_2}\oper{A}\ket{\psi_2} + \overbrace{2\mathrm{Re}[\bra{\psi_1}\oper{A}\ket{\psi_2}]}
+			^{=0}
+		}{2}\\
+		\bra{\psi_+}\oper{A}\ket{\psi_+} =  \frac{\bra{\psi_1}\oper{A}\ket{\psi_1} +  \bra{\psi_2}\oper{A}\ket{\psi_2}}{2} = \Tr{\rho \oper{A}}
+	\end{gathered}
+\end{equation}
+where
+\begin{equation}
+	\rho = \frac{\ket{\psi_1}\bra{\psi_1} + \ket{\psi_2}\bra{\psi_2}}{2}
+\end{equation}
+i.e. any relative phase between \(\ket{\psi_1}\) and \(\ket{\psi_2}\) is not measurable 
+and that coherent superposition of \(\ket{\psi_1}\) and \(\ket{\psi_2}\) cannot be 
+verified (or prepared). For an observer, the state \(\ket{\psi_+}\) will not be any 
+different from a mixed state \(\rho\). 

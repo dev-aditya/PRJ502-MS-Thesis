@@ -1,0 +1,86 @@
+\chapter{The Problem of Time\label{appen:problemoftime}}
+
+Action principles are widely used to express the laws of physics, including those of
+general relativity.  Symmetry transformations are changes in the coordinates or
+variables that leave the action invariant. It is well known that continuous symmetries
+generate conservation laws (Noether’s Theorem). Conservation laws are of fundamental importance in physics, and so it is valuable to investigate the symmetries of the action.
+
+It is useful to distinguish between two types of symmetries: \emph{dynamical symmetries}
+corresponding to some inherent property of matter or spacetime evolution (e.g., the
+Lagrangian being independent of a coordinate, leading to a conserved conjugate momentum) 
+and \emph{non-dynamical symmetries} arising because of the way in which we formulate
+the action (e.g., the gauge symmetries). Dynamical symmetries constrain the solutions
+of the equations of motion, while non-dynamical symmetries give rise to special laws
+called identities. They are distinct from conservation laws because they hold regardless of whether
+or not one has extremized the action.
+
+\section*{Parameterization-Invariance and Hamiltonian Constrain}
+Consider a system with $n$ degrees of freedom - the generalized coordinates $q_i$ - with a parameter $t$ giving the evolution of the trajectory in configuration space. We will remove the superscript
+on $q_i$ when it is clear from the context. Let the action of this system be:
+\begin{equation}
+	\label{eq:action_t}
+	\mathcal{S} = \int L_s\left(q, \frac{dq}{dt}\right)  dt
+\end{equation}
+Now consider a new integration parameter \(\tau\), which now parameterize the trajectory and promote \(t \to t(\tau)\) i.e to  a dynamical variable.
+In terms of \(\tau\) the action (\refeq{eq:action_t}) can be expressed as:
+\begin{equation}
+	\mathcal{S} = \int L_s\left(q, \frac{\Dot{q}}{\Dot{t}}\right)  \Dot{t} d\tau =  \int L\left(q, \Dot{q}, \Dot{t}\right)   d\tau
+\end{equation}
+where \(\dot{a} \equiv \dfrac{d a}{d \tau}\) and 
+\(L\left(q, \Dot{q}, \Dot{t}\right) = \Dot{t}L_s\left(q, \frac{\Dot{q}}{\Dot{t}}\right)  \).
+The Hamiltonian for the modified Lagrangian is then obtained by taking the Legendre
+transformation w.r.t. both \(\dot{q} \text{ and } \dot{t}\)\ ~\cite{deriglazov2011reparametrization}:
+\begin{equation}
+	\label{eq:hamlt_L}
+	\begin{gathered}
+		H =  p_t \dot{t} + p_q \dot{q} - L\\
+		H =  p_t \dot{t} + \dot{t} p_q (\dot{q}/\dot{t}) - \dot{t}L_s\\
+		H  = \dot{t} \left(p_t + p_q q'- L_s\right)
+	\end{gathered}
+\end{equation}
+where \(q'=\dfrac{dq}{dt}=(\dot{q}/\dot{t})\).
+
+Let's calculate the conjugate momenta:
+\begin{equation}
+	\begin{gathered}
+		p_q := \frac{\partial L}{\partial\dot{q}}
+		= \dot{t}\frac{\partial L_s}{\partial\dot{q}}
+		=\frac{\partial L_s}{\partial(\dot{q}/ \dot{t})}\\
+		p_q = \frac{\partial L_s}{\partial q'}
+	\end{gathered}
+\end{equation}
+which coincides with the momentum conjugate to $q$ defined by $L_s(q, q′)$. Hence, (\refeq{eq:hamlt_L}) get's modified as:
+\begin{equation}
+	\label{eq:hamil_contrain_Hs}
+	H  = \dot{t} \left(p_t + H_s\right)
+\end{equation}
+where \(H_s = p_q q'- L_s\) i.e Hamiltonian conjugate to \(L_s\).
+
+We have:
+\begin{equation}
+	\label{eq:conh_pt}
+	\begin{gathered}
+		p_t := \frac{\partial L}{\partial\dot{t}}\\
+		p_t = L_s + \dot{t} \frac{\partial L_s(q, q')}{\partial\dot{t}}\\
+		p_t = L_s + \dot{t} \left(\frac{\partial L_s(q, q')}{\partial q} \cancelto{0}{\frac{d q}{d \dot{t}}} +
+		\frac{\partial L_s(q, q')}{\partial q'} \frac{d (\dot{q}/\dot{t})}{d \dot{t}}
+		\right) \\
+		p_t = L_s - q'p_s = - H_s
+	\end{gathered}
+\end{equation}
+Using (\refeq{eq:conh_pt}) in (\refeq{eq:hamil_contrain_Hs}), the equation reduces to:
+\begin{equation}
+	\label{eq:H0}
+	\boxed{H = 0}
+\end{equation}
+Therefore, for parameterization-invariant theory, the Hamiltonian function 
+is identically zero. It is crucial to note that this \emph{derivation makes no 
+assumptions about the extremality of the action or the satisfaction of the 
+Euler-Lagrange equations} by the ($q$'s). Consequently, \refeq{eq:H0}
+represents a non-dynamical symmetry.
+
+Identity $H = 0$ is very different from conservation law $H = \mathrm{constant}$ arising
+from a time-independent Lagrangian. The conservation law holds only for solutions of the
+equations of motion; in contrast, when the action is parameterization-invariant, 
+$H = 0$ holds for any trajectory. The non-dynamical symmetry, therefore, does not
+constrain the motion.

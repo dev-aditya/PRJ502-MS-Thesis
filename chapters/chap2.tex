@@ -1,0 +1,201 @@
+\chapter[TDSE from Semi-classical Environment]{Emergence of Time dependence 
+through interaction with a Semi-classical Environment\label{chap:briggs_rost_semiclassic}}
+
+In modern textbooks, the Time-dependent Schr\"odinger equation (TDSE) is either introduced as a \emph{fundamental}
+equation governing the time evolution of a quantum wave function, with the Time-independent Schr\"odinger
+equation (TISE) as a special case, or it is derived from the correspondence with classical Hamilton-Jacobi 
+theory.
+
+Briggs and Rost~\cite{briggs2001derivation} presented an alternative derivation of the TDSE that partitions
+the ``global" Hilbert space into a system and an environment. They then employed the WKB ansatz 
+for the environment's wave function, effectively treating the environment semi-classically. Their analysis offers a clear physical interpretation of the time parameter, which arises from a directional gradient of the classical action along the environment trajectory.
+This chapter presents the analysis by Briggs and Rost in ~\cite{briggs2001derivation}.
+
+Consider a global system with Hamiltonian $\operatorname{H}$, which comprises a system $S$ and an environment $\mathcal{E}$. 
+The TISE for this system is given by
+\begin{equation}
+\label{eqn:chap2_TISE}
+\operatorname{H}\Psi = E\Psi, \quad \operatorname{H} = \operatorname{H}_S + \operatorname{H}_{\mathcal{E}} + \operatorname{H}_{\mathcal{SE}}.
+\end{equation}
+where $\operatorname{H}_S$ and $\operatorname{H}_{\mathcal{E}}$ are the Hamiltonians of the system 
+and the environment respectively and $\operatorname{H}_{\mathcal{SE}}$ is the interaction
+Hamiltonian between the system and the environment\footnote{$\operatorname{H}_{\mathcal{SE}}\equiv \operatorname{H}_{\mathcal{SE}}(x, R)$}.
+
+The total wave function $\Psi$ can be written as
+\begin{equation}
+    \label{eqn:chap2_total_wavefunction}
+    \Psi(x, R) = \sum  \psi_m (x, R) \chi_m(R).
+\end{equation}
+Where \(\{\psi 's\}\) represent the energy eigenstates of \(\operatorname{H}_{\mathcal{S}} + \operatorname{H}_{\mathcal{SE}}\) at a fixed $R$, with \\ \(\epsilon_n (R) =  \bra{\psi_n}\operatorname{H}_{\mathcal{S}} + \operatorname{H}_{\mathcal{SE}}\ket{\psi_n}\), and $x$ and $R$ represent the coordinates of the system and the environment, respectively.
+\footnote{We have assumed that the environment is large enough so the system  has a 
+no effect on the environment's states. Furthermore, \(\braket{\chi_m}{\chi_n} \not = \delta_{mn}\).}. 
+The environment Hamiltonian is assumed to be of the form
+\begin{equation}
+    \label{eqn:chap2_env_hamiltonian}
+    \operatorname{H}_{\mathcal{E}} = \operatorname{K} + \operatorname{V}_{\mathcal{E}} (R).
+\end{equation}
+with:
+\begin{equation}
+    \operatorname{K} = \frac{-\hbar^2}{2M} \sum_i \frac{\partial^2}{\partial R_i^2} = \frac{-\hbar^2}{2M} 
+    \nabla _R^2.
+\end{equation}
+
+Substituting ~\refeq{eqn:chap2_total_wavefunction} in ~\refeq{eqn:chap2_TISE} and projecting onto
+$\psi_n(x, R)$ gives a coupled TISE for the environment wavefunction\footnote{Notice 
+that, we integrate only over $x$.}~\cite{briggs2001derivation}:
+\begin{equation}
+    \label{eqn:chap2_TISE_proj}
+    \begin{aligned}
+        \sum_{m} \bra{\psi_n} \left(\frac{-\hbar^2}{2M} \nabla_R^2 \right) \ket{\psi_m} \chi_m(R) 
+    + \operatorname{V}_{\mathcal{E}}(R) \chi_n(R)\\
+    + \sum_{m} \bra{\psi_n} \operatorname{H}_{\mathcal{S}} + \operatorname{H}_{\mathcal{SE}}\ket{\psi_m}\chi_m(R) = E \chi_n(R).
+    \end{aligned}
+\end{equation}
+
+The ``potentials'':
+\begin{equation}
+    \mathcal{V}_{mn}(R) = \bra{\psi_m} \operatorname{H}_{\mathcal{S}} + \operatorname{H}_{\mathcal{SE}}
+    \ket{\psi_n}.
+\end{equation}
+depending on the state of the quantum system, provide the energy surface
+which determines the dynamics of the environment. The coupling from the kinetic term is
+\begin{equation}
+    \begin{gathered}
+        \bra{\psi_m} \left(\frac{-\hbar^2}{2M} 
+        \nabla_R^2 \right) \ket{\psi_n} \chi_n(R) \\
+        = -\frac{\hbar^2}{2M} \sum_k \left(\delta_{mk} \nabla_R+ \bra{\psi_m}\nabla_R
+    \ket{\psi_k}\right)\left(\delta_{kn} \nabla_R+ \bra{\psi_k}\nabla_R^2\ket{\psi_n}\right)
+     \chi_n(R).
+    \end{gathered}
+\end{equation}
+
+We define
+\begin{equation}
+    \Lambda_{mn}(R) = i\hbar \bra{\psi_m}\nabla_R\ket{\psi_n}.
+\end{equation}
+Now, using above definitions, ~\refeq{eqn:chap2_TISE_proj} can be written as
+\begin{equation}
+    \label{eqn:chap2_clc_evol}
+    \sum_m \left[ \frac{1}{2M} ({\hat{P}}^2)_{nm} +  
+    \mathcal{V}_{nm}(R)\right] \chi_m(R) + \operatorname{V}_{\mathcal{E}}(R) \chi_n(R) 
+    = E \chi_n(R).
+\end{equation}
+
+Where
+\begin{equation}
+    {\hat{P}}_{nm} = -i\hbar \left(\mathbb{I}\nabla_R - \frac{i}{\hbar}
+    \hat{\Lambda} \right) =
+ \left(\mathbb{I}P_R - \hat{\Lambda}\right) \quad \text{or} \quad P_{ij} = 
+ \left(\delta_{ij}P_R - {\Lambda}_{ij}\right).
+\end{equation}
+Notice that the kinematic coupling
+$\hat{\Lambda}$ appears as a vector potential. 
+
+The set of equations for system wavefunction is given by
+\begin{multline}
+    \label{eqn:chap2_system_evol}
+    \sum_{m} \chi_m(R) \left[
+    \operatorname{H}_{\mathcal{S}} + \operatorname{H}_{\mathcal{SE}}(x, R)  - \left(
+        E - \operatorname{V}_{\mathcal{E}}(R) + 
+        \frac{1}{\chi_m} \frac{\hbar^2}{2M} \nabla_R^2 \chi_m
+    \right) \right. \\\left. - \frac{\hbar^2}{2M} \nabla_R^2 - 
+    \frac{\hbar^2}{M\chi_m} \nabla_R \chi_m \cdot \nabla_R \right] \psi_m(x, R) = 0.
+\end{multline}
+
+The main approximation in this derivation would be to disentangle 
+~\refeq{eqn:chap2_clc_evol} and ~\refeq{eqn:chap2_system_evol}. To do so, 
+we assume that the environment is large enough so that the changes in the system,
+i.e. the variation in matrix elements $\mathcal{V}_{mn}$ and $\Lambda_{mn}$, have
+no effect on the environment dynamics. 
+
+The fist step would be to neglect in ~\refeq{eqn:chap2_clc_evol}  all the off-diagonal
+matrix elements, which gives:
+\begin{equation}
+\label{eq:chap2_no_off_diag}
+    \left[ \frac{1}{2M} \left(P_R -  
+    \Lambda_{nn}(R)\right)^2 + \operatorname{V}_{\mathcal{E}} + E_n(R) \right] \chi_n(R) = E \chi_n(R).
+\end{equation}
+with \(E_n(R) = \mathcal{V}_{nn}(R) \). The vector potential \(\Lambda_{nn}\), since now diagonal in the above case, can be included in the
+definition of an effective environment momentum operator. 
+
+The second step would be to use a semi-classical approximation for each \(\chi_m(R)\), i.e., we write
+\begin{equation}
+\label{eqn:chap2_WKB_clc}
+    \chi_{n}(R) = a_n(R) \exp\left(\frac{i}{\hbar} W_n(R)\right) \equiv \exp\left(\frac{i}{\hbar} W(R, E - \epsilon_n)\right) .
+\end{equation}
+
+with
+\begin{equation}
+    \label{eqn:chap2_clc_action}
+    \nabla _R W_n = \vec{P}_n.
+\end{equation}
+where the classical momentum 
+\(\vec{P}_n\) and position \(\vec{R}_n\) are decided by Hamilton's equations:
+\begin{eqnarray}
+    \label{eqn:chap2_hamilton_eqns1}
+    \frac{d\vec{P}_n}{dt} &=& -\nabla_{{R}_n} H = \nabla_{R_n}\left( \operatorname{V}_{\mathcal{E}}(R) + E_n(R)\right)\\
+    \label{eqn:chap2_hamilton_eqns2}
+    \frac{d\vec{R}_n}{dt} &=& \nabla_{{P}_n} H.
+\end{eqnarray}
+
+For the standard kinetic energy \(\frac{\vec{P}^2}{2M}\), one obtains from 
+~\refeq{eqn:chap2_hamilton_eqns2} that \(\vec{P}_n = M\frac{d\vec{R}_n}{dt}\). It is at this point
+that the time parameter enters the picture. To the leading order in \(\hbar\), one can write:
+\begin{equation}
+    \frac{\hbar}{iM} \nabla_R \chi_n = \frac{\chi_n}{a_n} \frac{\hbar}{iM} \nabla _R a_n + 
+    \chi_n \frac{1}{M} \nabla_R W_n \approx \chi_n \frac{d\vec{R}_n}{dt}.
+\end{equation}
+For the system \(\mathcal{S}\) the equation coupled to ~\refeq{eq:chap2_no_off_diag} now reads
+\begin{equation}
+    \label{eqn:chap2_system_evol_mod2}
+    \sum_{m} \chi_m(R) \left[
+    \operatorname{H}_{\mathcal{S}} + \operatorname{H}_{\mathcal{SE}}(x, R)  - E_m(R)  - \frac{\hbar^2}{2M}\nabla^2 _R -
+    i\hbar \frac{d \vec{R}_m}{dt} \cdot \nabla_R \right] \psi_m (x, R)= 0.
+\end{equation}
+
+It has been shown~\cite{briggs2001derivation} that in the above equation,
+the term \((\hbar^2/2M)\nabla^2 _R\) with higher-order gradient couplings can be neglected in comparison
+with the term
+\begin{equation*}
+i \hbar  \frac{d \vec{R}_n}{dt} \cdot \nabla_{R} := i \hbar \dfrac{d}{d\tau_n}.
+\end{equation*}
+Hence, ~\refeq{eqn:chap2_system_evol_mod2} can be written as
+\begin{equation}
+    \label{eqn:chap2_system_evol_mod3}
+    \sum_{m} \chi_m(R) \left[
+    \operatorname{H}_{\mathcal{S}} + \operatorname{H}_{\mathcal{SE}}(x,
+   \{ \tau_m\})  - E_m(\{\tau_m\})  - i \hbar \dfrac{\partial }{\partial \tau_m} \right] 
+    \psi_m (x, R)= 0.
+\end{equation}
+We have replaced the quantum \(R\) dependence by a ``classical time" like dependence on \(\{\tau_m\}\).
+
+In the approximation represented by ~\refeq{eqn:chap2_clc_action} and
+~\refeq{eqn:chap2_system_evol_mod3}, the environment shows classical dynamics, but
+the state of the quantum system determines its motion and, hence, the interaction time with the system. This represents the final impact of the quantum influence on the environment. This influence diminishes as the environment becomes fully disentangled
+from the system, allowing it to function as an external clock that reads a unique time~\cite{briggs2001derivation}.
+
+This simplification is achieved in the approximation when ~\refeq{eqn:chap2_WKB_clc} becomes
+\begin{equation}
+    \label{eqn:chap2_clc_action2}
+    \chi_n(R) = a_n(R) \exp\left(\frac{i}{\hbar} W(R)\right).
+\end{equation}
+%if the variation of \(E_n\) in ~\refeq{eqn:chap2_hamilton_eqns1} are negligible compared to \(V_{\mathcal{E}}\) or
+which is valid  in the limit \(\epsilon_n \ll E\). It is at this point that the Environment gets fully disentangled from the system. Then we get from ~\refeq{eqn:chap2_clc_action2}, a unique time derivative
+\begin{equation}
+    \label{eqn:chap2_clc_action3}
+    \nabla_R W = M \dfrac{d \vec{R}}{dt}
+\end{equation}
+
+Also, one can eliminate \(E_m(t)\) using a purely time-dependent phase transformation and writing 
+\(\psi_{\mathcal{S}}(x) = \sum_{n}a_n \psi_n(x)\), ~\refeq{eqn:chap2_system_evol_mod3} becomes:
+\begin{equation}
+    \label{eqn:chap2_system_evol_mod4}
+     \left[
+    \operatorname{H}_{\mathcal{S}} + \operatorname{H}_{\mathcal{SE}}(x, t)- i \hbar \dfrac{\partial}{\partial t} \right] 
+    \psi_m (x,t)= 0
+\end{equation}
+
+This gives the TDSE for the quantum system alone. Now, the dynamics of the environment is given by the classical equation of motion, with the system having no effect on it. However, the quantum system is affected by the environment
+through the term \(\operatorname{H}_{\mathcal{SE}}\)
+
+\newpage

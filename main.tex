@@ -50,7 +50,8 @@
 	pdftitle={},
 	pdfsubject={MS19022 MS Thesis},
 	pdfkeywords={},
-	backref=page
+	backref=page,
+	hypertexnames=false
 ]{hyperref}
 \renewcommand*{\backref}[1]{}
 \renewcommand*{\backrefalt}[4]{{\footnotesize [%
@@ -130,7 +131,7 @@
 \setcounter{equation}{0}
 \setcounter{figure}{0}
 %%%
-\input{chapters/1_introduction}
+\input{chapters/chap1}
 
 \clearpage
 
@@ -142,35 +143,44 @@
 \setcounter{equation}{0}
 \setcounter{figure}{0}
 %%%
-\chapter{Name of Chapter 2}\label{chap:chapter2}
-
-%%%
-
-Include as many chapters as required by using the \verb!\chapter{}! command.
-
+\input{chapters/chap2}
 
 \clearpage
 
 \newpage
-\chapter{Summary}\label{chap:summary}
-
+\renewcommand\thefigure{\thechapter.\arabic{figure}}    
+\renewcommand{\theequation}{\thechapter.\arabic{equation}}
+\setcounter{equation}{0}
+\setcounter{figure}{0}
 %%%
-% This code snippet takes care of the required  
-% Equation/Figure numbering scheme.
+\input{chapters/chap3}
+
+\clearpage
+
+\newpage
+\renewcommand\thefigure{\thechapter.\arabic{figure}}    
+\renewcommand{\theequation}{\thechapter.\arabic{equation}}
+\setcounter{equation}{0}
+\setcounter{figure}{0}
+%%%
+\input{chapters/chap4}
+
+\clearpage
+
+\newpage
+
+
+
 \renewcommand\thefigure{\thechapter.\arabic{figure}}    
 \renewcommand{\theequation}{\thechapter.\arabic{equation}}
 \setcounter{equation}{0}
 \setcounter{figure}{0}
 %%%
 
-Use this section to include a summary of the thesis~\cite{article_name}.
-
-
-\newpage
 \appendix
 
 
-\chapter{Name of the Appendix Chapter}\label{app:appendix1}
+\input{appendix/appendix_problemoftime}
 
 %%%
 % This code snippet takes care of the required  
@@ -181,7 +191,7 @@ Use this section to include a summary of the thesis~\cite{article_name}.
 \setcounter{figure}{0}
 %%%
 
-If required, include an appendix section.
+\input{appendix/appendix_superselection}
 
 
 \clearpage
