@@ -38,13 +38,11 @@
 \usepackage{float}
 \input{styles/custom_quoation}
 \input{styles/custom_frame}
-\usepackage{amsmath, amssymb, physics, cancel}
+\usepackage{amsmath, amssymb, fixmath, physics, cancel}
 \usepackage[no-math]{fontspec}
 \usepackage{newcomputermodern}
 \usepackage[scaled=1.0]{XCharter}
-
-\usepackage[right]{lineno}
-\linenumbers
+\usepackage[final]{microtype}
 \linespread{1.3}
 %$$$$$$$
 \usepackage[
@@ -52,13 +50,22 @@
 	pdftitle={},
 	pdfsubject={MS19022 MS Thesis},
 	pdfkeywords={},
+	backref=page
 ]{hyperref}
+\renewcommand*{\backref}[1]{}
+\renewcommand*{\backrefalt}[4]{{\footnotesize [%
+    \ifcase #1 Not cited.%
+	\or Cited on page~#2%
+	\else Cited on pages #2%
+	\fi%
+]}}
 \hypersetup{
 	colorlinks = true,
 	linkcolor={red!50!black},
 	citecolor={blue!50!black},
 	urlcolor={blue!80!black}
 }
+\input{styles/custom_commands}
 \begin{document}
 
 
@@ -78,7 +85,7 @@
 % Use Roman Page Numbering for first few pages.
 \pagenumbering{Roman}
 
-{\sffamily \include{certificateofexam}
+{\sffamily \include{certificate}
 
 \cleardoublepage
 
@@ -114,12 +121,6 @@
 \pagenumbering{arabic} 
 % Chapter 1 - Introduction.
 
-\input{chapters/1_introduction}
-
-\clearpage
-
-\newpage
-\chapter{Name of Chapter 2}\label{chap:chapter2}
 
 %%%
 % This code snippet takes care of the required  
@@ -129,9 +130,23 @@
 \setcounter{equation}{0}
 \setcounter{figure}{0}
 %%%
+\input{chapters/1_introduction}
+
+\clearpage
+
+\newpage
+
+
+\renewcommand\thefigure{\thechapter.\arabic{figure}}    
+\renewcommand{\theequation}{\thechapter.\arabic{equation}}
+\setcounter{equation}{0}
+\setcounter{figure}{0}
+%%%
+\chapter{Name of Chapter 2}\label{chap:chapter2}
+
+%%%
 
 Include as many chapters as required by using the \verb!\chapter{}! command.
-
 
 
 \clearpage
@@ -148,7 +163,7 @@ Include as many chapters as required by using the \verb!\chapter{}! command.
 \setcounter{figure}{0}
 %%%
 
-Use this section to include a summary of the thesis.
+Use this section to include a summary of the thesis~\cite{article_name}.
 
 
 \newpage
