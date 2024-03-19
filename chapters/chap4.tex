@@ -1,6 +1,414 @@
-\chapter[Semi-Classics of Jaynes-Cumming]{Classical Limit of Jaynes Cumming Model\label{chap:braun_briggs_jaynes}}
+\chapter{Relational Dynamics of Jaynes Cumming Model
+\label{chap:braun_briggs_jaynes}}
 
-It has been shown in\refchap{chap:briggs_rost_semiclassic} how one can reduce a TISE to a TDSE for a system in the presence of a classical environment. In this chapter, we will discuss the application of the previous chapter to a simple model of light-matter interaction and enumerating the conditions that must be obtained in order to treat the electromagnetic field classically.
+It has been shown in \refchap{chap:briggs_rost_semiclassic} how one can reduce a TISE 
+to a TDSE for a system in the presence of a classical environment. In this chapter, 
+we will discuss the application of the previous chapter to a simple model of light-matter 
+interaction and enumerating the conditions that must be obtained in order to treat the 
+electromagnetic field classically. The upcoming sections outlines the derivations as presented 
+in~\cite{braun2004classical}
 
-Consider a time-independent problem of a quantum system, with a Hamiltonian 
+We start by considerig a time-independent hamiltonian of an interacting quantum system,
+with a Hamiltonian given as
+\begin{equation}
+    H = H_s(p, x) + H_F(P, Q) + H_I(x, Q). 
+\end{equation}
+where $(x, p)$ and $(Q, P)$ are (position, momentum) operator for system and boson field, respectively. 
+Also, $H_s$ is the Hamiltonian of the atomic system, $H_F$ is the field hamiltonian, and $H_I$ is the interaction hamiltonian. 
+The boson field hamiltonian will be takes a sum over field modes, with hamiltonian given as 
+\begin{equation}
+    H_F(P, Q) = \sum_{k} \frac{1}{2}\left(P_k ^2 + \omega_k^2 Q_k^2\right)
+\end{equation}
 
+We write the above Hamiltonian in terms of creating and annihilation operators
+\begin{equation}
+    \label{eq:class_jcm_eq1}
+    H = \sum_i \epsilon_i c^\dagger _i c _i + \sum_k \hbar \omega_k \left(a^\dagger _k a_k 
+    + \frac{1}{2}\right) + \hbar\sum_k  g_{jk}^k c^\dagger _i c _i\left(a^\dagger _k + a_k \right).
+\end{equation}
+where $c_i$ and $c^\dagger _i$ are the annihilation and creation atomic operators for the system, 
+and $a_k$ and $a^\dagger _k$ are the annihilation and creation operators for the boson field.
+
+A sepcial case of the above Hamiltonian is when we take a two level atom (or a spin 1/2 system)
+interacting with a single mode of the electromagnetic field. \refeq{eq:class_jcm_eq1} then reduces to
+\begin{eqnarray}
+    \label{eq:class_jcm_eq2}
+    H = \hbar \omega_0 \sigma_z + \hbar \omega \left(a^\dagger a + \frac{1}{2}\right) 
+    + \hbar g \sigma_x\left(a + a^\dagger\right).
+\end{eqnarray}
+
+\section{Semiclassical limit of the JC-Model\label{sec:class_jcm_sec1}}
+As done in \refeq{eqn:chap2_total_wavefunction}, one can write in general the solution of 
+TISE 
+\begin{equation}
+    \label{eq:class_jcm_eq2}
+    (H - E)\Psi = 0
+\end{equation}
+with $H$ in the form of \refeq{eq:class_jcm_eq1} as 
+\begin{equation}
+    \label{eq:class_jcm_eq3}
+    \Psi(x, Q) = \sum_{k} \chi_k(Q) \phi_k(x, Q).
+\end{equation}
+
+We employ this particular form, wherein $\chi_k(Q)$ displays no reliance on $x$, 
+under the assumption that the system exerts minimal back-reaction on the field.
+This assumption has been utilized previously in \refchap{chap:briggs_rost_semiclassic} 
+and will be employed again in forthcoming derivations.
+
+Doing the same exercise as in \refeq{eqn:briggs_rost_eq5}, we substitute
+\refeq{eq:class_jcm_eq3} into \refeq{eq:class_jcm_eq2} and obtain a set of coupled equations
+
+\begin{align}
+    \label{eq:class_jcm_eq4}
+   \sum_i \chi_i(Q) \left[H_s + H_I - \left(E - \sum_k
+    \frac{1}{2}\omega_k^2 Q_k^2 + \frac{\hbar^2}{2\chi_i}\dfrac{\partial^2}{\partial Q_k^2}
+    \chi_i\right) \right]\nonumber \\
+    + \sum_i \chi_i(Q) \left[
+        \frac{-\hbar^2}{2}\dfrac{\partial^2}{\partial Q_k^2} - 
+        \frac{-\hbar^2}{\chi_i}\dfrac{\partial}{\partial Q_k}\chi_i\dfrac{\partial}{\partial Q_k}
+    \right]\phi_i (x, Q) = 0.
+\end{align}
+
+\refeq{eq:class_jcm_eq4} when projected onto state \(\phi_j\) gives
+\begin{align}
+    \label{eq:class_jcm_eq5}
+    \sum_k \left[-\frac{\hbar^2}{2}\dfrac{\partial^2}{\partial Q_k^2}
+     + \frac{1}{2} \omega_k^2 Q_k^2 \right]\chi_j
+    + \sum_i \bra{\phi_j}H_s + H_I\ket{\phi_i}\chi_i \nonumber \\
+   - \sum_{i, k} \left[
+    \bra{\phi_j}\frac{\hbar^2 \partial^2}{2 \partial Q_k^2}\ket{\phi_i}
+    + \bra{\phi_j}{\hbar^2}\dfrac{\partial}{\partial Q_k}\ket{\phi_i}\dfrac{\partial}{\partial Q_k}
+   \right]\chi_i = E \chi_j.
+\end{align}
+
+The equation above describes the ``close-coupled" form for \(\chi_j\). 
+The off-diagonal terms account for changes in the state of the boson
+field caused by changes in the system's state. Neglecting these 
+off-diagonal coupling terms simplifies the equation, providing 
+the state of \(\chi_j\) when the system is in state \(\phi_j\), i.e., 
+\begin{equation}
+    \begin{aligned}
+        \label{eq:class_jcm_eq6}
+    \left[\sum_k \left(-\frac{\hbar^2}{2}\dfrac{\partial^2}{\partial Q_k^2}
+    + \frac{1}{2} \omega_k^2 Q_k^2\right)
+    + E_j(Q) - E \right]\chi_j \\
+    = \hbar^2 \sum_k \bra*{\phi_j}H_s + H_I \ket*{\phi_j}\dfrac{\partial}{\partial Q_k}\chi_j.
+    \end{aligned}
+\end{equation}
+with 
+\begin{eqnarray}
+    E_j(Q) = \bra*{\phi_j}H_s + H_I - \sum_k \frac{\hbar^2}{2} \dfrac{\partial^2}{\partial Q_k^2} \ket*{\phi_i}.
+\end{eqnarray}
+The diagonal \(\bra*{\phi_j}H_s + H_I \ket*{\phi_j}\) terms on the RHS of \refeq{eq:class_jcm_eq6}
+are zero for real \(\phi_j\) or else can be eliminated by a (Berry) phase transformation~\cite{braun2004classical}.
+In addition, since we are neglecting the first order derivatives w.r.t. $Q_k$, it's consistent to neglect
+the second order derivatives as well, which gives us the following equation
+\begin{equation}
+    \label{eq:class_jcm_eq7}
+    \left[\sum_k \left(-\frac{\hbar^2}{2}\dfrac{\partial^2}{\partial Q_k^2}
+    + \frac{1}{2} \omega_k^2 Q_k^2\right)
+    + E_j(Q) - E \right]\chi_j (Q)= 0.
+\end{equation}
+this is the defining equation for the state of the boson field when the system is in state \(\phi_j\).
+
+For, complete independence of the field from the system, we need to replace 
+\(E_j(Q)\) by some fixed average energy \(\bar{E}(Q)\) and corresponding 
+\(\chi_j(Q)\) by some ``mean''-field state \({\chi}(Q)\). Hence, we replace 
+\begin{equation}
+    \label{eq:class_jcm_eq8}
+    \chi_j(Q) = a_j(Q) \chi(Q).
+\end{equation}
+where we assume \(a_j(Q)\) to be slowly varying function of \(Q\). The \refeq{eq:class_jcm_eq3}
+reduces to
+\begin{align}
+    \label{eq:class_jcm_eq9}
+    \Psi(x, Q) = \chi(Q) \sum_j a_j(Q) \phi_j(x) \nonumber \\
+    \Psi(x, Q) =  \chi(Q)  \psi(x, Q).
+\end{align}
+We've identified the key approximations needed to express the exact wave function 
+(\refeq{eq:class_jcm_eq3}) in the simpler, factorized form (\refeq{eq:class_jcm_eq9}). 
+This step is critical because it assumes the influence of the atom on the field is minimal, while the 
+field has a strong influence on the atom. Now, we can focus on deriving the effective 
+Schrödinger equation for the wave function (denoted by \(\psi\)) representing the quantum system.
+
+One can in general, view \refeq{eq:class_jcm_eq9} as a general ansatz for the wave function
+and find from \refeq{eq:class_jcm_eq2}\footnote{Here we assumed only single mode of E.M field} 
+\begin{align}
+    \label{eq:class_jcm_eqA}
+    (H - E) \Psi = \chi(Q)\left[H_S+H_I(x, Q)-\frac{\hbar^2}{2}\left(\frac{\partial^2}{\partial Q^2}\right.\right.
+    & \left.\left. 
+    +2 \frac{\chi^{\prime}(Q)}{\chi(Q)} \frac{\partial}{\partial Q}\right)\right] 
+    \psi(x, Q) \nonumber \\
+    +\psi(x, Q)\left[-\frac{\hbar^2}{2} \frac{\partial^2}{\partial Q^2}+\frac{\omega^2}{2} Q^2
+    - E\right] \chi(Q) = 0
+\end{align}
+To streamline our analysis, we'll now focus on a single field mode. This derivation takes a 
+slightly different approach compared to both the method outlined in 
+\refchap{chap:briggs_rost_semiclassic} 
+and the one we'll use later for the Jaynes-Cummings model (our toy model universe). 
+We present this alternative approach to lay the groundwork for the new considerations 
+in the next section, which will leverage coherent states.
+
+We split the action of the total Hamiltonian on the field ad quantum system such that the 
+wave function \(\chi(Q)\) described the field with energy close to total energy \(E\), while 
+the reaming part of the equation describes the quantum system (with negligible energy in camparison).
+Completely ignoring the influence of the quantum system on the field (back coupling) is analogous 
+to neglecting the terms \(\bar{E}(Q)\) in the equations. This simplification allows us 
+to select a wave function for the field, which will ultimately be treated classically. 
+This is equivalet to neglecting \(\bar{E}(Q)\) and allows one to choose the wave function of the
+field which is to become classical, This wave function must be an eigenstate of the fixed-field Schrödinger equation
+, i.e.
+\begin{equation}
+    \label{eq:class_jcm_eq10}
+    \left[\sum_k \left(-\frac{\hbar^2}{2}\dfrac{\partial^2}{\partial Q_k^2}
+    + \frac{1}{2} \omega_k^2 Q_k^2\right)
+    - E \right]\chi(Q) = 0.
+\end{equation}
+Under the assumption of these large (classical) energies and assuming we're sufficiently far from any 
+classical turning points, we can approximate the actual wave function, denoted by $\chi(Q)$,
+ by its WKB approximation, i.e., 
+ \begin{equation}
+    \label{eq:class_jcm_eq11}
+    \chi(Q) = \exp\left(\frac{i}{\hbar}\int ^Q dQ' P(Q')\right).
+ \end{equation}
+where \(P(Q)\) is the momentum of the field, given as 
+\begin{equation}
+    \label{eq:class_jcm_eq12}
+    P(Q) = \sqrt{2\left(E - \frac{1}{2}\omega^2 Q^2\right)}.
+\end{equation}
+Using \refeq{eq:class_jcm_eqA} - \refeq{eq:class_jcm_eq11} gives
+\begin{eqnarray}
+    \label{eq:class_jcm_eq13}
+    \left[\sum_k \left(-\frac{\hbar^2}{2}\dfrac{\partial^2}{\partial Q_k^2}
+    + \frac{1}{2} \omega_k^2 Q_k^2\right)
+    - E \right]\exp\left(\frac{i}{\hbar}\int ^Q dQ' P(Q')\right) = 0 \\
+    \left[
+        H_s + H_I(x, Q) - \frac{\hbar^2}{2} \dfrac{\partial^2}{\partial Q^2}
+    - i\hbar P(Q) \dfrac{\partial}{\partial Q}\right] \psi(x, Q) = 0. 
+\end{eqnarray}
+
+The above differential equation describes the dynamics of (remaining part) 
+the quantum system. We simplfy this equation by replacing the equation by a parameter $t$, 
+which parametrizes $Q(t)$ trajectory and define
+\begin{equation}
+    \label{eq:class_jcm_eq14}
+    P(Q)\dfrac{\partial}{\partial Q} \equiv \dfrac{\partial }{\partial t}
+\end{equation}
+It's evident that $P(Q)$ derived from \refeq{eq:class_jcm_eq12} corresponds to the velocity 
+$\dot{Q}$, as dictated by classical equations of motion. These equations state that
+$\dot{Q} = P$ and $\ddot{P} = -\omega^2 Q$, where $Q(t) = Q_0 \cos(\omega t)$ represents 
+\textit{the solution, demonstrating that the parameter $t$ signifies classical time.}
+
+We define \(\psi(x, t) = \psi(x, Q(t))\) and find from \refeq{eq:class_jcm_eq13}
+\begin{equation}
+    \label{eq:class_jcm_eq15}
+    i \frac{\partial}{\partial t}\psi(x, t) = \left[ H_s + H_I(x,Q(t)) 
+    \frac{\hbar^2}{2} \left(\frac{\ddot{Q}(t)}{\dot{Q}^3(t)}\frac{\partial}{\partial t}
+    - \frac{1}{\dot{Q}^2(t)} 
+    \frac{\partial^2}{\partial t^2}\right)\right]\psi(x, t).
+\end{equation}
+
+The derivatives appearing on the right-hand side stem from the second-order derivative 
+$\frac{\partial^2}{\partial Q^2}$ wrt position, when expressed in terms 
+of time derivatives. In the scenario of a substantial (``classical") amount of 
+energy $E$, predominantly residing in the classical degree of freedom $Q$, these additional 
+terms become negligible, as we will soon illustrate. Initially, it's worth noting that 
+$\frac{\partial}{\partial t}$ is of the order of energy of the quantum system, 
+$E_s = \langle H_s + H_I\rangle$, implying it is considerably smaller than $E$. This allows us to 
+disregard the supplementary derivative terms on the right side of \refeq{eq:class_jcm_eq15}. 
+Proceeding with self-consistency, and leveraging ${\dot{Q}} = P \approx \sqrt{E}$ 
+for the harmonic oscillator away from its turning points, as well as 
+$\ddot{Q} \approx \omega \dot{Q}$, we can estimate their respective orders of magnitude.
+First, 
+\begin{equation}
+    \label{eq:class_jcm_eq16}
+    \left \langle \frac{\hbar^2}{2} \frac{\ddot{Q}(t)}{\dot{Q}^3(t)}\frac{\partial}{\partial t} \right\rangle
+    \approx E_s \frac{\hbar \omega}{E}, \text{ and } \left \langle\frac{\hbar^2}{2} \frac{1}{\dot{Q}^2(t)} 
+    \frac{\partial^2}{\partial t^2} \right\rangle \approx \frac{E_s^2}{E^2}.
+\end{equation}
+The additional derivative terms on the right-hand side of \refeq{eq:class_jcm_eq15} 
+exhibit an order of magnitude of $E_s\left(\frac{E_s + \hbar \omega}{E}\right)$. 
+Hence, in comparison to the remaining terms on the right-hand side, which are of 
+the order $E_s$, these additional terms are diminished by a factor approximately 
+$\frac{\hbar \omega}{E} \approx \frac{1}{n}$, where $n$ represents the number of
+photons in the field mode.
+This factor is significantly small for a classical field. Hence, we can neglet these 
+terms and write
+\begin{equation}
+    \label{eq:class_jcm_eq17}
+    i \frac{\partial}{\partial t}\psi(x, t) = \left[ H_s + H_I(x,Q(t))\right]\psi(x, t)
+\end{equation}
+which is the usual form of TDSE for the quantum system interacting with the classical field.
+
+The derivation relies on the Time-Independent Schrödinger Equation (TISE) for both the 
+atom and the field. Time arises as a consequence of classical motion, serving solely as 
+a derived classical parameter. It's important to note that 
+the aforementioned arguments hold true only away from turning points where 
+the velocity ${\dot{Q}}(t)$ is non-zero. But it's evident that the Time-Dependent 
+Schrödinger Equation (TDSE) of (\refeq{eq:class_jcm_eq17}) remains valid for all times. 
+The reason behind this limitation is apparent: it lies in the selection of $Q$, 
+the position representation, for the field mode. 
+While this choice aids in diagonalizing the coupling Hamiltonian $H_I$, 
+in this representation, the real field quadrature $Q(t)$ undergoes 
+harmonic motion with periodic zeros in its time derivative $Q^{\dot{}}(t)$. 
+Consequently, the position representation fails to offer a global notion of time. 
+Next section will illustrates how this limitation can be addressed by utilizing 
+a coherent state representation of the field state.
+
+\section{Coherent State Derivation of TDSE}
+In quantum optics, coherent states hold a special place. Representing minimal uncertainty 
+in both position $(Q)$ and momentum $(P)$ of the field mode, these states exhibit classical 
+behavior. It's therefore unsurprising that coherent states play a crucial role in deriving 
+a time-dependent Schrödinger equation for the quantum system's degrees of freedom. This 
+derivation leverages a time-independent Schrödinger equation encompassing both the coupled 
+quantum system and the field mode. 
+
+We begin by writing  the total hamiltonian for single mode of E.M field in term of usual 
+creation and annihilation operators as
+\begin{equation}
+    \label{eq:class_jcm_eq18}
+    \begin{aligned}
+        \H_F = \hbar \omega \left(\oper{a}^\dagger \oper{a} + 1/2\right), \\
+        \H_I = \hbar \oper{S} (\oper{a} + \oper{a}^\dagger)
+    \end{aligned}
+\end{equation}
+with \(\oper{S} = \sum_{ij}^k g_{ij} \oper{c}_i^\dagger \oper{c}_i\) as in \refeq{eq:class_jcm_eq1}.
+
+Coherent state, defined as, \(\ket{\alpha} = \exp\left(\abs*{\alpha}^2/2 + \alpha \oper{a}^\dagger\right) \ket{0}\)
+where \(\alpha\) is a complex number, is an eigenstate of the annihilation operator, i.e., 
+\(\oper{a}\ket{\alpha} = \alpha \ket{\alpha}\). Some crucial properties that will be of use to us are 
+\begin{equation}
+    \label{eq:class_jcm_eq19}
+    \begin{aligned}
+        \bra*{\alpha}\oper{a}^\dagger = \alpha^* \bra*{\alpha},\\
+        \bra*{\alpha}\oper{a} = \left(\dfrac{\partial}{\partial \alpha^*} + \frac{\alpha}{2}\right)\bra*{\alpha}.
+    \end{aligned}
+\end{equation}
+
+Coherent states form an overcomplete basis, i.e., any state \(\ket{\psi}\) can be expanded as
+\begin{equation}
+    \label{eq:class_jcm_eq20}
+    \ket{\psi} = \int \frac{d^2\alpha}{\pi} \ket{\alpha}\bra*{\alpha}\ket{\psi} \equiv 
+    \int \frac{d^2\alpha}{\pi} \ket{\alpha}\Tilde{\chi}(\alpha, \alpha^*).
+\end{equation}
+
+where \(\Tilde{\chi}(\alpha, \alpha^*) = \bra*{\alpha}\ket{\psi}\). Note that we can 
+always write  
+\[\Tilde{\chi}(\alpha, \alpha^*) = \chi(\alpha^*)\exp\left(-\abs*{\alpha}/2\right)\]
+where \(\chi(\alpha, \alpha^*)\) is a complex function of \(\alpha\). Instead of utilizing the position
+$Q$ representation as previously done, we leverage the properties of coherent states mentioned 
+above to express the Time-Independent Schrödinger Equation (TISE) within the coherent state 
+representation relative to the classical degree of freedom. We write the total wave function
+\begin{equation}
+    \label{eq:class_jcm_eq21}
+    \braket*{\alpha}{\Psi} = \exp\left(-\abs*{\alpha}^2/2\right)\chi(\alpha^*)\psi(\alpha^*).
+\end{equation}
+As before, we will consider \( \exp\left(-\abs*{\alpha}^2/2\right)\chi(\alpha^*)\) to 
+describe the classical degree of freedom, while \(\psi(\alpha^*)\) will represent the 
+quantum system without backreaction to the classical degree of freedom.
+
+Another important property of the conherent state is it's overlap with the  photon number state, 
+which is given as \( \braket*{n}{\alpha} = \exp\left(-\abs*{\alpha}/2\right) (\alpha^*)^n/\sqrt{n!} \). 
+In the limit of large photon number \(n\), it's easy to see that only those coherent states 
+\(\ket{\alpha}\) with 
+\begin{equation}
+    \label{eq:class_jcm_eq22}
+    \abs*{\alpha}^2 = n
+\end{equation}
+will contribute significantly to the number state \(\ket{n}\).
+
+
+Another significant property of coherent states is their overlap with photon number states, expressed as 
+\( \braket*{n}{\alpha} = \exp\left(-\abs*{\alpha}/2\right) (\alpha^*)^n/\sqrt{n!} \). 
+When considering a large photon number $n$, it becomes evident that only coherent states 
+$\ket{\alpha}$ satisfying the condition:
+\begin{equation}
+\label{eq:class_jcm_eq22}
+\abs*{\alpha}^2 = n
+\end{equation}
+contribute significantly to the corresponding number state \(\ket{n}\). 
+With \refeq{eq:class_jcm_eq21} in mind, the TISE with $H_F$ and $H_I$ from 
+\refeq{eq:class_jcm_eq20} now reads
+\begin{eqnarray}
+    \label{eq:class_jcm_eq23}
+    \bra*{\alpha}(H - E)\ket*{\Psi} = \chi(\alpha^*)
+    \left[H_s + \hbar g \left(\alpha ^* + 
+    \frac{\chi'(\alpha^*)}{\chi(\alpha^*)} + \dfrac{\partial}{\partial \alpha^*}
+    \right)\sigma_x + \hbar \omega \alpha^* \dfrac{\partial}{\partial \alpha^*}\right] 
+    \ket*{\psi(\alpha^*)} \nonumber \\
+    + \ket*{\psi(\alpha^*)}
+    \left[\hbar \omega \left(
+        \alpha^* \dfrac{\partial}{\partial \alpha^*} + \frac{1}{2}\right) - E\right]\chi(\alpha^*) = 0. \quad \qquad
+\end{eqnarray}
+
+The above equation corresponds to \refeq{eq:class_jcm_eqA} of position space approach. 
+Just as we did in \refsec{sec:class_jcm_sec1}, we chose \(\chi\) to be an eigenstate of the field 
+Hamiltonian, i.e., to be a number state \(\ket*{n}\) with energy \(E = \hbar \omega \left[n + 1/2\right]\).
+In coherent state representation, 
+\begin{eqnarray}
+    \label{eq:class_jcm_eq24}
+    \chi(\alpha^*) =  (\alpha^*)^n/\sqrt{n!}. 
+\end{eqnarray}
+
+This ensures that the second part of \refeq{eq:class_jcm_eq23} dissappears and one notices that
+\begin{eqnarray}
+    \label{eq:class_jcm_eq25}   
+    \frac{\chi'(\alpha^*)}{\chi(\alpha^*)} = \frac{n}{\alpha^*} = \frac{\alpha^*\alpha}{\alpha^*} = \alpha.
+\end{eqnarray}
+
+Using \refeq{eq:class_jcm_eq24} and \refeq{eq:class_jcm_eq25} in \refeq{eq:class_jcm_eq23} gives
+\begin{equation}
+    \label{eq:class_jcm_eq26}
+    \left[H_s + \hbar S \left(\alpha^* + \alpha + 
+    \dfrac{\partial}{\partial  \alpha^*}\right) 
+    + \hbar \omega \alpha^* \dfrac{\partial}{\partial \alpha^*} \right] \ket*{\psi(\alpha^*)} = 0.
+\end{equation}
+We now introduce a new parameter \(t\), which replaces \(\alpha\) analogous to what we did 
+in position space representation. The parameter \(t\) is defined through a complex trajectory 
+\(\alpha^*(t)\) for the coherent state field amplitude, such that 
+\begin{equation}
+    \label{eq:class_jcm_eq27}
+    \hbar \omega \alpha^* \dfrac{\partial}{\partial \alpha^*} \equiv 
+    -i \hbar\dfrac{\partial}{\partial t}.
+ \end{equation}
+Hence, time is determined by the classical motion of the field amplitude, which in this case is 
+\begin{equation}
+    \label{eq:class_jcm_eq28}
+    \alpha(t) = \alpha_0 e^{-i\omega t}.
+\end{equation}
+
+Importantly, whereas the position space expression (\refeq{eq:class_jcm_eq14}) becomes 
+problematic near classical turning 
+points due to $P(Q) = 0$, the coherent state expression (\refeq{eq:class_jcm_eq27}) maintains finiteness throughout all times. 
+Furthermore, it's noteworthy that the coherent state equation (\refeq{eq:class_jcm_eq26}) exclusively involves first-order 
+derivatives. This characteristic closely resembles the first-order time-dependent Schrödinger 
+equation, whereas the position space expression (\refeq{eq:class_jcm_eq15}) is of second order.
+
+We see that the field part of the interaction Hamiltonian becomes, 
+\begin{eqnarray}
+    \label{eq:class_jcm_eq29}
+    \left[\alpha^* + \alpha - \alpha \left(\hbar \omega \abs*{\alpha}^2\right)^{-1}
+    \left(i \hbar \partial / \partial t\right) \right]
+\end{eqnarray}
+
+In large photon number limit \(1/\abs*{\alpha}^2 \approx 1/n\), vanishes. This can be 
+compared to the similar discussion after \refeq{eq:class_jcm_eq15}. Therefore we find that, in 
+the limit of large photon number, the TDSE for state \(\ket*{\psi(t)}\) is 
+\begin{mdframed}
+    \begin{equation}
+        \label{eq:class_jcm_eq30}
+        i\hbar \dfrac{\partial}{\partial t} \ket*{\psi(t)} = \left[
+            H_s +  \hbar S \left(\alpha_0 e^{-i \omega t} + \alpha_0 e^{i \omega t}\right) 
+        \right] \ket*{\psi(t)}.
+    \end{equation}
+\end{mdframed}
+
+Under the assumption of a valid two-level approximation, the system can be represented 
+by the operator $S = g\sigma_x$.  Crucially, unlike the equivalent result obtained in 
+position space representation, the derivation of \refeq{eq:class_jcm_eq30} using coherent 
+states is valid for all times.
+
+Furthermore, this equation for a two-level system interacting with a single electromagnetic 
+field mode is of critical importance. We will leverage it to compare the system's dynamics 
+obtained through this approach to those obtained from a fully quantum relational dynamics 
+approach in the next section.
