@@ -1,4 +1,4 @@
-\chapter{Relational Dynamics of Jaynes Cumming Model
+\chapter{Semi-Classical Relational Dynamics for Light-Matter Interaction
 \label{chap:braun_briggs_jaynes}}
 
 It has been shown in \refchap{chap:briggs_rost_semiclassic} how one can reduce a TISE 
@@ -6,9 +6,9 @@ to a TDSE for a system in the presence of a classical environment. In this chapt
 we will discuss the application of the previous chapter to a simple model of light-matter 
 interaction and enumerating the conditions that must be obtained in order to treat the 
 electromagnetic field classically. The upcoming sections outlines the derivations as presented 
-in~\cite{braun2004classical}
+in~\cite{braun2004classical}. 
 
-We start by considerig a time-independent hamiltonian of an interacting quantum system,
+To get the time-dependence, we start by considerig a time-independent hamiltonian of an interacting quantum system,
 with a Hamiltonian given as
 \begin{equation}
     H = H_s(p, x) + H_F(P, Q) + H_I(x, Q). 
@@ -29,14 +29,15 @@ We write the above Hamiltonian in terms of creating and annihilation operators
 where $c_i$ and $c^\dagger _i$ are the annihilation and creation atomic operators for the system, 
 and $a_k$ and $a^\dagger _k$ are the annihilation and creation operators for the boson field.
 
-A sepcial case of the above Hamiltonian is when we take a two level atom (or a spin 1/2 system)
+A special case of the above Hamiltonian is when we take a two level atom (or a spin 1/2 system)
 interacting with a single mode of the electromagnetic field. \refeq{eq:class_jcm_eq1} then reduces to
 \begin{eqnarray}
     \label{eq:class_jcm_eq2}
     H = \hbar \omega_0 \sigma_z + \hbar \omega \left(a^\dagger a + \frac{1}{2}\right) 
-    + \hbar g \sigma_x\left(a + a^\dagger\right).
+    + \hbar g \sigma_x\left(a + a^\dagger\right),
 \end{eqnarray}
-
+where $\sigma_z$ and $\sigma_x$ are the Pauli matrices. 
+This special case is known as the Jaynes-Cummings model.
 \section{Semiclassical limit of the JC-Model\label{sec:class_jcm_sec1}}
 As done in \refeq{eqn:chap2_total_wavefunction}, one can write in general the solution of 
 TISE 
@@ -131,7 +132,7 @@ This step is critical because it assumes the influence of the atom on the field 
 field has a strong influence on the atom. Now, we can focus on deriving the effective 
 Schrödinger equation for the wave function (denoted by \(\psi\)) representing the quantum system.
 
-One can in general, view \refeq{eq:class_jcm_eq9} as a general ansatz for the wave function
+Note that, one can in general, view \refeq{eq:class_jcm_eq9} as a general ansatz for the wave function
 and find from \refeq{eq:class_jcm_eq2}\footnote{Here we assumed only single mode of E.M field} 
 \begin{align}
     \label{eq:class_jcm_eqA}
@@ -181,13 +182,13 @@ Using \refeq{eq:class_jcm_eqA} - \refeq{eq:class_jcm_eq11} gives
     \label{eq:class_jcm_eq13}
     \left[\sum_k \left(-\frac{\hbar^2}{2}\dfrac{\partial^2}{\partial Q_k^2}
     + \frac{1}{2} \omega_k^2 Q_k^2\right)
-    - E \right]\exp\left(\frac{i}{\hbar}\int ^Q dQ' P(Q')\right) = 0 \\
+    - E \right]\exp\left(\frac{i}{\hbar}\int ^Q dQ' P(Q')\right) = 0 \nonumber \\
     \left[
         H_s + H_I(x, Q) - \frac{\hbar^2}{2} \dfrac{\partial^2}{\partial Q^2}
     - i\hbar P(Q) \dfrac{\partial}{\partial Q}\right] \psi(x, Q) = 0. 
 \end{eqnarray}
 
-The above differential equation describes the dynamics of (remaining part) 
+The above differential equation describes the dynamics of (atomic part) 
 the quantum system. We simplfy this equation by replacing the equation by a parameter $t$, 
 which parametrizes $Q(t)$ trajectory and define
 \begin{equation}

@@ -1,0 +1,72 @@
+\chapter{Open Questions, Progress Made and Future Prospects}
+
+The primary objective of this work is to investigate the transition from purely quantum systems, 
+as explored in \refchap{chap:sebgem_Rel}, to semi-classical regimes, as discussed in
+\refchap{chap:briggs_rost_semiclassic} and, to compare the dynamics
+as described by the two approaches. However, a crucial question arises: What type of
+clocks (i.e., ``Environments'') are we considering in this context? Also, one notices that, 
+as shown in \refchap{chap:sebgem_Rel}, the ``emergent" potential in
+Eqn~\ref{eq:chap3_sebgem_TDSE} depends on the clock state on which the global system
+is projected. So, a natural question would be to ask: What type of clock states would one use? Especially in the context of our work? 
+
+The phase of the WKB wave function, which satisfies the Hamilton-Jacobi equation, implies
+that the argument ($x$) corresponds precisely to the classical trajectory of the clock system. 
+Consequently, a natural approach would be to employ environment Hamiltonian for which we can define specific ``special'' states such that the expectation values of observables coincide with 
+the classical trajectories. For instance, the coherent states of harmonic oscillators are suitable
+candidates~\cite{braun2004classical}. Furthermore, these states are preferable due to their well-defined position representation \textit{although the necessity of this requirement remains an open question}.
+
+Given the wide range of potential environments, two generic environment systems are discussed in the following sections.
+\section{Spin Systems}
+In the context of semi-classical clocks, we can either take a single ``large spin" with angular momentum ($l$)
+ or a spin chain composed of ($N$) small spins.
+
+For the former, taking the limit $l \rightarrow \infty \Rightarrow d_C \rightarrow \infty$ allows us to consider the clock Hilbert
+space to become infinite-dimensional, 
+making it a suitable candidate for a large environment. Similarly, for the latter,
+taking the limit $N \rightarrow \infty \Rightarrow d_C \rightarrow \infty$ leads to the same result.
+
+However, careful consideration must be given to the representation in which the clocks are described.
+As the WKB approximation always assumes, the WKB wave function is in position representation. So, we have a specific choice of representation. This can be challenging for spin systems, as quantum
+spins are intrinsic properties of quantum particles and lack a direct classical counterpart.
+
+Unlike angular momentum operators, which inherit their position representation from the position
+representation of $\oper{x}$ and $\oper{p}$​, it is not possible to express $\oper{S}_z$ in terms of the classical position and momenta. 
+This is because spin is an intrinsic rather than a spatial degree of freedom. Dimensional analysis shows that only products like
+$yp_x$ have units of angular momentum so, after incorporating the commutation relations, 
+a position representation of spin would closely resemble the position representation of ``ordinary" angular momentum, 
+with spherical harmonics serving as the eigenstates for the angular momentum operator. However, caution is advised,
+as spherical harmonics are only defined for integer values of angular momentum, rendering the representation invalid
+for half-integer values of angular momentum.
+
+Another promising approach, I will investigate, is the method of WKB for spin in terms of a spectral representation
+~\cite{van1986tunneling,van2003wkb} which offers a means of defining the WKB wave function in the large spin limit as discussed above.
+Details of this approach are still being worked on.
+
+\section{Quantum Harmonic Oscillator}
+Another candidate for the environment would be to use truncated quantum harmonic oscillators (QHOs) as clocks. 
+Similarly to spin systems, one could use a single ``large Quantum Harmonic Oscillator'' or
+ a chain of ``small quantum harmonic oscillators''.4for
+
+An immediate advantage of using a Quantum Harmonic Oscillator is that the position representation
+is well-defined. As discussed at the beginning of the chapter, the coherent states are the best
+candidates for the clock states to which the global states will be projected. This is because
+the expectation values of the coherent states' position and momentum operators are exactly the clock system's classical trajectories. Rovelli~\cite{rovelli1990quantum} and Ashworth~\cite{Ashworth:1996eq} have explored a comparable perspective on the concept of a clock, although within the framework of non-interacting systems.
+
+\section{Progress made and Future Work}
+
+The following list summarizes the future work that needs to be done:
+\paragraph{Numerical Implementation} Numerical implementation of the relational approach for general finite-dimensional systems
+has been implemented in the \texttt{Python} and \texttt{Julia} programming language. 
+Some code checks have been performed to ensure the correctness of the implementation.
+
+Future work in this direction includes:
+\begin{itemize}
+    \item Extend the numerical implementation of the relational approach for finite dimensional systems to include the case of large spin systems.
+    \item Investigate the limitations on the size of the systems that can be simulated numerically.
+\end{itemize}
+
+\paragraph{Analytical Work}
+\begin{itemize}
+    \item The analytical work for the systems as mentioned above is still in progress. The WKB method for the case of a spin system is still being worked on. The approach of~\cite{van1986tunneling} provides an interesting way of writing the WKB wave function for the large spin limit. The details of this approach need to be worked out, for how to include it in our relational formalism from both numerical and analytical perspectives. 
+    \item One also needs to formulate analytical or numerical work on how the comparison between the two approaches can be done in a more quantitative way. 
+\end{itemize}
