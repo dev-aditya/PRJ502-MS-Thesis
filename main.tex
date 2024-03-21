@@ -127,96 +127,39 @@
 % Chapter 1 - Introduction.
 
 
-%%%
-% This code snippet takes care of the required  
-% Equation/Figure numbering scheme.
-\renewcommand\thefigure{\thechapter.\arabic{figure}}    
-\renewcommand{\theequation}{\thechapter.\arabic{equation}}
-\setcounter{equation}{0}
-\setcounter{figure}{0}
-%%%
-\input{chapters/chap1}
+\newcommand{\resetCountersAndFormats}{
+    \renewcommand\thefigure{\thechapter.\arabic{figure}}    
+    \renewcommand{\theequation}{\thechapter.\arabic{equation}}
+    \setcounter{equation}{0}
+    \setcounter{figure}{0}
+}
 
-\clearpage
+\newcommand{\inputChapter}[1]{
+    \resetCountersAndFormats
+    \input{chapters/#1}
+    \clearpage
+}
 
-\newpage
-
-
-\renewcommand\thefigure{\thechapter.\arabic{figure}}    
-\renewcommand{\theequation}{\thechapter.\arabic{equation}}
-\setcounter{equation}{0}
-\setcounter{figure}{0}
-%%%
-\input{chapters/chap2}
-
-\clearpage
-
-\newpage
-\renewcommand\thefigure{\thechapter.\arabic{figure}}    
-\renewcommand{\theequation}{\thechapter.\arabic{equation}}
-\setcounter{equation}{0}
-\setcounter{figure}{0}
-%%%
-\input{chapters/chap3}
-
-\clearpage
-
-\newpage
-
-\renewcommand\thefigure{\thechapter.\arabic{figure}}    
-\renewcommand{\theequation}{\thechapter.\arabic{equation}}
-\setcounter{equation}{0}
-\setcounter{figure}{0}
-%%%
-\input{chapters/chap4}
-
-\clearpage
-
-\newpage
-
-\renewcommand\thefigure{\thechapter.\arabic{figure}}    
-\renewcommand{\theequation}{\thechapter.\arabic{equation}}
-\setcounter{equation}{0}
-\setcounter{figure}{0}
-%%%
-\input{chapters/chap5}
-
-\clearpage
-
-\newpage
-
-
-
-\renewcommand\thefigure{\thechapter.\arabic{figure}}    
-\renewcommand{\theequation}{\thechapter.\arabic{equation}}
-\setcounter{equation}{0}
-\setcounter{figure}{0}
-%%%
+\inputChapter{chap1}
+\inputChapter{chap2}
+\inputChapter{chap3}
+\inputChapter{chap4}
+\inputChapter{chap5}
 
 \appendix
 
+\newcommand{\inputAppendix}[1]{
+    \resetCountersAndFormats
+    \input{appendix/#1}
+    \clearpage
+}
 
-\input{appendix/appendix_problemoftime}
-
-%%%
-% This code snippet takes care of the required  
-% Equation/Figure numbering scheme.
-\renewcommand\thefigure{\thechapter.\arabic{figure}}    
-\renewcommand{\theequation}{\thechapter.\arabic{equation}}
-\setcounter{equation}{0}
-\setcounter{figure}{0}
-%%%
-
-\input{appendix/appendix_superselection}
-
-
-\clearpage
-
-\newpage
+\inputAppendix{appendix_problemoftime}
+\inputAppendix{appendix_superselection}
+\inputAppendix{appendix_PRL_calculation}
 
 \addcontentsline{toc}{chapter}{Bibliography}
 \bibliographystyle{styles/bibsty.bst}
-%\bibliographystyle{styles/alphaurl}
 \bibliography{references}
 
 
