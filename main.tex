@@ -14,26 +14,13 @@
 \graphicspath{ {figures/} }
 %%
 \usepackage{titlesec}
-% Format section headings with sans-serif font
-\titleformat{\section}
-{\Large\bfseries\sffamily}
-{\thesection}{1em}{}
-% Format chapter headings with sans-serif font
-\titleformat{\chapter}[display]
-{\Huge\bfseries\sffamily}
-{\chaptertitlename\ \thechapter}{20pt}{\Huge}
-
-% Format subsection headings with sans-serif font
-\titleformat{\subsection}
-{\large\bfseries\sffamily}
-{\thesubsection}{1em}{}
-
-% Format subsubsection headings with sans-serif font
-\titleformat{\subsubsection}
-{\bfseries\sffamily}
-{\thesubsubsection}{1em}{}
-
 \usepackage{fancyhdr}
+% Format section, chapter, subsection, and subsubsection headings with sans-serif font
+\titleformat{\section}{\Large\bfseries\sffamily}{\thesection}{1em}{}
+\titleformat{\chapter}[display]{\Huge\bfseries\sffamily}{\chaptertitlename\ \thechapter}{20pt}{\Huge}
+\titleformat{\subsection}{\large\bfseries\sffamily}{\thesubsection}{1em}{}
+\titleformat{\subsubsection}{\bfseries\sffamily}{\thesubsubsection}{1em}{}
+
 \usepackage{float}
 \input{styles/custom_quoation}
 \input{styles/custom_frame}
@@ -43,6 +30,7 @@
 \usepackage{newcomputermodern}
 \usepackage[scaled=1.0]{XCharter}
 \usepackage[final]{microtype}
+
 \linespread{1.3}
 \usepackage[
 	pdfauthor={Aditya Dev},
@@ -72,59 +60,46 @@
 \begin{document}
 
 
-% Use '\thispagestyle{empty}' to ensure that this page
-% is not counted in page numbering.
-\thispagestyle{empty}
-
 % Set required margin widths for first few pages.
 \newgeometry{top = 2.5in, left = 1.25in, right = 1in, bottom = 1in}
-\include{title}
 
-% Use '\thispagestyle{empty}' to ensure that this page
-% is not counted in page numbering.
+% Include title and set this page style to empty
 \thispagestyle{empty}
+\include{misce/title}
 \cleardoublepage
 
 % Use Roman Page Numbering for first few pages.
 \pagenumbering{Roman}
 
-{\sffamily \include{certificate}
-
+% Include certificate, declaration, and acknowledgement
+{\sffamily \include{misce/certificate}}
 \cleardoublepage
-
-\include{declaration}
-
+{\sffamily \include{misce/declaration}}
 \cleardoublepage
+{\sffamily \include{misce/acknowledgement}}
 
-% Acknowledgements.
-\include{acknowledgement}}
-% Abstract.
-%\fontfamily{ptm}\selectfont % Times font
-\include{abstract}
-\input{acronyms}
+% Include abstract and acronyms
+\thispagestyle{empty}
+\include{misce/abstract}
+%\input{misce/acronyms}
 \restoregeometry
 
 % Creates a List of All Figures.
 \addcontentsline{toc}{chapter}{\textbf{List of Figures}}
 \listoffigures
-
 \newpage
 
 % Creates a List of All Tables.
 \addcontentsline{toc}{chapter}{\textbf{List of Tables}}
 \listoftables
-
 \newpage    
+
 % Creates a Table of Contents.
 \tableofcontents
-
 \newpage
-% Certificate of Examination.
-
 
 % Use Arabic Page Numbering for the rest of the thesis.
 \pagenumbering{arabic} 
-% Chapter 1 - Introduction.
 
 
 \newcommand{\resetCountersAndFormats}{
