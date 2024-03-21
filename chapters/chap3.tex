@@ -147,6 +147,14 @@ with eigenvalues \(E = \left\{-\sqrt{3}, \sqrt{3}\right\}\),
 where both of them are doubly degenerate. One of the eigenvector
 corresponding to \(E_- = -\sqrt{3}\), in the standard basis, is
 \(\vec{\Psi} = \left(1, 0, -1, -(1 + \sqrt{3})\right)^T\).
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width=1.0\textwidth]{chap3/Vx_Vy_Vz.pdf}
+    \caption{Components of the effective potential \(\vec{V}_S(\lambda)\) for the two interacting spin-1/2 particles.}
+    \label{fig:chap3_effective_potential}
+\end{figure}
+
+
 Taking
 \begin{equation}
     \ket*{\chi(\lambda)} = 
@@ -154,9 +162,11 @@ Taking
         2\sqrt{1 + a \cos^2(\lambda)}} \left(e^{-i\lambda} \ket*{\uparrow} + e^{i\lambda} \ket*{\downarrow} \right)
 \end{equation} 
 where \(a = \sqrt{3} + 1\), we obtain from \refeq{eq:effective_Vs}, the effective potential
+
 \begin{equation}
     \oper{V}_s = \vec{V}_S(\lambda)\cdot\vec{\oper{\sigma}}_S. 
 \end{equation}
+
 The components of \(\vec{V}_S(\lambda)\) are shown in \reffig{fig:chap3_effective_potential} and 
 are explicitly given by 
 \begin{equation}
@@ -167,10 +177,11 @@ are explicitly given by
 \end{equation}
 \begin{figure}[!h]
     \centering
-    \includegraphics[width=1.0\textwidth]{chap3/Vx_Vy_Vz.pdf}
-    \caption{Components of the effective potential \(\vec{V}_S(\lambda)\) for the two interacting spin-1/2 particles.}
-    \label{fig:chap3_effective_potential}
+    \includegraphics[]{chap3/psi_c1_c2.pdf}
+    \caption{Evolution of the system state \(\ket{\varphi(\lambda)}_s\) for the two interacting spin-1/2 particles. }
+    \label{fig:2spin_interact_RQM}
 \end{figure}
+
 
 One can calculate the evolution of the system state by projecting the global state onto the clock state,
 which gives
@@ -183,12 +194,6 @@ which gives
     \end{gathered}
 \end{equation}
 The dynamics is shown in \reffig{fig:2spin_interact_RQM}.
-\begin{figure}[!h]
-    \centering
-    \includegraphics[]{chap3/psi_c1_c2.pdf}
-    \caption{Evolution of the system state \(\ket{\varphi(\lambda)}_s\) for the two interacting spin-1/2 particles. }
-    \label{fig:2spin_interact_RQM}
-\end{figure}
 
 
 
