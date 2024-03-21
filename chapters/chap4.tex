@@ -23,18 +23,18 @@ The boson field hamiltonian will be takes a sum over field modes, with hamiltoni
 We write the above Hamiltonian in terms of creating and annihilation operators
 \begin{equation}
     \label{eq:class_jcm_eq1}
-    H = \sum_i \epsilon_i c^\dagger _i c _i + \sum_k \hbar \omega_k \left(a^\dagger _k a_k 
-    + \frac{1}{2}\right) + \hbar\sum_k  g_{jk}^k c^\dagger _i c _i\left(a^\dagger _k + a_k \right).
+    H = \sum_i \epsilon_i \oper{c}^\dagger _i \oper{c}_i + \sum_k \hbar \omega_k \left(\oper{a}^\dagger _k \oper{a}_k 
+    + \frac{1}{2}\right) + \hbar\sum_k  g_{jk}^k \oper{c}^\dagger _i \oper{c}_i\left(\oper{a}^\dagger _k + \oper{a}_k \right).
 \end{equation}
-where $c_i$ and $c^\dagger _i$ are the annihilation and creation atomic operators for the system, 
+where $c_i$ and $\oper{c}^\dagger _i$ are the annihilation and creation atomic operators for the system, 
 and $a_k$ and $a^\dagger _k$ are the annihilation and creation operators for the boson field.
 
 A special case of the above Hamiltonian is when we take a two level atom (or a spin 1/2 system)
 interacting with a single mode of the electromagnetic field. \refeq{eq:class_jcm_eq1} then reduces to
 \begin{eqnarray}
     \label{eq:class_jcm_eq2}
-    H = \hbar \omega_0 \sigma_z + \hbar \omega \left(a^\dagger a + \frac{1}{2}\right) 
-    + \hbar g \sigma_x\left(a + a^\dagger\right),
+    H = \hbar \omega_0 \oper{\sigma}_z + \hbar \omega \left(\oper{a}^\dagger \oper{a} + \frac{1}{2}\right) 
+    + \hbar g \oper{\sigma}_x\left(a + a^\dagger\right),
 \end{eqnarray}
 where $\sigma_z$ and $\sigma_x$ are the Pauli matrices. 
 This special case is known as the Jaynes-Cummings model.

@@ -1,7 +1,7 @@
 \chapter{Detailed Calculation of Two coupled Two-level systems\label{app:chap3_appendix}}
-For $\hat{H}_{\mathrm{S}}=0$, the global Hamiltonian reads
+For $\oper{H}_{\mathrm{S}}=0$, the global Hamiltonian reads
 $$
-\hat{H}=\underbrace{\hat{\sigma}_{\mathrm{C}, x}}_{=1_S \otimes \hat{H}_{\mathrm{C}}}+\underbrace{\left(\hat{\sigma}_{\mathrm{S}, x}+\hat{\sigma}_{\mathrm{S}, x}\right) \otimes \hat{\sigma}_{\mathrm{C}, x}}_{=\hat{V}}=\left(\begin{array}{cccc}
+\oper{H}=\underbrace{\oper{\sigma}_{\mathrm{C}, x}}_{=1_S \otimes \oper{H}_{\mathrm{C}}}+\underbrace{\left(\oper{\sigma}_{\mathrm{S}, x}+\oper{\sigma}_{\mathrm{S}, x}\right) \otimes \oper{\sigma}_{\mathrm{C}, x}}_{=\oper{V}}=\left(\begin{array}{cccc}
 1 & 1 & 0 & 1 \\
 1 & -1 & 1 & 0 \\
 0 & 1 & 1 & -1 \\
@@ -39,7 +39,7 @@ $$
 for components $\left\{\left|\uparrow_S \uparrow_C\right\rangle,\left|\uparrow_S \downarrow_C\right\rangle,\left|\downarrow_S \uparrow_C\right\rangle,\left|\downarrow_S \downarrow_C\right\rangle\right\}$. A quick consistency check for $|\Psi\rangle=\left|\uparrow_S \uparrow_{\mathrm{C}}\right\rangle-\left|\downarrow_{\mathrm{S}} \uparrow_{\mathrm{C}}\right\rangle-(1+\sqrt{3})\left|\downarrow_{\mathrm{s}} \downarrow_{\mathrm{C}}\right\rangle$, which we take as the global state, yields
 $$
 \begin{aligned}
-\hat{H}|\Psi\rangle= & \left(\left|\uparrow_{\mathrm{s}} \uparrow_{\mathrm{C}}\right\rangle+\left|\uparrow_{\mathrm{s}} \downarrow_{\mathrm{C}}\right\rangle+\left|\downarrow_{\mathrm{s}} \downarrow_{\mathrm{C}}\right\rangle\right) \\
+\oper{H}|\Psi\rangle= & \left(\left|\uparrow_{\mathrm{s}} \uparrow_{\mathrm{C}}\right\rangle+\left|\uparrow_{\mathrm{s}} \downarrow_{\mathrm{C}}\right\rangle+\left|\downarrow_{\mathrm{s}} \downarrow_{\mathrm{C}}\right\rangle\right) \\
 & -\left(\left|\downarrow_{\mathrm{s}} \uparrow_{\mathrm{C}}\right\rangle+\left|\uparrow_{\mathrm{s}} \downarrow_{\mathrm{C}}\right\rangle-\left|\downarrow_{\mathrm{s}} \downarrow_{\mathrm{C}}\right\rangle\right) \\
 & -(\sqrt{3}+1)\left(-\left|\downarrow_{\mathrm{S}} \downarrow_{\mathrm{C}}\right\rangle+\left|\uparrow_{\mathrm{s}} \uparrow_{\mathrm{C}}\right\rangle-\left|\downarrow_{\mathrm{s}} \uparrow_{\mathrm{C}}\right\rangle\right) \\
 = & -\sqrt{3}\left|\uparrow_{\mathrm{s}} \uparrow_{\mathrm{C}}\right\rangle+\sqrt{3}\left|\downarrow_{\mathrm{s}} \uparrow_{\mathrm{C}}\right\rangle+(\sqrt{3}+3)\left|\downarrow_{\mathrm{s}} \downarrow_{\mathrm{C}}\right\rangle \\
@@ -92,7 +92,7 @@ $$
 With the expression
 $$
 \begin{aligned}
-\hat{V}|\Psi\rangle= & \left(\left|\downarrow_S \downarrow_C\right\rangle+\left|\uparrow_S \downarrow_C\right\rangle\right)-\left(\left|\uparrow_S \downarrow_C\right\rangle-\left|\downarrow_S \downarrow_C\right\rangle\right) \\
+\oper{V}|\Psi\rangle= & \left(\left|\downarrow_S \downarrow_C\right\rangle+\left|\uparrow_S \downarrow_C\right\rangle\right)-\left(\left|\uparrow_S \downarrow_C\right\rangle-\left|\downarrow_S \downarrow_C\right\rangle\right) \\
 & -c\left(\left|\uparrow_s \uparrow_C\right\rangle-\left|\downarrow_s \uparrow_C\right\rangle\right) \\
 = & -c\left|\uparrow_s \uparrow_C\right\rangle+c\left|\downarrow_s \uparrow_C\right\rangle+2\left|\downarrow_S \downarrow_C\right\rangle,
 \end{aligned}
@@ -100,7 +100,7 @@ $$
 we determine
 $$
 \begin{aligned}
-\langle\chi(\lambda)|\hat{V}| \Psi\rangle_{\mathrm{C}}= & e^{-i E \lambda}\left[-c e^{i \lambda}\left|\uparrow_{\mathrm{S}}\right\rangle_{\mathrm{S}}+c e^{i \lambda}\left|\downarrow_{\mathrm{S}}\right\rangle_{\mathrm{S}}\right. \\
+\langle\chi(\lambda)|\oper{V}| \Psi\rangle_{\mathrm{C}}= & e^{-i E \lambda}\left[-c e^{i \lambda}\left|\uparrow_{\mathrm{S}}\right\rangle_{\mathrm{S}}+c e^{i \lambda}\left|\downarrow_{\mathrm{S}}\right\rangle_{\mathrm{S}}\right. \\
 & \left.+2 e^{-i \lambda}\left|\downarrow_{\mathrm{S}}\right\rangle_{\mathrm{S}}\right] \\
 = & e^{-i E \lambda}\left[-c e^{i \lambda}\left|\uparrow_{\mathrm{S}}\right\rangle_{\mathrm{S}}+\left(c e^{i \lambda}+2 e^{-i \lambda}\right)\left|\downarrow_{\mathrm{S}}\right\rangle_{\mathrm{S}}\right] \\
 = & e^{-i E \lambda} e^{i \lambda}\left[-c\left|\uparrow_{\mathrm{S}}\right\rangle_{\mathrm{S}}+\left(c+2 e^{-2 i \lambda}\right)\left|\downarrow_{\mathrm{S}}\right\rangle_{\mathrm{S}}\right]
@@ -114,7 +114,7 @@ $$
 allows us to express
 $$
 \begin{aligned}
-\left\langle\chi\left|\hat{V} \hat{P}_{\Psi}\right| \chi\right\rangle_{\mathrm{C}}= & {\left[-c\left|\uparrow_{\mathrm{s}}\right\rangle_{\mathrm{s}}+\left(c+2 e^{-2 i \lambda}\right)\left|\downarrow_{\mathrm{s}}\right\rangle_{\mathrm{s}}\right] } \\
+\left\langle\chi\left|\oper{V} \oper{P}_{\Psi}\right| \chi\right\rangle_{\mathrm{C}}= & {\left[-c\left|\uparrow_{\mathrm{s}}\right\rangle_{\mathrm{s}}+\left(c+2 e^{-2 i \lambda}\right)\left|\downarrow_{\mathrm{s}}\right\rangle_{\mathrm{s}}\right] } \\
 & \otimes\left[\left\langle\left.\uparrow_{\mathrm{s}}\right|_{\mathrm{s}}-\left(c e^{2 i \lambda}+1\right)\left\langle\left.\downarrow_{\mathrm{s}}\right|_{\mathrm{s}}\right]\right.\right. \\
 = & -\left.c\left|\uparrow_{\mathrm{s}}\right\rangle \uparrow_{\mathrm{s}}\right|_{\mathrm{s}}+c\left(c e^{2 i \lambda}+1\right)\left|\uparrow_{\mathrm{s}}\right\rangle\left\langle\left.\downarrow_{\mathrm{s}}\right|_{\mathrm{s}}\right. \\
 & +\left.\left(c+2 e^{-2 i \lambda}\right)\left|\downarrow_{\mathrm{S}}\right\rangle \uparrow_{\mathrm{s}}\right|_{\mathrm{s}} \\
@@ -125,7 +125,7 @@ $$
 and
 $$
 \begin{aligned}
-& \left\langle\chi\left|\hat{P}_W \hat{V}\right| \chi\right\rangle_{\mathrm{C}}=-c\left|\uparrow_{\mathrm{S}}\right\rangle\left\langle\left.\uparrow_{\mathrm{S}}\right|_{\mathrm{S}}+c\left(c e^{-2 i \lambda}+1\right) \mid \downarrow_{\mathrm{S}}\right\rangle\left\langle\left.\uparrow_{\mathrm{S}}\right|_{\mathrm{S}}\right. \\
+& \left\langle\chi\left|\oper{P}_W \oper{V}\right| \chi\right\rangle_{\mathrm{C}}=-c\left|\uparrow_{\mathrm{S}}\right\rangle\left\langle\left.\uparrow_{\mathrm{S}}\right|_{\mathrm{S}}+c\left(c e^{-2 i \lambda}+1\right) \mid \downarrow_{\mathrm{S}}\right\rangle\left\langle\left.\uparrow_{\mathrm{S}}\right|_{\mathrm{S}}\right. \\
 & +\left(c+2 e^{2 i \lambda}\right)\left|\uparrow_s\right\rangle\left\langle\left.\downarrow_s\right|_s\right. \\
 & -\left(c e^{-2 i \lambda}+1\right)\left(c+2 e^{2 i \lambda}\right)\left|\downarrow_S K \downarrow_S\right|_s \\
 &
@@ -139,19 +139,19 @@ $$
 the individual components read
 $$
 \begin{aligned}
-\left\langle\uparrow_{\mathrm{S}} \chi\left|\left\{\hat{P}_{\Psi}, \hat{V}\right\}\right| \uparrow_{\mathrm{S}} \chi\right\rangle_{\mathrm{C}} & =-2 c \\
-\left\langle\uparrow_{\mathrm{S}} \chi\left|\left\{\hat{P}_{\Psi}, \hat{V}\right\}\right| \downarrow_{\mathrm{S}} \chi\right\rangle_{\mathrm{C}} & =c\left(c e^{2 i \lambda}+1\right)+\left(c+2 e^{2 i \lambda}\right) \\
+\left\langle\uparrow_{\mathrm{S}} \chi\left|\left\{\oper{P}_{\Psi}, \oper{V}\right\}\right| \uparrow_{\mathrm{S}} \chi\right\rangle_{\mathrm{C}} & =-2 c \\
+\left\langle\uparrow_{\mathrm{S}} \chi\left|\left\{\oper{P}_{\Psi}, \oper{V}\right\}\right| \downarrow_{\mathrm{S}} \chi\right\rangle_{\mathrm{C}} & =c\left(c e^{2 i \lambda}+1\right)+\left(c+2 e^{2 i \lambda}\right) \\
 & =2\left[2 \cos (2 \lambda)+c\left(1+e^{2 i \lambda}\right)\right] \\
 & =4\left[\cos (2 \lambda)+c \cos ^2(\lambda)\right]+2 i c \sin (2 \lambda) \\
 & =4 f(\lambda)+2 i c \sin (2 \lambda)
 \end{aligned}
 $$
-$\left\langle\downarrow_{\mathrm{s}} \chi\left|\left\{\hat{P}_{\Psi}, \hat{V}\right\}\right| \uparrow_{\mathrm{s}} \chi\right\rangle_{\mathrm{C}}=4\left[\cos (2 \lambda)+c \cos ^2(\lambda)\right]-2 i c \sin (2 \lambda) \quad$ and
+$\left\langle\downarrow_{\mathrm{s}} \chi\left|\left\{\oper{P}_{\Psi}, \oper{V}\right\}\right| \uparrow_{\mathrm{s}} \chi\right\rangle_{\mathrm{C}}=4\left[\cos (2 \lambda)+c \cos ^2(\lambda)\right]-2 i c \sin (2 \lambda) \quad$ and
 $$
 =4 f(\lambda)-2 i c \sin (2 \lambda)
 $$
 $$
-\left\langle\downarrow_{\mathrm{s}} \chi\left|\left\{\hat{P}_{\Psi}, \hat{V}\right\}\right| \downarrow_{\mathrm{s}} \chi\right\rangle_{\mathrm{C}}=-2 \operatorname{Re}\left(c e^{2 i \lambda}+1\right) \cdot\left(c+2 e^{-2 i \lambda}\right)
+\left\langle\downarrow_{\mathrm{s}} \chi\left|\left\{\oper{P}_{\Psi}, \oper{V}\right\}\right| \downarrow_{\mathrm{s}} \chi\right\rangle_{\mathrm{C}}=-2 \operatorname{Re}\left(c e^{2 i \lambda}+1\right) \cdot\left(c+2 e^{-2 i \lambda}\right)
 $$
 $$
 =-2 \operatorname{Re}\left[2\left(e^{2 i \lambda}+e^{-2 i \lambda}\right)+2 c\left(1+e^{2 i \lambda}\right)+c\right]
@@ -172,14 +172,14 @@ $$
 Thus, the main part of the effective system potential is
 $$
 \begin{aligned}
-\left\langle\chi\left|\left\{\hat{V}, \hat{P}_\psi\right\}\right| \chi\right\rangle_{\mathrm{C}}= & -2 c \sin (2 \lambda) \hat{\sigma}_{\mathrm{s}, y}+4 f(\lambda)\left(\hat{\sigma}_{\mathrm{S}, x}+\hat{\sigma}_{\mathrm{S}, x}\right) \\
+\left\langle\chi\left|\left\{\oper{V}, \oper{P}_\psi\right\}\right| \chi\right\rangle_{\mathrm{C}}= & -2 c \sin (2 \lambda) \oper{\sigma}_{\mathrm{s}, y}+4 f(\lambda)\left(\oper{\sigma}_{\mathrm{S}, x}+\oper{\sigma}_{\mathrm{S}, x}\right) \\
 & -2[c+2 f(\lambda)] \mathrm{i}_{\mathrm{S}} .
 \end{aligned}
 $$
 in terms of Pauli operators. In addition,
 $$
 \begin{aligned}
-\left\langle\Psi\left|\hat{V} \hat{P}_\chi\right| \Psi\right\rangle= & {\left[-c\left\langle\left.\uparrow_{\mathrm{S}}\right|_{\mathrm{S}}+\left(c+2 e^{2 i \lambda}\right)\left\langle\left.\downarrow_{\mathrm{S}}\right|_{\mathrm{S}}\right]\right.\right.} \\
+\left\langle\Psi\left|\oper{V} \oper{P}_\chi\right| \Psi\right\rangle= & {\left[-c\left\langle\left.\uparrow_{\mathrm{S}}\right|_{\mathrm{S}}+\left(c+2 e^{2 i \lambda}\right)\left\langle\left.\downarrow_{\mathrm{S}}\right|_{\mathrm{S}}\right]\right.\right.} \\
 & \cdot\left[\left|\uparrow_{\mathrm{S}}\right\rangle_{\mathrm{S}}-\left(c e^{-2 i \lambda}+1\right)\left|\downarrow_{\mathrm{S}}\right\rangle_{\mathrm{S}}\right] \\
 & =-c-\left(c+2 e^{2 i \lambda}\right)\left(c e^{-2 i \lambda}+1\right) \\
 & =-[2 c+2 e^{2 i \lambda}+\underbrace{c^2}_{=2(1+c)} e^{-2 i \lambda}+2 c] \\
@@ -192,7 +192,7 @@ $$
 $$
 $$
 \begin{aligned}
-\operatorname{Re}\left\langle\Psi\left|\hat{V} \hat{P}_\chi\right| \Psi\right\rangle & =-2[2 c+(2+c) \cos (2 \lambda)] \\
+\operatorname{Re}\left\langle\Psi\left|\oper{V} \oper{P}_\chi\right| \Psi\right\rangle & =-2[2 c+(2+c) \cos (2 \lambda)] \\
 & =-2\left[c+2\left(\cos (2 \lambda)+c \cos ^2(\lambda)\right)\right] \\
 & =-2[c+2 f(\lambda)]
 \end{aligned}
@@ -201,11 +201,11 @@ $$
 Hence,
 and
 $$
-\hat{V}_{\mathrm{S}}=\frac{\left\langle\chi\left|\left\{\hat{V}, \hat{P}_{\Psi}\right\}\right| \chi\right\rangle_{\mathrm{C}}-\operatorname{Re}\left\langle\Psi\left|\hat{V} \hat{P}_\chi\right| \Psi\right\rangle \hat{1}_{\mathrm{S}}}{\left\langle\Psi\left|\hat{P}_\chi\right| \Psi\right\rangle}
+\oper{V}_{\mathrm{S}}=\frac{\left\langle\chi\left|\left\{\oper{V}, \oper{P}_{\Psi}\right\}\right| \chi\right\rangle_{\mathrm{C}}-\operatorname{Re}\left\langle\Psi\left|\oper{V} \oper{P}_\chi\right| \Psi\right\rangle \oper{1}_{\mathrm{S}}}{\left\langle\Psi\left|\oper{P}_\chi\right| \Psi\right\rangle}
 $$
 $$
-=\frac{-c \sin (2 \lambda)}{2\left[1+c \cos ^2(\lambda)\right]} \hat{\sigma}_{\mathrm{S}, y}+\frac{\cos (2 \lambda)+c \cos ^2(\lambda)}{\left[1+c \cos ^2(\lambda)\right]}\left(\hat{\sigma}_{\mathrm{S}, x}+\hat{\sigma}_{\mathrm{S}, x}\right)
+=\frac{-c \sin (2 \lambda)}{2\left[1+c \cos ^2(\lambda)\right]} \oper{\sigma}_{\mathrm{S}, y}+\frac{\cos (2 \lambda)+c \cos ^2(\lambda)}{\left[1+c \cos ^2(\lambda)\right]}\left(\oper{\sigma}_{\mathrm{S}, x}+\oper{\sigma}_{\mathrm{S}, x}\right)
 $$
 $$
-\equiv \vec{V}_s(\lambda) \cdot \hat{\sigma}
+\equiv \vec{V}_s(\lambda) \cdot \oper{\sigma}
 $$

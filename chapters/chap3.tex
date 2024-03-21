@@ -1,7 +1,5 @@
 \chapter[Quantum Relational Dynamics for Interacting Quantum Systems]{Relational Quantum Mechanics: With System and Environment Interaction\label{chap:sebgem_Rel}}
 
-
-
 We start by \emph{reformulating} the time independent Schr\"odinger equation as an \emph{invariance principle}~\cite{Gemsheim:2023izg}
 \begin{equation}
     \label{eq:invariance_principle}
@@ -115,9 +113,10 @@ where \(\mathcal{N}_\lambda = \bbra{\Psi}\oper{P}_\chi\ketPsi\). One observes th
      \end{aligned}
  \end{equation}
 where 
-\begin{equation*}
+\begin{equation}
+    \label{eq:chap3_effective_Vs}
     \Vs(\lambda) = \frac{\bra{\chi_\lambda} \left(\Vinter\oper{P}_{\Psi} + \oper{P}_{\Psi}\Vinter\right)\ket{\chi_\lambda}}{\mathcal{N}_\lambda}
-\end{equation*}
+\end{equation}
 
 Inserting (\refeq{eq:effective_Vs}) into (\refeq{eq:TISE_undecomposed_simp}) and setting \(\xi(\lambda) = -\bbra{\Psi} \oper{V}\oper{P}_\chi \ketPsi/\mathcal{N}_\lambda\) we obtain
 \begin{equation}
@@ -129,20 +128,68 @@ where we defined \(\innerGlob{\chi_\lambda}{\Psi} = \ket{\varphi(\lambda)}_s\). 
 We find that the final form of the Equation is equivalent to the TDSE for the remaining sub-system (\(\mathcal{H}_s\)) of the
 global Hilbert space \(\mathcal{H}\).
 
-\section{Example: Dynamics of two interacting (1/2)-spins}
+\section{Example: Dynamics of two interacting two level system}
 
-\begin{figure}[!h]
-    \centering
-    \includegraphics[]{chap3/psi_c1_c2.pdf}
-    \caption{Two interacting (1/2)-spins}
-    \label{fig:2spin_interact_RQM}
-\end{figure}
-
+To provide an illustrative example of the approach, let us consider an interaction two spin-1/2 particles~\cite{Gemsheim:2023izg}.
+The Hamiltonians for system and clock are taken as, \(\oper{H_s} = 0\), \(\oper{H_C} = E_C\oper{\sigma}_{C, x}\)
+and the interaction 
+\(\Vinter = V_0\left(\oper{\sigma}_{S, x} + \oper{\sigma}_{S, z}\right)\otimes \oper{\sigma}_{C, x}\). 
+Taking \(E_C = V_0 \equiv 1\), we get
+\begin{equation}
+    \H = \begin{pmatrix}
+        1 & 1 & 0 & 1 \\
+        1 & -1 & 1 & 0 \\
+        0 & 1 & 1 & -1 \\
+        1 & 0 & -1 & -1
+        \end{pmatrix}
+\end{equation}
+with eigenvalues \(E = \left\{-\sqrt{3}, \sqrt{3}\right\}\), 
+where both of them are doubly degenerate. One of the eigenvector
+corresponding to \(E_- = -\sqrt{3}\), in the standard basis, is
+\(\vec{\Psi} = \left(1, 0, -1, -(1 + \sqrt{3})\right)^T\).
+Taking
+\begin{equation}
+    \ket*{\chi(\lambda)} = 
+    \frac{\exp\left(i E_- \lambda\right)}{
+        2\sqrt{1 + a \cos^2(\lambda)}} \left(e^{-i\lambda} \ket*{\uparrow} + e^{i\lambda} \ket*{\downarrow} \right)
+\end{equation} 
+where \(a = \sqrt{3} + 1\), we obtain from \refeq{eq:effective_Vs}, the effective potential
+\begin{equation}
+    \oper{V}_s = \vec{V}_S(\lambda)\cdot\vec{\oper{\sigma}}_S. 
+\end{equation}
+The components of \(\vec{V}_S(\lambda)\) are shown in \reffig{fig:chap3_effective_potential} and 
+are explicitly given by 
+\begin{equation}
+    \begin{gathered}
+        V_x(\lambda) = V_y(\lambda) = \frac{\cos(2\lambda) + a \cos^2(\lambda)}{1 + a\cos^(\lambda)}\\
+        V_z(\lambda) = -\frac{(a/2)\sin(2\lambda)}{1 + a \cos^2(\lambda)}
+    \end{gathered}
+\end{equation}
 \begin{figure}[!h]
     \centering
     \includegraphics[width=1.0\textwidth]{chap3/Vx_Vy_Vz.pdf}
-    \caption{Two interacting (1/2)-spins}
-    \label{fig:2spin_emerg_pot_RQM}
+    \caption{Components of the effective potential \(\vec{V}_S(\lambda)\) for the two interacting spin-1/2 particles.}
+    \label{fig:chap3_effective_potential}
 \end{figure}
+
+One can calculate the evolution of the system state by projecting the global state onto the clock state,
+which gives
+\begin{equation}
+    \begin{gathered}
+        \ket{\varphi(\lambda)}_s \equiv  \innerGlob{\chi(\lambda)}{\Psi} \\
+        = \frac{\exp\left(i a\lambda\right)}{
+            2\sqrt{1 + a \cos^2(\lambda)}} \left[\ket*{\uparrow} - 
+            \left(a e^{-2i\lambda} + 1\right)\ket*{\downarrow}\right] .
+    \end{gathered}
+\end{equation}
+The dynamics is shown in \reffig{fig:2spin_interact_RQM}.
+\begin{figure}[!h]
+    \centering
+    \includegraphics[]{chap3/psi_c1_c2.pdf}
+    \caption{Evolution of the system state \(\ket{\varphi(\lambda)}_s\) for the two interacting spin-1/2 particles. }
+    \label{fig:2spin_interact_RQM}
+\end{figure}
+
+
 
 \newpage

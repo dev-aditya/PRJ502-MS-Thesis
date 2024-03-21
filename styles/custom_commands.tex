@@ -5,16 +5,15 @@
 \newcommand{\refsec}[1]{Section~\ref{#1}}
 \newcommand{\reftab}[1]{Table~\ref{#1}}
 
-\renewcommand{\vec}[1]{\mathbold{#1}}
-\newcommand{\mat}[1]{\mathbold{#1}}
+\renewcommand{\vec}[1]{\boldsymbol{#1}}
 \newcommand{\psid}{\psi ^\dagger}
 \newcommand{\psibar}{\overline{\psi}}
 \newcommand{\ketpsi}{\ket{\psi}}
-\newcommand{\kket}[1]{\left| #1 \right\rAngle}
-\newcommand{\bbra}[1]{\left\lAngle #1 \right|}
+\newcommand{\kket}[1]{\left.\left| #1 \right\rangle\right\rangle}
+\newcommand{\bbra}[1]{\left\langle\left\langle #1 \right|\right.}
 \newcommand{\ketPsi}{\kket{\Psi}}
-\newcommand{\innerGlob}[2]{\left\langle #1 |  #2 \right\rAngle}
-\newcommand{\oper}[1]{\mathbf{#1}}
+\newcommand{\innerGlob}[2]{\left\langle \left. #1 |  #2 \right\rangle \right\rangle}
+\newcommand{\oper}[1]{\Hat{#1}}
 \renewcommand{\H}{\oper{H}}
 \newcommand{\I}{\oper{I}}
 \newcommand{\Vinter}{\oper{V}}
