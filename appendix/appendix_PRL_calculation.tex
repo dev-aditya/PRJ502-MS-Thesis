@@ -9,34 +9,40 @@ For $\oper{H}_{\mathrm{S}}=0$, the global Hamiltonian reads
 \end{array}\right)
 \end{equation}
 and has eigenvalues
+\(E=\{-\sqrt{3}, \sqrt{3}\}\), 
+both with multiplicity two. The Eigenvectors corresponding to them are
 \begin{equation}
-E=\{-\sqrt{3}, \sqrt{3}\},
-\end{equation}
-both with multiplicity two. The corresponding eigenvectors are
-\begin{equation}
-\left(\begin{array}{c}
+\begin{pmatrix}
 1 \\
 0 \\
 -1 \\
 -(1+\sqrt{3})
-\end{array}\right),\left(\begin{array}{c}
+\end{pmatrix},\begin{pmatrix}
 0 \\
 1 \\
 1-\sqrt{3} \\
 -1
-\end{array}\right),\left(\begin{array}{c}
+\end{pmatrix},\begin{pmatrix}
 1 \\
 0 \\
 -1 \\
 \sqrt{3}-1
-\end{array}\right),\left(\begin{array}{c}
+\end{pmatrix},\begin{pmatrix}
 0 \\
 1 \\
 1+\sqrt{3} \\
 -1
-\end{array}\right)
+\end{pmatrix}
 \end{equation}
-for components $\left\{\left|\uparrow_S \uparrow_C\right\rangle,\left|\uparrow_S \downarrow_C\right\rangle,\left|\downarrow_S \uparrow_C\right\rangle,\left|\downarrow_S \downarrow_C\right\rangle\right\}$. A quick consistency check for $|\Psi\rangle=\left|\uparrow_S \uparrow_{\mathrm{C}}\right\rangle-\left|\downarrow_{\mathrm{S}} \uparrow_{\mathrm{C}}\right\rangle-(1+\sqrt{3})\left|\downarrow_{\mathrm{s}} \downarrow_{\mathrm{C}}\right\rangle$, which we take as the global state, yields
+for components $\left\{\left|\uparrow_S \uparrow_C
+\right\rangle,\left|\uparrow_S \downarrow_C\right\rangle,
+\left|\downarrow_S \uparrow_C\right\rangle,\left|\downarrow_S 
+\downarrow_C\right\rangle\right\}$. 
+
+One can check for $|\Psi\rangle=\left|\uparrow_S \uparrow_{\mathrm{C}}\right\rangle
+-\left|\downarrow_{\mathrm{S}} \uparrow_{\mathrm{C}}\right\rangle-(1+\sqrt{3})\left|
+\downarrow_{\mathrm{s}} \downarrow_{\mathrm{C}}\right\rangle$, 
+which we have takes as the global state in \refsec{sec:chap3_2spin_interact}, yields
 \begin{equation}
 \begin{aligned}
 \oper{H}|\Psi\rangle= & \left(\left|\uparrow_{\mathrm{s}} \uparrow_{\mathrm{C}}\right\rangle+\left|\uparrow_{\mathrm{s}} \downarrow_{\mathrm{C}}\right\rangle+\left|\downarrow_{\mathrm{s}} \downarrow_{\mathrm{C}}\right\rangle\right) \\
@@ -204,7 +210,7 @@ and
 \oper{V}_{\mathrm{S}}=\frac{\left\langle\chi\left|\left\{\oper{V}, \oper{P}_{\Psi}\right\}\right| \chi\right\rangle_{\mathrm{C}}-\operatorname{Re}\left\langle\Psi\left|\oper{V} \oper{P}_\chi\right| \Psi\right\rangle \oper{1}_{\mathrm{S}}}{\left\langle\Psi\left|\oper{P}_\chi\right| \Psi\right\rangle}
 \end{equation}
 \begin{equation}
-=\frac{-c \sin (2 \lambda)}{2\left[1+c \cos ^2(\lambda)\right]} \oper{\sigma}_{\mathrm{S}, y}+\frac{\cos (2 \lambda)+c \cos ^2(\lambda)}{\left[1+c \cos ^2(\lambda)\right]}\left(\oper{\sigma}_{\mathrm{S}, x}+\oper{\sigma}_{\mathrm{S}, x}\right)
+=\frac{-c \sin (2 \lambda)}{2\left[1+c \cos ^2(\lambda)\right]} \oper{\sigma}_{\mathrm{S}, y}+\frac{\cos (2 \lambda)+c \cos ^2(\lambda)}{\left[1+c \cos ^2(\lambda)\right]}\left(\oper{\sigma}_{\mathrm{S}, x}+\oper{\sigma}_{\mathrm{S}, z}\right)
 \end{equation}
 \begin{equation}
 \equiv \vec{V}_s(\lambda) \cdot \oper{\sigma}
