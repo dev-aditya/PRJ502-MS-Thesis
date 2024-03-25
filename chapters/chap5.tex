@@ -1,4 +1,4 @@
-\chapter{Quantum Relational Dynamics of Jaynes-Cummings Model
+\chapter{Quantum Relational Dynamics of JC Model
 \label{chap5:RDQ_JCM_chap}}
 
 In \refchap{chap:braun_briggs_jaynes}, we delved into the semi-classical approach to derive the Time-Dependent Schrödinger Equation (TDSE) governing the Jaynes-Cummings model. 
@@ -33,8 +33,13 @@ Under dipole-approximation and rotating-wave approximation
         + \hbar g \left(\oper{\sigma}_+ \oper{a} + \oper{\sigma}_- \oper{a}^\dagger\right).
 \end{equation}
 
-A specific scenario of this Hamiltonian, known as the "resonance case," becomes exactly solvable when \(\omega_0 = \omega\). 
-This model is characterized by the Hamiltonian operator
+\section[Exact Energy Eigenstate of JC-Hamiltonian]{Exact Energy Eigenstate of JC-Hamiltonian (resonant case)}
+
+In the specific scenario of the Hamiltonian in Equation \ref{eq:chap5_JCM_Hamiltonian_RWA}, when 
+\(\omega  = \omega_0\), known as the 
+``resonance case," the system becomes exactly solvable.
+This model is characterized by the Hamiltonian operator\footnote{Here, we dropped the \(1/2\) term from \(H_c\), 
+simplifying calculations. This adjustment doesn't affect our analysis.}
 \begin{equation}
         \label{eq:chap5_JCM_Hamiltonian_resonance}
         \oper{H} = \frac{\hbar\omega}{2} \oper{\sigma}_z + \hbar \omega \oper{a}^\dagger \oper{a}
@@ -62,9 +67,36 @@ Once you block-diagonalize the Hamiltonian, the eigenvalues and eigenvectors of 
 and the corresponding eigenvectors are
 \begin{equation}
         \label{eq:chap5_JCM_eigenvectors}
-        \lvert \pm, n \rangle = \frac{1}{\sqrt{2}} \left(\lvert g, n \rangle \pm \lvert e, n-1 \rangle\right).
+        \ket*{\pm, n} = \frac{1}{\sqrt{2}} \left(\ket*{g, n} \pm \ket*{e, n-1}\right).
 \end{equation}
+\section{Unitary Evolution operator for semiclassical JC Hamiltonian}
+We discussed the coherent state-based semiclassical approximation in Chapter 
+\ref{chap:braun_briggs_jaynes}, where the final result simply involved replacing 
+the field operators, i.e., \( \oper{a} \) and \( \oper{a}^\dagger \), with their 
+expectation values. Following a similar approach, we assume the semiclassical form 
+of the Hamiltonian in Equation \ref{eq:chap5_JCM_Hamiltonian_resonance} as
 
+\begin{equation}
+    \label{eq:chap5_JCM_Hamiltonian_semi}
+    \begin{aligned}
+        \oper{H}_{\text{semi}} = \frac{\hbar\omega}{2} \oper{\sigma}_z + \hbar \omega \langle \oper{a}^\dagger \oper{a} \rangle
+    + \hbar g \left( \oper{\sigma}_+ \langle \oper{a} \rangle + \oper{\sigma}_- \langle \oper{a}^\dagger \rangle \right),\\
+    = \frac{\hbar\omega}{2} \oper{\sigma}_z + \hbar \omega N 
+    + \hbar g \alpha\left( \oper{\sigma}_+ e^{-it\omega} + \oper{\sigma}_- e^{it\omega} \right),
+    \end{aligned}
+\end{equation}
+where \(\langle a(t) \rangle = \alpha e^{-i\omega t}\). This leads to the evolution operator being expressed as
+\begin{equation}
+        \begin{gathered}
+                \tilde{U}(t) = 
+        \cos(\Omega t) \left[ \ket{+}\bra{+} + \ket{-}\bra{-} \right] 
+        - i \sin(\Omega t)
+         \left[ \ket{+}\bra{-}
+        + \ket{-}\bra{+} \right]
+        \end{gathered}
+\end{equation}
+where \(\Omega = \frac{\hbar g\alpha}{\hbar} = \theta,\) and, \(g = \frac{\theta}{\alpha}\). We justify the 
+use of~\refeq{eq:chap5_JCM_Hamiltonian_semi} as our semi-classical Hamiltonian in~\refapp{app:chap3_appendix}. 
 
 \begin{figure}[!h]
         \centering
@@ -81,7 +113,7 @@ and the corresponding eigenvectors are
         (\& variance $\abs*{\braket*{\psi_{rel}}{\psi_{semi}}}^2$)
          v/s Global Eigen Energy]{The $N_{\mathrm{cutoff}}=1000$ is taken for above calculations.
          The plots shows the average $\abs*{\braket*{\psi_{rel}}{\psi_{semi}}}^2$ and 
-         variance $\abs*{\braket*{\psi_{rel}}{\psi_{semi}}}^2$ over \(0, 2\pi\) v/s corresponding global eigen energy.
-         An attempt to describe the dynamics of all eigenstates in a concise manner.}
+         variance $\abs*{\braket*{\psi_{rel}}{\psi_{semi}}}^2$ over \([0, 2\pi]\) v/s corresponding global eigen energy.
+         Coupling \(g = \theta / \abs*{\alpha}\) for a fixed \(\theta\)}
         \label{fig:chap5_JCM_schematic_2}
 \end{figure}
