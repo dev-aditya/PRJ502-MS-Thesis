@@ -26,7 +26,7 @@ We assume our Hamiltonian to be of the form
 
 
 Under dipole-approximation and rotating-wave approximation 
-[for details see~\refapp{app:chap3_appendix}], the Hamiltonian can be written as
+[for details see~\refapp{appen:chap5_JC_calculations} ], the Hamiltonian can be written as
 \begin{equation}
         \label{eq:chap5_JCM_Hamiltonian_RWA}
         \oper{H} = \frac{\hbar \omega_0}{2} \oper{\sigma}_z + \hbar \omega \left(\oper{a}^\dagger \oper{a} + \frac{1}{2}\right) 
@@ -57,9 +57,9 @@ U(t) = \sum_k e^{-i t a_k/\hbar} \lvert a_k \rangle \langle a_k \rvert
 Finding such an eigenvalue decomposition is not trivial, particularly in this context, 
 given the infinite-dimensional nature of the underlying Hilbert space. However, the 
 JC-Hamiltonian possesses a notably simple structure as it is block-diagonal with respect 
-to the $\lvert \pm, n \rangle$-basis. The diagonalization of the JC-Hamiltonian in 
-\refeq{eq:chap5_JCM_Hamiltonian_resonance} is given in \refapp{app:chap3_appendix}.
-Once you block-diagonalize the Hamiltonian, the eigenvalues and eigenvectors of the JC-Hamiltonian are given by
+to the $\ket{\pm, n}$-basis. The diagonalization of the JC-Hamiltonian in 
+\refeq{eq:chap5_JCM_Hamiltonian_resonance} is given in \refapp{appen:chap5_JC_calculations} .
+Once you diagonalize the Hamiltonian, the eigenvalues and eigenvectors of the JC-Hamiltonian are given by
 \begin{equation}
         \label{eq:chap5_JCM_eigenvalues}
         E_{\pm, n} = \hbar \omega \left(n - \frac{1}{2}\right) \pm \hbar g \sqrt{n + 1},
@@ -86,17 +86,16 @@ of the Hamiltonian in Equation \ref{eq:chap5_JCM_Hamiltonian_resonance} as
     \end{aligned}
 \end{equation}
 where \(\langle a(t) \rangle = \alpha e^{-i\omega t}\). This leads to the evolution operator being expressed as
-\begin{equation}
-        \begin{gathered}
-                \tilde{U}(t) = 
-        \cos(\Omega t) \left[ \ket{+}\bra{+} + \ket{-}\bra{-} \right] 
-        - i \sin(\Omega t)
-         \left[ \ket{+}\bra{-}
-        + \ket{-}\bra{+} \right]
-        \end{gathered}
-\end{equation}
-where \(\Omega = \frac{\hbar g\alpha}{\hbar} = \theta,\) and, \(g = \frac{\theta}{\alpha}\). We justify the 
-use of~\refeq{eq:chap5_JCM_Hamiltonian_semi} as our semi-classical Hamiltonian in~\refapp{app:chap3_appendix}. 
+\begin{align}
+        \tilde{U}(t) &= 
+                \cos(\Omega t) \left(e^{-i t \omega \frac{1}{2}}\ket{+}\bra{+} + 
+                e^{i t \omega \frac{1}{2}}\ket{-}\bra{-} \right)  \nonumber\\
+                &- i \sin(\Omega t)
+                 \left( e^{-i t \omega \frac{1}{2}}\ket{+}\bra{-}
+                + e^{i t \omega \frac{1}{2}}\ket{-}\bra{+}\right)
+\end{align}
+where \(\Omega = {g\alpha}\). We justify the 
+use of~\refeq{eq:chap5_JCM_Hamiltonian_semi} as our semi-classical Hamiltonian in~\refapp{appen:chap5_JC_calculations} . 
 
 \begin{figure}[!h]
         \centering
@@ -113,7 +112,7 @@ use of~\refeq{eq:chap5_JCM_Hamiltonian_semi} as our semi-classical Hamiltonian i
         (\& variance $\abs*{\braket*{\psi_{rel}}{\psi_{semi}}}^2$)
          v/s Global Eigen Energy]{The $N_{\mathrm{cutoff}}=1000$ is taken for above calculations.
          The plots shows the average $\abs*{\braket*{\psi_{rel}}{\psi_{semi}}}^2$ and 
-         variance $\abs*{\braket*{\psi_{rel}}{\psi_{semi}}}^2$ over \([0, 2\pi]\) v/s corresponding global eigen energy.
-         Coupling \(g = \theta / \abs*{\alpha}\) for a fixed \(\theta\)}
+         variance $\abs*{\braket*{\psi_{rel}}{\psi_{semi}}}^2$ over \([0, 2\pi]\) time domain v/s corresponding global eigenenergy.
+         Coupling \(g = \Omega / \abs*{\alpha}\) for a fixed \(\Omega\)}
         \label{fig:chap5_JCM_schematic_2}
 \end{figure}
