@@ -2,83 +2,90 @@
 
 \epigraph{ \myopeningquote Time is an illusion \myclosingquote}{-- Albert Einstein}
 
+The unification of Quantum Mechanics and General Relativity has long been the Holy Grail of physics 
+since their development. Despite extensive research, no satisfactory theory has yet been proposed 
+to solve this challenge. General relativity states that a physical theory should not depend on 
+background structures. However, conventional quantization methods often introduce background structures, 
+such as imposing the canonical commutation relations on a constant-time hypersurface. The Hamiltonian 
+of a generally covariant theory, such as general relativity, is constrained to vanish in the absence 
+of boundaries~\cite{gielen2023quantum}. Attempts to quantize gravity using canonical quantization 
+lead to a Hamiltonian constraint, known as the Wheeler-DeWitt equation (i.e., \(\oper{H} \ketPsi = 0\)). 
+This gives rise to a well-known issue referred to as the ``Problem of Time" within the canonical 
+approach to quantum gravity. Further details regarding the Problem of Time are elaborated in 
+\refapp{appen:problemoftime}. The issue is that quantum 
+states of space-time (and matter in it) do not seem to undergo any time evolution, as dictated by 
+the constraints of the theory.
 
+In quantum cosmology, the universe is described by a wave function whose dynamics are governed 
+by the Wheeler-DeWitt equation, the quantized Hamiltonian constraint of the system. Due to inherent 
+mathematical ambiguities in the Wheeler-DeWitt equation, it is often unreliable to extend beyond the 
+semiclassical approximation~\cite{cooke2010qcintro}. The wave function in this approximation is provided 
+by the WKB wave function, \(\Psi_{\mathrm{WKB}} 
+\approx \exp\left[iS_0/\hbar\right]\psi(\{x_n\})\); where \(S_0\) is a function which obeys the classical 
+Hamilton-Jacobi equation for the gravitational field~\cite{gielen2023quantum}. Then, we substitute this 
+WKB ansatz into the Wheeler-DeWitt equation and applying the relevant approximations leads to the 
+time-dependent Schr\"odinger equation. The work of Briggs et al.~\cite{briggsBraun2004, briggs2001derivation} 
+has proposed a similar solution to the problem, but from an atomic and molecular physics perspective, 
+and their approach is discussed in \refchap{chap:briggs_rost_semiclassic} and \refchap{chap:braun_briggs_jaynes}.
+Their approach derives time-dependence by partitioning the entire system into a ``quantum'' system and a classical 
+environment, with the latter governed by the Hamilton-Jacobi equation. Time-dependence is introduced into the 
+description as a classical parameter.
 
-The unification of Quantum Mechanics and General Relativity has long been
-the Holy Grail of physics since their development.
-Despite extensive research, no satisfactory theory has yet been
-proposed to solve this challenge. General relativity states that a physical
-theory should not depend on background structures.
-However, conventional quantization methods often introduce background structures,
-such as imposing the canonical commutation relations on constant-time hypersurface. The Hamiltonian of a
-generally covariant theory, such as general relativity, is constrained to
-vanish in the absence of boundaries~\cite{gielen2023quantum}. Attempts to quantize gravity using 
-canonical quantization lead to a Hamiltonian constraint, known as the Wheeler-DeWitt equation
-(i.e., \(\oper{H} \ketPsi = 0\)). This leads to an infamous problem known as
-``The problem of time'' in the canonical approach to quantum gravity
-[Refer to \refapp{appen:problemoftime} for more details]. The issue is that
-quantum states of space-time (and matter in it) do not seem to undergo any time evolution, as
-dictated by the constraints of the theory. 
+On the other hand, for locally relativistic quantum field theories, it has been demonstrated that the 
+long-range Coulomb field causes the total ``charge" operator to commute with all quasi-local observables, 
+implying a superselection rule for charges~\cite{Strocchi:1974xh} [Refer to \refapp{appen:superselection} 
+for further details]. Analogously, due to the coupling of energy with the long-range gravitational 
+field, there is speculation about the existence of a superselection rule for energy~\cite{page1983evolution}. 
+This implies that only operators that commute with the Hamiltonian can be observable. However, such 
+observables are stationary (i.e., constants of motion). How can we observe time evolution if the 
+only observables we can observe are stationary, i.e., they do not evolve at all?
 
-In quantum cosmology, the universe is described by a wave function whose dynamics is governed by the Wheeler-DeWitt equation, the quantized Hamiltonian constraint of the system.
-Due to inherent mathematical ambiguities in the Wheeler-DeWitt equation, it is often unreliable
-to extend beyond the semi-classical approximation~\cite{cooke2010qcintro}. The wave function
-in this approximation is provided by the WKB wave function, \(\Psi_{\mathrm{WKB}} 
-\approx \exp\left[iS_0/\hbar\right]\psi(\{x_n\})\); where \(S_0\) is 
-a function which obeys the classical Hamilton-Jacobi equation for the gravitational
-field~\cite{gielen2023quantum}. Then we substitute this WKB ansatz into the
-Wheeler-DeWitt equation and applying the relevant approximations leads to the time-dependent 
-Schr\"odinger equation.  The work of Briggs et.al.  ~\cite{briggsBraun2004, briggs2001derivation} 
-have proposed a similar solution to the problem, but from an atomic and molecular
-physics perspective, and their approach is discussed in~\refchap{chap:briggs_rost_semiclassic}.
+One can argue and ask why one should consider time as a fundamental property; rather, what if 
+it's an emergent property of a more fundamental theory of the universe? The above arguments and 
+problems discussed hint toward a more fundamental nature of time. One approach is to argue that 
+the problem of time is a manifestation of background independence rather than the ``timelessness" 
+of quantum mechanics, and means that physical states do not evolve relative to an external background 
+time. Instead, time evolution must be extracted relationally, by selecting certain quantized degrees 
+of freedom to serve as an internal timekeeper, i.e., pick some quantized degrees of freedom to serve 
+as an internal time.
 
-On the other hand, for locally relativistic quantum field theories, it has been demonstrated
-that the long-range Coulomb field causes the total ``charge'' operator to commute
-with all quasi-local observables, implying a superselection rule for charges~\cite{Strocchi:1974xh} 
-[Refer to \refapp{appen:superselection} for further details].
-Analogously, due to the coupling of energy with the long-range gravitational field, 
-there is speculation about the existence of a superselection rule for energy~\cite{page1983evolution}.
-This implies that only operators that commute
-with the Hamiltonian can be observable. However, such observables are stationary
-(i.e., constants of motion). How can we observe time evolution if the only observables
-we can observe are stationary i.e., they do not evolve at all?
+Even in our everyday ``classical" world, we never directly measure time; instead, we measure the 
+position or angular displacement of a pendulum or a dial and use that measurement to \emph{define} a 
+unit of time. The use of relational time in Quantum Mechanics is a framework in which one promotes 
+all variables to quantum operators and later chooses one of the variables to operate like a    
+``clock" degree of freedom.
 
-The problem of time is a manifestation of background independence rather than the
-``timelessness'' of quantum mechanics, and means that physical states do not evolve
-relative to an external background time. Instead, time evolution must be extracted relationally, 
-by selecting certain quantized degrees of freedom to serve as an internal timekeeper, 
-i.e., pick some quantized degrees of freedom to serve as an internal time. 
-\texttt{Quantum mechanics typically depicts physical reality as a vector in Hilbert space at a distinct point in time, 
-with Schrödinger's equation governing its progression. This equation features an externally imposed time parameter, 
-which can be problematic if the universe is viewed as a quantum mechanical system. This is because there shouldn't be 
-any external time in such a system.}
-Even in our everyday ``classical' world, we never directly measure time; instead, we measure the
-position or angular displacement of a pendulum or a dial and use that measurement to \emph{define} a
-unit of time. The use of relational time in Quantum
-Mechanics is a framework in which one promotes all variables to quantum operators and
-later chooses one of the variables to operate like a ``clock'' degree of freedom.
+Apart from the semiclassical approaches employed in quantum cosmology, various other avenues 
+exist to address the time problem from a purely quantum mechanical standpoint~\cite{hohn2021trinity}. 
+One such approach is the "Page-Wootters Formalism" (abbreviated P\&W formalism), which defines 
+relational dynamics in terms of conditional probabilities for the clock and evolving degrees of 
+freedom~\cite{page1983evolution}. To date, no one has successfully tackled the problem involving 
+general interaction potentials [with the exception of~\cite{Smith:2017pwx} to a certain extent]. 
+The original formulation due to P\&W is no exception, as it also neglects the interaction between 
+the environment and the system. However, recent work by Gemsheim and Rost has developed a relational 
+formalism based on the P\&W formalism, which now includes the environment-system 
+interaction~\cite{Gemsheim:2023izg}. This advancement provides the necessary tools to study 
+relational dynamics for a general system-environment setting. Their approach is discussed in 
+detail in \refchap{chap:sebgem_Rel}.
 
-Apart from the semi-classical approaches employed in quantum cosmology, various other 
-avenues exist to address the time problem from a purely quantum mechanical standpoint~\cite{hohn2021trinity}. 
-One such approach is the ``Page-Wootters Formalism'' (abbreviated P\&W formalism), 
-which defines relational dynamics in terms of conditional probabilities for the clock and 
-evolving degrees of freedom~\cite{page1983evolution}. To date, no one has successfully tackled 
-the problem involving general interaction potentials [with the exception of~\cite{Smith:2017pwx} 
-to a certain extent]. The original formulation due to P\&W is no exception, as it also neglects 
-the interaction between the environment and the system. However, recent work by Gemsheim and Rost 
-has developed a relational formalism based on the P\&W formalism, which now includes the 
-environment-system interaction~\cite{Gemsheim:2023izg}. This advancement provides the necessary 
-tools to study relational dynamics for a general system-environment setting. Their approach is 
-discussed in detail in~\refchap{chap:sebgem_Rel}.
+The primary objective of this work is to investigate the transition from a quantum mechanical 
+relational description to the semiclassical limit. The concept of a ``large" or semiclassical 
+environment will be further elucidated in subsequent chapters, specifically in 
+\refchap{chap:braun_briggs_jaynes} and \refchap{chap:briggs_rost_semiclassic}. 
+In \refchap{chap:braun_briggs_jaynes}, we will discuss and outline the conditions 
+under which the environment can be treated classically. Moreover, this chapter will 
+also delve into the emergence of time dependence within the context of our model system
+, employing coherent states.
 
+Coherent states hold a significant position in quantum mechanics due to their close 
+resemblance to classical states. Thus, it is not surprising that coherent states 
+emerged as the most suitable candidates for representing clock states within our 
+relational description. This chapter will explore their properties and relevance 
+to our model.
 
-The primary objective of this work is to study the transition from quantum mechanical approach 
-to semi-classics, in the limit of a  large environment
-\footnote{The notion of a ``large" environment will be elaborated upon
-in subsequent chapters.}
-
-
-\texttt{\cite{Mendes_2019} Has a very nice introduction to the approach, especially the 
-Page1 column 2, first paragraph}
+Finally, \refchap{chap5:RDQ_JCM_chap} will delve into the quantum relational 
+description of our model system, building upon the methods outlined in 
+\refchap{chap:sebgem_Rel}, and will address the transition to the semiclassical 
+limits as discussed in \refchap{chap:braun_briggs_jaynes}
 
 \newpage

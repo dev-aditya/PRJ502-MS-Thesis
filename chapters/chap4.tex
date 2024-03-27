@@ -11,10 +11,10 @@ in~\cite{braun2004classical}.
 To get the time-dependence, we start by considerig a time-independent hamiltonian of an interacting quantum system,
 with a Hamiltonian given as
 \begin{equation}
-    H = H_s(p, x) + H_F(P, Q) + H_I(x, Q). 
+    \oper{H} = \oper{H}_s(\oper{p}, \oper{x}) + \oper{H}_F(\oper{Q}, \oper{P}) + \oper{H}_I(\oper{x}, \oper{Q}). 
 \end{equation}
-where $(x, p)$ and $(Q, P)$ are (position, momentum) operator for system and boson field, respectively. 
-Also, $H_s$ is the Hamiltonian of the atomic system, $H_F$ is the field hamiltonian, and $H_I$ is the interaction hamiltonian. 
+where $(\oper{x}, \oper{p})$ and $(\oper{Q}, \oper{P})$ are (position, momentum) operator for system and boson field, respectively. 
+Also, $\oper{H}_s$ is the Hamiltonian of the atomic system, $\oper{H}_F$ is the field hamiltonian, and $\oper{H}_I$ is the interaction hamiltonian. 
 The boson field hamiltonian will be takes a sum over field modes, with hamiltonian given as 
 \begin{equation}
     H_F(P, Q) = \sum_{k} \frac{1}{2}\left(P_k ^2 + \omega_k^2 Q_k^2\right)
@@ -23,7 +23,7 @@ The boson field hamiltonian will be takes a sum over field modes, with hamiltoni
 We write the above Hamiltonian in terms of creating and annihilation operators
 \begin{equation}
     \label{eq:class_jcm_eq1}
-    H = \sum_i \epsilon_i \oper{c}^\dagger _i \oper{c}_i + \sum_k \hbar \omega_k \left(\oper{a}^\dagger _k \oper{a}_k 
+    \oper{H} = \sum_i \epsilon_i \oper{c}^\dagger _i \oper{c}_i + \sum_k \hbar \omega_k \left(\oper{a}^\dagger _k \oper{a}_k 
     + \frac{1}{2}\right) + \hbar\sum_k  g_{jk}^k \oper{c}^\dagger _i \oper{c}_i\left(\oper{a}^\dagger _k + \oper{a}_k \right).
 \end{equation}
 where $c_i$ and $\oper{c}^\dagger _i$ are the annihilation and creation atomic operators for the system, 
@@ -33,7 +33,7 @@ A special case of the above Hamiltonian is when we take a two level atom (or a s
 interacting with a single mode of the electromagnetic field. \refeq{eq:class_jcm_eq1} then reduces to
 \begin{eqnarray}
     \label{eq:class_jcm_eq2}
-    H = \hbar \omega_0 \oper{\sigma}_z + \hbar \omega \left(\oper{a}^\dagger \oper{a} + \frac{1}{2}\right) 
+    H = {\hbar \omega_0}\oper{\sigma}_z + \hbar \omega \left(\oper{a}^\dagger \oper{a} + \frac{1}{2}\right) 
     + \hbar g \oper{\sigma}_x\left(a + a^\dagger\right),
 \end{eqnarray}
 where $\sigma_z$ and $\sigma_x$ are the Pauli matrices. 
@@ -256,7 +256,7 @@ Consequently, the position representation fails to offer a global notion of time
 Next section will illustrates how this limitation can be addressed by utilizing 
 a coherent state representation of the field state.
 
-\section{Coherent State Derivation of TDSE}
+\section{Coherent State Derivation of TDSE\label{sec:sec:class_jcm_sec2}}
 In quantum optics, coherent states hold a special place. Representing minimal uncertainty 
 in both position $(Q)$ and momentum $(P)$ of the field mode, these states exhibit classical 
 behavior. It's therefore unsurprising that coherent states play a crucial role in deriving 
@@ -308,17 +308,6 @@ As before, we will consider \( \exp\left(-\abs*{\alpha}^2/2\right)\chi(\alpha^*)
 describe the classical degree of freedom, while \(\psi(\alpha^*)\) will represent the 
 quantum system without backreaction to the classical degree of freedom.
 
-Another important property of the conherent state is it's overlap with the  photon number state, 
-which is given as \( \braket*{n}{\alpha} = \exp\left(-\abs*{\alpha}/2\right) (\alpha^*)^n/\sqrt{n!} \). 
-In the limit of large photon number \(n\), it's easy to see that only those coherent states 
-\(\ket{\alpha}\) with 
-\begin{equation}
-    \label{eq:class_jcm_eq22}
-    \abs*{\alpha}^2 = n
-\end{equation}
-will contribute significantly to the number state \(\ket{n}\).
-
-
 Another significant property of coherent states is their overlap with photon number states, expressed as 
 \( \braket*{n}{\alpha} = \exp\left(-\abs*{\alpha}/2\right) (\alpha^*)^n/\sqrt{n!} \). 
 When considering a large photon number $n$, it becomes evident that only coherent states 
@@ -330,17 +319,17 @@ $\ket{\alpha}$ satisfying the condition:
 contribute significantly to the corresponding number state \(\ket{n}\). 
 With \refeq{eq:class_jcm_eq21} in mind, the TISE with $H_F$ and $H_I$ from 
 \refeq{eq:class_jcm_eq20} now reads
-\begin{eqnarray}
+\begin{align}
     \label{eq:class_jcm_eq23}
-    \bra*{\alpha}(H - E)\ket*{\Psi} = \chi(\alpha^*)
+    \bra*{\alpha}(H - E)\ket*{\Psi} &= \chi(\alpha^*)
     \left[H_s + \hbar g \left(\alpha ^* + 
     \frac{\chi'(\alpha^*)}{\chi(\alpha^*)} + \dfrac{\partial}{\partial \alpha^*}
     \right)\sigma_x + \hbar \omega \alpha^* \dfrac{\partial}{\partial \alpha^*}\right] 
     \ket*{\psi(\alpha^*)} \nonumber \\
-    + \ket*{\psi(\alpha^*)}
+    &+ \ket*{\psi(\alpha^*)}
     \left[\hbar \omega \left(
         \alpha^* \dfrac{\partial}{\partial \alpha^*} + \frac{1}{2}\right) - E\right]\chi(\alpha^*) = 0. \quad \qquad
-\end{eqnarray}
+\end{align}
 
 The above equation corresponds to \refeq{eq:class_jcm_eqA} of position space approach. 
 Just as we did in \refsec{sec:class_jcm_sec1}, we chose \(\chi\) to be an eigenstate of the field 

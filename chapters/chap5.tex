@@ -1,36 +1,49 @@
 \chapter{Quantum Relational Dynamics of JC Model
 \label{chap5:RDQ_JCM_chap}}
 
-In \refchap{chap:braun_briggs_jaynes}, we delved into the semi-classical approach to derive the Time-Dependent Schrödinger Equation (TDSE) governing the Jaynes-Cummings model. 
-This method assumes a semiclassical (WKB-like) wave function for the field mode. However, 
-this approach inherits the concept of ``time" as a purely classical parameter, thereby compromising its deeper and more fundamental nature.
+In \refchap{chap:braun_briggs_jaynes}, we delved into the semi-classical approach to derive the Time-Dependent Schrödinger 
+Equation (TDSE) governing the Jaynes-Cummings model. 
+In \refsec{sec:class_jcm_sec1} we derived the TDSE using the position space representatian, 
+by assuming a semiclassical (WKB-like) wave function for the field mode and then 
+we presented a alternative derivation, in \refsec{sec:sec:class_jcm_sec2} making use of coherent representatian.
+However, 
+both these approaches inherits the concept of ``time" as a purely classical parameter, 
+thereby compromising its deeper and more fundamental nature.
 
-In contrast, in \ref{chap:sebgem_Rel}, we presented a purely quantum framework to describe the dynamics of the general interacting system. Here, ``time" 
-emerges as a symmetry parameter stemming from the principle of global invariance of the global energy 
-eigenstate of total Hamiltonian.
+In contrast, in \refchap{chap:sebgem_Rel}, we presented a purely quantum framework to 
+describe the dynamics of the general interacting system. Here, ``time" emerges as a 
+symmetry parameter stemming from the principle of global invariance of the global 
+energy eigenstate of the total Hamiltonian. A natural question arises: Are both of 
+these totally different-looking approaches to describe the dynamics of the system 
+equivalent? If yes, then in what limit? In this chapter, we aim to address these questions.
 
-This chapter explores the Jaynes-Cummings model from the perspective of Quantum Relational Dynamics. 
+We start by adopting the Jaynes-Cummings Hamiltonian as our model system. We then 
+explores the Jaynes-Cummings model from the perspective of Quantum Relational Dynamics. 
 We aim to scrutinize the transition from a purely quantum system to semi-classical regimes, 
 as previously discussed in \refchap{chap:braun_briggs_jaynes}, and to juxtapose the dynamics as 
 characterized by the two distinct approaches. We demonstrate that, under appropriate limits
-(consistent with the semi-classical treatment), the two approaches yield identical results. 
+(consistent with the semi-classical treatment in previous Chapters), the two approaches yield identical results. 
 %Interestingly, the analysis also hints at the presence of a superselection rule.
 
 We assume our Hamiltonian to be of the form
 
+\begin{mdframed}
 \begin{eqnarray}
         \label{eq:chap5_JCM_Hamiltonian}
         \oper{H} = \frac{\hbar \omega_0}{2} \oper{\sigma}_z + \hbar \omega \left(\oper{a}^\dagger \oper{a} + \frac{1}{2}\right) 
         + \hbar g \oper{\sigma}_x\left(\oper{a} + \oper{a}^\dagger\right). 
 \end{eqnarray}
+\end{mdframed}
 
 
 Under dipole-approximation and rotating-wave approximation~\cite[Chap 2]{Bina_JC_tutorial} the Hamiltonian can be written as
+\begin{mdframed}
 \begin{equation}
         \label{eq:chap5_JCM_Hamiltonian_RWA}
         \oper{H} = \frac{\hbar \omega_0}{2} \oper{\sigma}_z + \hbar \omega \left(\oper{a}^\dagger \oper{a} + \frac{1}{2}\right) 
         + \hbar g \left(\oper{\sigma}_+ \oper{a} + \oper{\sigma}_- \oper{a}^\dagger\right).
 \end{equation}
+\end{mdframed}
 
 \section[Exact Energy Eigenstate of JC-Hamiltonian]{Exact Energy Eigenstate of JC-Hamiltonian (resonant case)}
 
@@ -66,13 +79,14 @@ Once you diagonalize the Hamiltonian, the eigenvalues and eigenvectors of the JC
 and the corresponding eigenvectors are
 \begin{equation}
         \label{eq:chap5_JCM_eigenvectors}
-        \ket*{\pm, n} = \frac{1}{\sqrt{2}} \left(\ket*{g, n} \pm \ket*{e, n-1}\right).
+        \ket*{\psi_{n,\pm}} := \frac{1}{\sqrt{2}} 
+     \left( \ket*{+, n - 1} \pm \ket*{-, n} \right).
 \end{equation}
-\section{Unitary Evolution operator for semiclassical JC Hamiltonian}
+
 We discussed the coherent state-based semiclassical approximation in Chapter 
 \ref{chap:braun_briggs_jaynes}, where the final result simply involved replacing 
 the field operators, i.e., \( \oper{a} \) and \( \oper{a}^\dagger \), with their 
-expectation values. Following a similar approach, we assume the semiclassical form 
+expectation values. Following a similar approach, we could assume the semiclassical form 
 of the Hamiltonian in Equation \ref{eq:chap5_JCM_Hamiltonian_resonance} as
 
 \begin{equation}
@@ -85,29 +99,253 @@ of the Hamiltonian in Equation \ref{eq:chap5_JCM_Hamiltonian_resonance} as
     \end{aligned}
 \end{equation}
 where \(\langle a(t) \rangle = \alpha e^{-i\omega t}\). This leads to the evolution operator being expressed as
+%\begin{align}
+%        \tilde{U}(t) &= 
+%                \cos(\Omega t) \left(e^{-i t \omega \frac{1}{2}}\ket{+}\bra{+} + 
+%                e^{i t \omega \frac{1}{2}}\ket{-}\bra{-} \right)  \nonumber\\
+%                &- i \sin(\Omega t)
+%                 \left( e^{-i t \omega \frac{1}{2}}\ket{+}\bra{-}
+%                + e^{i t \omega \frac{1}{2}}\ket{-}\bra{+}\right)
+%\end{align}
 \begin{align}
         \tilde{U}(t) &= 
-                \cos(\Omega t) \left(e^{-i t \omega \frac{1}{2}}\ket{+}\bra{+} + 
-                e^{i t \omega \frac{1}{2}}\ket{-}\bra{-} \right)  \nonumber\\
+                \cos(\Omega t) \left(\ket{+}\bra{+} + 
+                \ket{-}\bra{-} \right)  \nonumber\\
                 &- i \sin(\Omega t)
-                 \left( e^{-i t \omega \frac{1}{2}}\ket{+}\bra{-}
-                + e^{i t \omega \frac{1}{2}}\ket{-}\bra{+}\right)
+                 \left( \ket{+}\bra{-}
+                +\ket{-}\bra{+}\right)
 \end{align}
-where \(\Omega = {g\alpha}\). We justify the 
-use of~\refeq{eq:chap5_JCM_Hamiltonian_semi} as our semi-classical Hamiltonian in~\refapp{appen:chap5_JC_calculations} . 
+where \(\Omega = {g\alpha}\). We will see in next section that the semi-classical limit can be made more rigorous
+under the limits discussed \refchap{chap:braun_briggs_jaynes}, i.e., in the limit of 
+large photon number and weak ``back-coupling'' from the quantum system.
+
+\section{Semiclassical JC-Hamiltonain  in Large Amplitude and Weak Interaction Limit}
+
+The emergence of the semi-classical model occurs when fields are in
+coherent states. However, it's not straightforward to recover the 
+semi-classical behavior by merely substituting coherent states, (as we did in \refeq{eq:chap5_JCM_Hamiltonian_semi}). 
+To elaborate, we can expect this to happen under specific conditions~\cite{semiclassical_limit_JC_PRL}:
+\begin{itemize}
+    \item \textbf{Large Amplitude of Coherent State}: When the amplitude of the coherent state is substantial, 
+    the quantum fluctuations (i.e. the influence of atom onto the field in our model!) become less significant, 
+    resembling classical behavior.
+    \item \textbf{Weak Atom-Mode Coupling}: If the coupling between the atom and the mode (field) is weak, 
+    the quantum effects become less pronounced, favoring semi-classical behavior.
+\end{itemize}
+Here, we will attempt to make this idea more concrete by considering the 
+limit where $g = \frac{\Omega}{|\alpha|}$, and $|\alpha| \rightarrow \infty$, where 
+$\Omega$ is a constant. In the following discussion, we will argue, albeit not in a particularly rigorous manner, that we can regain a unitary evolution on the atom in this limit. Let's first recall the form of coherent states:
+\begin{equation}
+    \ket{\alpha} = e^{-\frac{1}{2}|\alpha|^2} \sum_{n=0}^{\infty} \frac{\alpha^n}{\sqrt{n!}} \ket{n}
+\end{equation}
+    
+One particular property of coherent states is that the particle number is Poisson distributed. In other words, the probability to find $n$ photons in the mode is given by:
+\begin{equation}
+    p_n = \abs*{\bra*{n}\ket*{\alpha}}^2 = \frac{e^{-\gamma} \gamma^n}{n!}, \text{ where } \gamma = |\alpha|^2
+\end{equation}
+Our objective is to understand the evolution of the atom when it interacts with a coherent state. 
+Therefore, we aim to compute the reduced density operator of the atom, which is given by:
+
+\begin{align}
+\oper{\rho}_{\text{atom}}(t) &= 
+\text{Tr}_{\text{mode}} \left( U(t)[\oper{\rho} \otimes \ket{\alpha}\bra{\alpha}]U^\dagger(t) \right) \nonumber \\
+ &= \sum_n e^{-\abs{\alpha}^2} \abs{\alpha}^{2n} \frac{V_g(n)\oper{\rho} V_g^\dagger(n)}{n!},
+\end{align}
+
+where
+\begin{align}
+        \label{eq:appen_JCM_V_g}
+    V_g (n) &=e^{-it\omega\frac{1}{2}}  \cos(tg\sqrt{n + 1})\ket{+}\bra{+}\\
+&+ e^{it\omega\frac{1}{2}} \cos(tg\sqrt{n})\ket{-}\bra{-}\\
+&- ie^{-it\omega\frac{1}{2}} \sin(tg\sqrt{n + 1}) \frac{\alpha}{\sqrt{n + 1}} \ket{+}\bra{-}\\
+&- ie^{-t\omega\frac{1}{2}} \sin(tg\sqrt{n}) \frac{\sqrt{n}}{\alpha} \ket{-}\bra{+}.
+\end{align}
+Let's discuss a few key points. Firstly, as \( x \) increases, the function 
+\( \sqrt{x} \) becomes flatter (its derivative approaches zero). Secondly, 
+for large values of \( |\alpha| \), the Poisson distribution is approximately 
+equivalent to the normal distribution, 
+\begin{equation}
+f(x) = \frac{1}{\sqrt{2\pi\sigma^2}} e^{-\frac{(x-\mu)^2}{2\sigma^2}}.
+\end{equation}
+
+In this context, the approximate normal distribution has a mean of \( |\alpha|^2 \) and a 
+standard deviation of \( |\alpha| \). This implies that the distribution's width increases 
+at a slower rate than the mean. Consequently, for large \( |\alpha| \), it is plausible 
+that the square root remains nearly constant within the region where the Poisson/normal 
+distribution is significant. Considering these observations, the subsequent reasoning 
+for approximation might be easier to grasp.
+
+\begin{equation}
+\oper{\rho}_{\text{atom}}(t) = \sum_{n} e^{-|\alpha|^2} \frac{|\alpha|^{2n}}{n!} V(t, n) \oper{\rho} V(t, n)^{\dagger}
+\end{equation}
+By approximating the weighted sum over the Poisson distribution with the integral weighted by 
+the normal distribution \( f_{|\alpha|^2, |\alpha|}(x) \), having a mean (\( \mu = |\alpha|^2 \)) 
+and standard deviation (\( \sigma = |\alpha| \)), we obtain
+
+\begin{equation}
+    \oper{\rho}_{\text{atom}}(t)\approx \int f_{|\alpha|^2, |\alpha|}(x) V(t, x) \oper{\rho} V(t, x)^{\dagger} dx
+\end{equation}
+We cut away the tails of the integral at (\( s \)) standard deviations
+
+\begin{equation}
+    \oper{\rho}_{\text{atom}}(t)\approx \int_{|\alpha|^2 - s|\alpha|}^{|\alpha|^2 + s|\alpha|} f_{|\alpha|^2, |\alpha|}(x) V(t, x) \oper{\rho} V(t, x)^{\dagger} dx
+\end{equation}
+Change of variables (\( x \to x|\alpha| + |\alpha|^2 \))
+
+\begin{equation}
+    \label{eq:appen_JCM_rho_atom_t}
+    \begin{aligned}
+        \oper{\rho}_{\text{atom}}(t)= \int_{-s}^{s} f_{0,1}(x) V(x|\alpha| + |\alpha|^2) 
+    \oper{\rho} V(x|\alpha| + |\alpha|^2)^{\dagger} dx
+    \end{aligned}
+\end{equation}
+Now we put in our assumption that \(g = \Omega / \abs*{\alpha}\). Let's assume, 
+for simplicity, that \(\alpha = \abs*{\alpha}\), i.e., it's real. Then \refeq{eq:appen_JCM_V_g} becomes
+\begin{align}
+    V_{\Omega/|\alpha|}(x|\alpha| + |\alpha|^2) 
+    &= e^{-i t \omega \frac{1}{2}}\cos \left( t\Omega \sqrt{1 + \frac{x}{\abs*{\alpha}}+ \frac{1}{\abs*{\alpha}^2}} \right) \ket{+}\bra{+} \nonumber \\
+    &+ e^{i t \omega \frac{1}{2} }\cos \left( t\Omega \sqrt{1 + \frac{x}{\abs*{\alpha}}} \right) \ket{-}\bra{-} \nonumber \\
+    &- i e^{-i t \omega \frac{1}{2} }\sin \left( t\Omega \sqrt{1 + \frac{x}{\abs*{\alpha}} + \frac{1}{\abs*{\alpha}^2}} \right) \frac{1}{\sqrt{1 + \frac{x}{\abs*{\alpha}} + 1}} \ket{+}\bra{-} \nonumber \\
+    &- i e^{i t \omega \frac{1}{2}} \sin \left( t\Omega \sqrt{1 + \frac{x}{\abs*{\alpha}}} \right) \sqrt{1 + \frac{x}{\abs*{\alpha}}} \ket{-}\bra{+}. \nonumber
+\end{align}
+Since, \(-s < x < s\), with \(s\) constant, in the limit of \(|\alpha| \to \infty\),
+\begin{align}
+        \label{eq:appen_JCM_V_g_limit}
+    \tilde{U}(t) &:= \lim_{\abs*{\alpha}^2 \to \infty} 
+    V_{\Omega/|\alpha|}(x|\alpha| + |\alpha|^2)  \nonumber \\
+    &= \cos(\Omega t) \left(e^{-i t \omega \frac{1}{2}}\ket{+}\bra{+} + 
+    e^{i t \omega \frac{1}{2}}\ket{-}\bra{-} \right)  \nonumber \\
+    &- i \sin(\Omega t)
+     \left( e^{-i t \omega \frac{1}{2}}\ket{+}\bra{-}
+    + e^{i t \omega \frac{1}{2}}\ket{-}\bra{+}\right)  \nonumber \\
+\end{align}
+Inserting this limit back into \refeq{eq:appen_JCM_rho_atom_t}, we obtain
+\begin{align}
+    \oper{\rho}_{\text{atom}}(t) &\approx \int_{-s}^{s} f_{0,1}(x) \tilde{U}(t) \oper{\rho} \tilde{U}(t)^{\dagger} dx \nonumber\\
+        &\approx \tilde{U}(t) \oper{\rho} \tilde{U}(t)^{\dagger}.
+\end{align}
+
+Hence in the limit of large \(\alpha\) and weak interaction, we get the 
+semiclassical limit. The final form of the evolution operator is given in \refeq{eq:appen_JCM_V_g_limit}, i.e., 
+\begin{align}
+    \label{eq:appen_JCM_V_g_limit2}
+    \tilde{U}(t) 
+    &= \cos(\Omega t) \left(e^{-i t \omega \frac{1}{2}}\ket{+}\bra{+} + 
+    e^{i t \omega \frac{1}{2}}\ket{-}\bra{-} \right)  \nonumber \\
+    &- i \sin(\Omega t)
+     \left( e^{-i t \omega \frac{1}{2}}\ket{+}\bra{-}
+    + e^{i t \omega \frac{1}{2}}\ket{-}\bra{+}\right) 
+\end{align}
+
+\section{Numerical Results: Comparing Quantum Relational Dynamics with Semi-Classical Dynamics}
+
+\subsection*{JC-Model: Non Rotating Wave Approximation} 
+\begin{figure}[!h]
+    \centering
+    \includegraphics{chap5/semi_vs_quant_linear.pdf}
+    \caption[Expectation Value Comparison for Semi-Classical and
+     Quantum Relational Dynamics]{Expectation Value Comparison 
+     for Semi-Classical and Quantum Relational Dynamics. The $N_{\mathrm{cutoff}}=1000$ is taken for above calculations.}
+     \label{fig:chap5_linear_semi_vs_quant}
+\end{figure}
+
+\reffig{fig:chap5_linear_semi_vs_quant} depict the expectation value of the operator  \(\oper{\sigma}_x + \oper{\sigma}_y\), 
+computed using the relational evolution described by the Hamiltonian in Equation \refeq{eq:chap5_JCM_Hamiltonian}., i.e., 
+\begin{eqnarray}
+    \label{eq:chap5_JCM_Hamiltonian_linear}
+    \oper{H} = \frac{\hbar \omega}{2} \oper{\sigma}_z + \hbar \omega \left(\oper{a}^\dagger \oper{a} + \frac{1}{2}\right) 
+    + \hbar \frac{ g}{\abs*{\alpha}} \oper{\sigma}_x\left(\oper{a} + \oper{a}^\dagger\right).
+\end{eqnarray}
+and the the semi-classical Hamiltonain as given in \refeq{eq:class_jcm_eq30}, i.e., 
+\begin{eqnarray}
+    \oper{H}_{\text{semi}} = \frac{\hbar\omega}{2} \oper{\sigma}_z 
+    + \hbar \frac{g}{\abs*{\alpha}} \oper{\sigma}_x\left( \alpha e^{-it\omega} + \alpha e^{it\omega} \right).
+\end{eqnarray}
+\begin{figure}[!h]
+    \centering
+    \includegraphics{chap5/overlap_average_linear.pdf}
+    \caption[Average $\abs*{\braket*{\psi_{rel}}{\psi_{semi}}}^2$ 
+    (\& variance $\abs*{\braket*{\psi_{rel}}{\psi_{semi}}}^2$)
+     v/s Global Eigen Energy]{The $N_{\mathrm{cutoff}}=1000$ is taken for above calculations.
+     The plots shows the average $\abs*{\braket*{\psi_{rel}}{\psi_{semi}}}^2$ and 
+     variance $\abs*{\braket*{\psi_{rel}}{\psi_{semi}}}^2$ over \([0, 4\pi]\) time domain 
+     v/s corresponding global eigenenergy.
+     Coupling \(g\abs*{\alpha}= \Omega\) for a fixed \(\Omega\)}
+     \label{fig:chap5_linear_overlap_avg}
+\end{figure}
+
+
+The clock (environment) quantum state, onto which the global eigenstate is projected 
+to extract the 
+quantum dynamics , 
+are takes to be the
+the coherent states \(\ket*{\alpha (t)}\), where \(\alpha(t) = \alpha e^{-i\omega t}\). The system's quantum state then one get according to \refeq{eq:nonint_sys_evol}, i.e.,  
+\begin{equation}
+    \ket*{\psi_{rel}(t)} = \mathcal{N} \innerGlob{\alpha(t)}{\Psi_{\mathrm{glob}}},
+    \mathcal{N} = \frac{1}{\sqrt{\lvert \lvert \innerGlob{\alpha(t)}{\Psi_{\mathrm{glob}}} \rvert \rvert^2}}
+\end{equation}
+where \(\ket*{\Psi_{E_{glob}}}\) is an eigenstate of \refeq{eq:chap5_JCM_Hamiltonian_linear}. 
+
+The initial state is taken as \(N\innerGlob{\alpha(t)}{\Psi_{E_{glob}}}\), where $N$ denotes normalization, for the semiclassical time evolution and plots are shown 
+for three different global energy eigenstates and a fixed \(E_c(\alpha^2) = \hbar \omega \abs*{\alpha}^2\). \reffig{fig:chap5_linear_semi_vs_quant} also shows the overlap \(\abs*{\braket*{\psi_{rel}}{\psi_{semi}}}\)
+for same time evolution.
+
+The parameters utilized for the numerical calculations are listed in \reftab{tab:numerical_values_linear} below.
+\begin{table}[ht]
+    \centering
+    \label{tab:numerical_values_linear}
+        \begin{tabular}{|c|c|c|c|c|}
+            \hline
+            Parameter & $g$ & $\omega$ & $N_{\text{cutoff}}$ & $\hbar$ \\
+            \hline
+            Value & $2\pi/100$ & $2.2\pi$ & $1000$ & $1$ \\
+            \hline
+        \end{tabular}
+    \caption{Parameters used for Numerical Results in \reffig{fig:chap5_linear_overlap_avg} and 
+    \reffig{fig:chap5_linear_semi_vs_quant}}
+\end{table}
+
+%As can be seen, the plots show that the average overlap is maximized for relational states 
+%where the energy eigenvalue of the global eigenket closely matches the energy of the semiclassical
+%conditional state \(E_c(\alpha^2) = \hbar \omega \bra*{\alpha}\oper{a}^\dagger \oper{a}\ket*{\alpha}
+%= \hbar \omega \abs*{\alpha^2}\) 
+
+\reffig{fig:chap5_linear_overlap_avg} illustrates the average and the 
+variance of the absolute value of overlap \(\abs*{\braket*{\psi_{rel}}{\psi_{semi}}}\) over one time period, 
+for three different values of \(E_c(\alpha^2)\) (depicted as red vertical lines in the plots). 
+
+\subsection*{JC-Model: Rotating Wave Approximation}
+
+Similar to the non-rotating wave approximation, we compare the expectation values of the operator
+\(\oper{\sigma}_x + \oper{\sigma}_y\) in \reffig{fig:chap5_JCM_semi_vs_quant}, as described by the Hamiltonain in \refeq{eq:chap5_JCM_Hamiltonian_resonance}, i.e., 
+\begin{eqnarray}
+    \oper{H} = \frac{\hbar \omega}{2} \oper{\sigma}_z + \hbar \omega\oper{a}^\dagger \oper{a}
+    + \hbar g \left(\oper{\sigma}_+ \oper{a} + \oper{\sigma}_- \oper{a}^\dagger\right).
+\end{eqnarray}
+and the semi-classical unitary evolution operator as given in \refeq{eq:appen_JCM_V_g_limit2}, i.e.,
+\begin{eqnarray}
+    \tilde{U}(t) 
+    &= \cos(\Omega t) \left(e^{-i t \omega \frac{1}{2}}\ket{+}\bra{+} + 
+    e^{i t \omega \frac{1}{2}}\ket{-}\bra{-} \right)  \nonumber \\
+    &- i \sin(\Omega t)
+     \left( e^{-i t \omega \frac{1}{2}}\ket{+}\bra{-}
+    + e^{i t \omega \frac{1}{2}}\ket{-}\bra{+}\right) 
+\end{eqnarray}
+
+
+
 
 \begin{figure}[!h]
-        \label{fig:chap5_JCM_semi_vs_quant}
         \centering
-        \includegraphics{chap5/semi_vs_quant.pdf}
+        \includegraphics{chap5/semi_vs_quant_JC.pdf}
         \caption[Expectation Value Comparison for Semi-Classical and
          Quantum Relational Dynamics]{Expectation Value Comparison 
          for Semi-Classical and Quantum Relational Dynamics. The $N_{\mathrm{cutoff}}=1000$ is taken for above calculations.}
+         \label{fig:chap5_JCM_semi_vs_quant}
 \end{figure}
 \begin{figure}[!h]
-        \label{fig:chap5_JCM_overlap_avg}
         \centering
-        \includegraphics{chap5/overlap_average.pdf}
+        \includegraphics{chap5/overlap_average_JC.pdf}
         \caption[Average $\abs*{\braket*{\psi_{rel}}{\psi_{semi}}}^2$ 
         (\& variance $\abs*{\braket*{\psi_{rel}}{\psi_{semi}}}^2$)
          v/s Global Eigen Energy]{The $N_{\mathrm{cutoff}}=1000$ is taken for above calculations.
@@ -115,40 +353,30 @@ use of~\refeq{eq:chap5_JCM_Hamiltonian_semi} as our semi-classical Hamiltonian i
          variance $\abs*{\braket*{\psi_{rel}}{\psi_{semi}}}^2$ over \([0, 4\pi]\) time domain 
          v/s corresponding global eigenenergy.
          Coupling \(g = \Omega / \abs*{\alpha}\) for a fixed \(\Omega\)}
+         \label{fig:chap5_JCM_overlap_avg}
 \end{figure}
 
-In \reffig{fig:chap5_JCM_semi_vs_quant}, we compare the expectation values of the operator 
-\(\oper{\sigma}_x + \oper{\sigma}_y\)  for three different global energy eigenstates at a fixed 
-\(E_c(\alpha^2) = \hbar \omega \abs*{\alpha}^2\). The initial state is \(N\innerGlob{\alpha}{\Psi_{E_{glob}}}\), where $N$ denotes normalization, 
-for the semiclassical time evolution. We observe that both semiclassical and quantum relational dynamics exhibit 
-good agreement for values of $E_{glob}$​ close to $E_c$​, indicating a scenario where ``all" the energy of the system 
-is carried by the environment.
+Similar to the non-rotating wave approximation, we compute the average and the 
+variance of the absolute value of overlap \(\abs*{\braket*{\psi_{rel}}{\psi_{semi}}}\) over one time period, 
+for three different values of \(E_c(\alpha^2)\) (depicted as red vertical lines in the plots)
+in \reffig{fig:chap5_JCM_overlap_avg}.
 
-Furthermore, \reffig{fig:chap5_JCM_overlap_avg} illustrates the average of the overlap 
-\(\abs*{\braket*{\psi_{rel}}{\psi_{semi}}}^2\) 
- and its variance over the time domain 
- \([0, 4\pi]\) for three different values of $E_c(\alpha^2)$ (depicted as red vertical lines). 
-Here, \(\alpha^2 = \lvert n \rvert\). We observe that the average overlap is maximized for relational states 
-where the energy eigenvalue of the global eigenket closely matches the energy of the semiclassical 
-environment. Additionally, as we increase the average photon number, the agreement improves for 
+\begin{table}[ht]
+    \centering
+    \label{tab:numerical_values}
+        \begin{tabular}{|c|c|c|c|c|}
+            \hline
+            Parameter & $\Omega$ & $\omega$ & $N_{\text{cutoff}}$ & $\hbar$ \\
+            \hline
+            Value & $2\pi/100$ & $2.2\pi$ & $1000$ & $1$ \\
+            \hline
+        \end{tabular}
+    \caption{Parameters used for Numerical Results in \reffig{fig:chap5_JCM_semi_vs_quant} and 
+    \reffig{fig:fig:chap5_JCM_overlap_avg}}
+\end{table}
+Additionally, as we increase the average photon number, the agreement improves for 
 higher energy eigenstates. These numerical findings align with the conditions outlined for an 
 environment to be treated classically, as discussed in \refchap{chap:braun_briggs_jaynes} and 
 \refchap{chap:briggs_rost_semiclassic}.
-
-\begin{table}[ht]
-        \centering
-        \caption{Numerical Calculation Values}
-        \label{tab:numerical_values}
-        \begin{tabular}{|c|c|}
-                \hline
-                Parameter & Value \\
-                \hline
-                $\Omega$ & $2\pi/100$ \\
-                $\omega$ & $2\pi \times 1.1$ \\
-                $N_{\text{cutoff}}$ & $1000$ \\
-                $\hbar$ & $1$ \\
-                \hline
-        \end{tabular}
-\end{table}
 
 
