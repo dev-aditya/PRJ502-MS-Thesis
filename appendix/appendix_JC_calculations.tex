@@ -48,14 +48,11 @@ The eigenvalues and eigenvectors of this matrix can be expressed as
      \left( \ket*{+, n - 1} \pm \ket*{-, n} \right)
 \end{equation}
 and finally, the uniraty evolution operator can be expressed as
-\begin{eqnarray}
-    \begin{gathered}
-        U(t) = e^{-i t H/\hbar} = e^{\frac{1}{2} i t \omega } 
-        \ket*{-, 0}\bra*{-, 0} + \sum_{n=1}^{\infty} e^{-i t \omega (n - \frac{1}{2})} e^{-i t g \sqrt{n}} \ket*{\psi_{n,+}}\bra*{\psi_{n,+}} \\
-     + \sum_{n=1}^{\infty} e^{-i t \omega (n - \frac{1}{2})} e^{i t g \sqrt{n}} \ket*{\psi_{n,-}}\bra*{\psi_{n,-}} \\
-    = e^{\frac{1}{2} i t \omega }\ket*{-, 0}\bra*{-, 0} \\
-     + \sum_{n=1}^{\infty} e^{-i t \omega (n - \frac{1}{2})} \Big[ \cos(t g \sqrt{n}) \left( \ket*{+, n - 1}\bra*{+, n - 1} + \ket*{-, n}\bra*{-, n} \right) \\
-     - i \sin(t g \sqrt{n}) \left( \ket*{+, n - 1}\bra*{-, n} + \ket*{-, n}\bra*{+, n - 1} \right) \Big].
-    \end{gathered}
-\end{eqnarray}
-
+\begin{align}
+    U(t) = e^{-i t H/\hbar} 
+    &= e^{\frac{1}{2} i t \omega } \ket*{-, 0}\bra*{-, 0} + \sum_{n=1}^{\infty} e^{-i t \omega (n - \frac{1}{2})} e^{-i t g \sqrt{n}} \ket*{\psi_{n,+}}\bra*{\psi_{n,+}} \nonumber \\
+     &+ \sum_{n=1}^{\infty} e^{-i t \omega (n - \frac{1}{2})} e^{i t g \sqrt{n}} \ket*{\psi_{n,-}}\bra*{\psi_{n,-}} \nonumber \\
+    &= e^{\frac{1}{2} i t \omega }\ket*{-, 0}\bra*{-, 0} \nonumber \\
+     &+ \sum_{n=1}^{\infty} e^{-i t \omega (n - \frac{1}{2})} \Big[ \cos(t g \sqrt{n}) \left( \ket*{+, n - 1}\bra*{+, n - 1} + \ket*{-, n}\bra*{-, n} \right) \nonumber \\
+     &- i \sin(t g \sqrt{n}) \left( \ket*{+, n - 1}\bra*{-, n} + \ket*{-, n}\bra*{+, n - 1} \right) \Big].
+\end{align}
