@@ -7,9 +7,9 @@ smaller than the set of all self-adjoint operators on Hilbert space. The notion 
 in 1952 by Wick, Wightman, and Wigner~\cite{Wick:1952nb} in connection with the problem of consistently assigning intrinsic parity to elementary particles.
 
 
-In the context of quantum field theory, the electric current \( J^\mu  = \overline{\psi}\gamma^\mu \psi\) is defined in terms of the Dirac spinor field operator \(\psi\) for electrons. The electric current $J^\mu$ is self-adjoint and measurable. However, the operators
+In the context of quantum field theory, the electric current \( J^\mu  = \overline{\zeta}\gamma^\mu \zeta\) is defined in terms of the Dirac spinor field operator \(\zeta\) for electrons. The electric current $J^\mu$ is self-adjoint and measurable. However, the operators
 \begin{equation}
-	\frac{1}{2}\left(\psi + \psid \right) \qquad \frac{1}{2i}\left(\psi - \psid \right)
+	\frac{1}{2}\left(\zeta + \zeta^\dagger \right) \qquad \frac{1}{2i}\left(\zeta - \zeta^\dagger \right)
 \end{equation}
 are also self-adjoint but they are not measurable even via indirect methods.
 
@@ -36,29 +36,29 @@ $\oper{J}$ is formulated as
 where $\oper{H}$ is the Hamiltonian $\oper{H}$ of the system. The conservation law ~(\refeq{eq:conservation_law}) requires that
 $\oper{J}$ commutes with the Hamiltonian $\oper{H}$ while the superselection rule ~(\refeq{eq:superselection_law}) requires that $\oper{J}$ commutes with all of the measurable quantities. Thus, the superselection rule is a stronger requirement for $\oper{J}$ than the conservation law. It can be said that the superselection rule is an extreme form of conservation laws.
 
-Notice that the SSR~(Eq~\refeq{eq:superselection_law}) implies that, for all  physically measurable observables $\oper{A}$ and  any eigenvector \(\ket{\psi _i}\) of $\oper{J}$ with charge $q_i$\footnote{we assume $\oper{J}$ is non degenerate}.
+Notice that the SSR~(Eq~\refeq{eq:superselection_law}) implies that, for all  physically measurable observables $\oper{A}$ and  any eigenvector \(\ket{\zeta _i}\) of $\oper{J}$ with charge $q_i$\footnote{we assume $\oper{J}$ is non degenerate}.
 \begin{equation}
 	\label{eq:sSSR_orthoganility}
 	\begin{gathered}
-		\bra{\psi_i}\oper{J}\oper{A}\ket{\psi_j} - \bra{\psi_i}\oper{A}\oper{J}\ket{\psi_j} = 0\\
-		(q_i - q_j)\bra{\psi_i}\oper{A}\ket{\psi_j} = 0\\
-		\bra{\psi_i}\oper{A}\ket{\psi_j} = 0 \quad (\text{for } i\not = j)
+		\bra{\zeta_i}\oper{J}\oper{A}\ket{\zeta_j} - \bra{\zeta_i}\oper{A}\oper{J}\ket{\zeta_j} = 0\\
+		(q_i - q_j)\bra{\zeta_i}\oper{A}\ket{\zeta_j} = 0\\
+		\bra{\zeta_i}\oper{A}\ket{\zeta_j} = 0 \quad (\text{for } i\not = j)
 	\end{gathered}
 \end{equation}
-So,  if we have a quantum state in a coherent superposition of eigenstates of superselection charge $\oper{J}$ i.e. \(\ket{\psi _+} = \frac{\ket{\psi _1} + \ket{\psi_2}}{\sqrt{2}}\). One can check that:
+So,  if we have a quantum state in a coherent superposition of eigenstates of superselection charge $\oper{J}$ i.e. \(\ket{\zeta _+} = \frac{\ket{\zeta _1} + \ket{\zeta_2}}{\sqrt{2}}\). One can check that:
 \begin{equation}
 	\begin{gathered}
-		\bra{\psi_+}\oper{A}\ket{\psi_+} =  \frac{\bra{\psi_1}\oper{A}\ket{\psi_1} +  \bra{\psi_2}\oper{A}\ket{\psi_2} + \overbrace{2\mathrm{Re}[\bra{\psi_1}\oper{A}\ket{\psi_2}]}
+		\bra{\zeta_+}\oper{A}\ket{\zeta_+} =  \frac{\bra{\zeta_1}\oper{A}\ket{\zeta_1} +  \bra{\zeta_2}\oper{A}\ket{\zeta_2} + \overbrace{2\mathrm{Re}[\bra{\zeta_1}\oper{A}\ket{\zeta_2}]}
 			^{=0}
 		}{2}\\
-		\bra{\psi_+}\oper{A}\ket{\psi_+} =  \frac{\bra{\psi_1}\oper{A}\ket{\psi_1} +  \bra{\psi_2}\oper{A}\ket{\psi_2}}{2} = \Tr{\rho \oper{A}}
+		\bra{\zeta_+}\oper{A}\ket{\zeta_+} =  \frac{\bra{\zeta_1}\oper{A}\ket{\zeta_1} +  \bra{\zeta_2}\oper{A}\ket{\zeta_2}}{2} = \Tr{\rho \oper{A}}
 	\end{gathered}
 \end{equation}
 where
 \begin{equation}
-	\rho = \frac{\ket{\psi_1}\bra{\psi_1} + \ket{\psi_2}\bra{\psi_2}}{2}
+	\rho = \frac{\ket{\zeta_1}\bra{\zeta_1} + \ket{\zeta_2}\bra{\zeta_2}}{2}
 \end{equation}
-i.e. any relative phase between \(\ket{\psi_1}\) and \(\ket{\psi_2}\) is not measurable 
-and that coherent superposition of \(\ket{\psi_1}\) and \(\ket{\psi_2}\) cannot be 
-verified (or prepared). For an observer, the state \(\ket{\psi_+}\) will not be any 
+i.e. any relative phase between \(\ket{\zeta_1}\) and \(\ket{\zeta_2}\) is not measurable 
+and that coherent superposition of \(\ket{\zeta_1}\) and \(\ket{\zeta_2}\) cannot be 
+verified (or prepared). For an observer, the state \(\ket{\zeta_+}\) will not be any 
 different from a mixed state \(\rho\). 
