@@ -1,18 +1,18 @@
 \chapter{The Problem of Time\label{appen:problemoftime}}
 
-Action principles are widely used to express the laws of physics, including those of
-general relativity.  Symmetry transformations are changes in the coordinates or
-variables that leave the action invariant. It is well known that continuous symmetries
-generate conservation laws (Noether’s Theorem). Conservation laws are of fundamental importance in physics, and so it is valuable to investigate the symmetries of the action.
+In physics, the action principle is a powerful approach for formulating laws, including general relativity, which essentially describes how a system's properties change with different paths it might take. Interestingly, certain continuous transformations on variables that don't alter this action hold a hidden key.  
+The significance of continuous symmetries lies in their ability to create conservation laws, as per the well-known ``Noether's Theorem''. Given the essential role of conservation laws in physics, it is both meaningful and beneficial to explore the symmetries of the action.
 
-It is useful to distinguish between two types of symmetries: \emph{dynamical symmetries}
-corresponding to some inherent property of matter or spacetime evolution (e.g., the
+It is useful to distinguish between two types of symmetries: 
+\begin{itemize}
+\item \emph{Dynamical symmetries} corresponding to some inherent property of matter or spacetime evolution (e.g., the
 Lagrangian being independent of a coordinate, leading to a conserved conjugate momentum) 
-and \emph{non-dynamical symmetries} arising because of the way in which we formulate
+\item \emph{Non-Dynamical symmetries} arise because of the way in which we formulate
 the action (e.g., the gauge symmetries). Dynamical symmetries constrain the solutions
 of the equations of motion, while non-dynamical symmetries give rise to special laws
 called identities. They are distinct from conservation laws because they hold regardless of whether
 or not one has extremized the action.
+\end{itemize}
 
 \section*{Parameterization-Invariance and Hamiltonian Constrain}
 Consider a system with $n$ degrees of freedom - the generalized coordinates $q_i$ - with a parameter $t$ giving the evolution of the trajectory in configuration space. We will remove the superscript
@@ -21,7 +21,8 @@ on $q_i$ when it is clear from the context. Let the action of this system be:
 	\label{eq:action_t}
 	\mathcal{S} = \int L_s\left(q, \frac{dq}{dt}\right)  dt
 \end{equation}
-Now consider a new integration parameter \(\tau\), which now parameterize the trajectory and promote \(t \to t(\tau)\) i.e to  a dynamical variable.
+Now consider a new integration parameter \(\tau\), which now parameterizes the trajectory and promotes \(t \to t(\tau)\) 
+i.e to a dynamical variable.
 In terms of \(\tau\) the action (\refeq{eq:action_t}) can be expressed as:
 \begin{equation}
 	\mathcal{S} = \int L_s\left(q, \frac{\Dot{q}}{\Dot{t}}\right)  \Dot{t} d\tau =  \int L\left(q, \Dot{q}, \Dot{t}\right)   d\tau

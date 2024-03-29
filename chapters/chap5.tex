@@ -119,7 +119,7 @@ where \(\Omega = \frac{g\alpha}{\hbar}\). We will see in next section that the s
 under the limits discussed \refchap{chap:braun_briggs_jaynes}, i.e., in the limit of 
 large photon number and weak ``back-coupling'' from the quantum system.
 
-\section{Semiclassical JC-Hamiltonain  in Large Amplitude and Weak Interaction Limit}
+\section{Semiclassical JC-Hamiltonian  in Large Amplitude and Weak Interaction Limit\label{sec:chap5_large_amplitude_weak_g}}
 
 The emergence of the semi-classical model occurs when fields are in
 coherent states. However, it's not straightforward to recover the 
@@ -128,9 +128,9 @@ To elaborate, we can expect this to happen under specific conditions~\cite{semic
 \begin{itemize}
     \item \textbf{Large Amplitude of Coherent State}: When the amplitude of the coherent state is substantial, 
     the quantum fluctuations (i.e. the influence of atom onto the field in our model!) become less significant, 
-    resembling classical behavior.
+    resembling classical behaviour.
     \item \textbf{Weak Atom-Mode Coupling}: If the coupling between the atom and the mode (field) is weak, 
-    the quantum effects become less pronounced, favoring semi-classical behavior.
+    the quantum effects become less pronounced, favouring semi-classical behaviour.
 \end{itemize}
 Here, we will attempt to make this idea more concrete by considering the 
 limit where $g = \frac{\Omega}{|\alpha|}$, and $|\alpha| \rightarrow \infty$, where 
@@ -227,7 +227,9 @@ Inserting this limit back into \refeq{eq:appen_JCM_rho_atom_t}, we obtain
 
 Hence in the limit of large \(\alpha\) and weak interaction, we get the 
 semiclassical limit. The final form of the evolution operator is given in \refeq{eq:appen_JCM_V_g_limit}, i.e., 
-\begin{align}
+
+\begin{mdframed}
+    \begin{align}
     \label{eq:appen_JCM_V_g_limit2}
     \tilde{U}(t) 
     &= \cos(\Omega t) \left(e^{-i t \omega \frac{1}{2}}\ket{+}\bra{+} + 
@@ -236,6 +238,7 @@ semiclassical limit. The final form of the evolution operator is given in \refeq
      \left( e^{-i t \omega \frac{1}{2}}\ket{+}\bra{-}
     + e^{i t \omega \frac{1}{2}}\ket{-}\bra{+}\right) 
 \end{align}
+\end{mdframed}
 
 \section{Numerical Results: Comparing Quantum Relational Dynamics with Semi-Classical Dynamics
 \label{sec:chap5_numerical_results}}
@@ -244,13 +247,12 @@ semiclassical limit. The final form of the evolution operator is given in \refeq
 \begin{figure}[!h]
     \centering
     \includegraphics{chap5/semi_vs_quant_linear.pdf}
-    \caption[Expectation value \(\bra*{\psi} \oper{\sigma}_x + \oper{\sigma}_z \ket*{\psi}\) v/s Time ($t$) for Semi-Classical and Quantum Relational Dynamics
-    and \(\abs*{\braket*{\psi_{\mathrm{rel}}}{\psi_{\mathrm{semi}}}}\) v/s Time ($t$) for \(\oper{V} = 
-    \hbar \frac{g}{\abs*{\alpha}} \oper{\sigma}_x\left(\oper{a} + \oper{a}^\dagger\right)\).]{Expectation value
+    \caption{Expectation value
         \(\bra*{\psi} \oper{\sigma}_x + \oper{\sigma}_z \ket*{\psi}\) v/s Time ($t$) for Semi-Classical and Quantum Relational Dynamics
-    and \(\abs*{\braket*{\psi_{\mathrm{rel}}}{\psi_{\mathrm{semi}}}}\) v/s Time ($t$) for \(\oper{V} = 
-    \hbar \frac{g}{\abs*{\alpha}} \oper{\sigma}_x\left(\oper{a} + \oper{a}^\dagger\right)\). The parameters 
-    are given in \reftab{tab:numerical_values_linear}}
+    and \(\abs*{\braket*{\psi_{\mathrm{rel}}}{\psi_{\mathrm{semi}}}}\) v/s Time ($t$). The Global Eigenstates are calculated from 
+    Hamiltonian is given in \refeq{eq:chap5_JCM_Hamiltonian_linear} and the semi-classical dynamics given by \refeq{eq:chap5_semi_classical_JC_Linear}. The parameters 
+    are given in \reftab{tab:numerical_values_linear}
+    }
      \label{fig:chap5_linear_semi_vs_quant}
 \end{figure}
 
@@ -265,17 +267,18 @@ computed using the relational evolution described by the Hamiltonian in Equation
 \begin{figure}[!h]
     \centering
     \includegraphics{chap5/overlap_average_linear.pdf}
-    \caption[Average $\abs*{\braket*{\psi_{rel}}{\psi_{semi}}}^2$ 
-    (\& variance $\abs*{\braket*{\psi_{rel}}{\psi_{semi}}}^2$)
-     v/s Global Eigen Energy]{The $N_{\mathrm{cutoff}}=1000$ is taken for above calculations.
+    \caption{
      The plots shows the average $\abs*{\braket*{\psi_{rel}}{\psi_{semi}}}^2$ and 
-     variance $\abs*{\braket*{\psi_{rel}}{\psi_{semi}}}^2$ over \([0, 4\pi]\) time domain 
-     v/s corresponding global eigenenergy.
-     Coupling \(g\abs*{\alpha}= \Omega\) for a fixed \(\Omega\)}
+     variance $\abs*{\braket*{\psi_{rel}}{\psi_{semi}}}^2$ over \([0, 4\pi/\omega]\) time domain 
+     v/s corresponding global Eigenenergy.
+     The Global Eigenstates are calculated from 
+    Hamiltonian is given in \refeq{eq:chap5_JCM_Hamiltonian_linear} and the semi-classical dynamics given by \refeq{eq:chap5_semi_classical_JC_Linear}. The parameters 
+    are given in \reftab{tab:numerical_values_linear}}
      \label{fig:chap5_linear_overlap_avg}
 \end{figure}
 and the the semi-classical Hamiltonain as given in \refeq{eq:class_jcm_eq30}, i.e., 
 \begin{eqnarray}
+\label{eq:chap5_semi_classical_JC_Linear}
     \oper{H}_{\text{semi}} = \frac{\hbar\omega}{2} \oper{\sigma}_z 
     + \hbar \frac{g}{\abs*{\alpha}} \oper{\sigma}_x\left( \alpha e^{-it\omega} + \alpha e^{it\omega} \right).
 \end{eqnarray}
@@ -293,9 +296,9 @@ where \(\ket*{\Psi_{E_{glob}}}\) is an eigenstate of \refeq{eq:chap5_JCM_Hamilto
 
 The initial state is taken as \(N\innerGlob{\alpha(t)}{\Psi_{E_{glob}}}\), where $N$ denotes normalization, for the semiclassical time evolution and plots are shown 
 for three different global energy eigenstates and a fixed \(E_c(\alpha^2) = \hbar \omega \abs*{\alpha}^2\). \reffig{fig:chap5_linear_semi_vs_quant} also shows the overlap \(\abs*{\braket*{\psi_{rel}}{\psi_{semi}}}\)
-for same time evolution.
-
-
+for same time evolution. \reffig{fig:chap5_linear_overlap_avg} illustrates the average and the 
+variance of the absolute value of overlap \(\abs*{\braket*{\psi_{rel}}{\psi_{semi}}}\) over one time period, 
+for three different values of \(E_c(\alpha^2)\) (depicted as red vertical lines in the plots). 
 
 The parameters utilized for the numerical calculations are listed in \reftab{tab:numerical_values_linear} below.
 \begin{table}[ht]
@@ -318,22 +321,19 @@ The parameters utilized for the numerical calculations are listed in \reftab{tab
 %conditional state \(E_c(\alpha^2) = \hbar \omega \bra*{\alpha}\oper{a}^\dagger \oper{a}\ket*{\alpha}
 %= \hbar \omega \abs*{\alpha^2}\) 
 
-\reffig{fig:chap5_linear_overlap_avg} illustrates the average and the 
-variance of the absolute value of overlap \(\abs*{\braket*{\psi_{rel}}{\psi_{semi}}}\) over one time period, 
-for three different values of \(E_c(\alpha^2)\) (depicted as red vertical lines in the plots). 
 
 
 \subsection*{JC-Model: Rotating Wave Approximation}
 \begin{figure}[!h]
     \centering
     \includegraphics{chap5/semi_vs_quant_JC.pdf}
-    \caption[Expectation value \(\bra*{\psi} \oper{\sigma}_x + \oper{\sigma}_z \ket*{\psi}\) v/s Time ($t$) for Semi-Classical and Quantum Relational Dynamics
-    and \(\abs*{\braket*{\psi_{\mathrm{rel}}}{\psi_{\mathrm{semi}}}}\) v/s Time ($t$) for \(\oper{V} = 
-    \hbar \frac{g\alpha}{{\alpha}} \oper{\sigma}_x\left( e^{-it\omega} + e^{it\omega} \right)\).]{Expectation value
+    \caption{
+    Expectation value
         \(\bra*{\psi} \oper{\sigma}_x + \oper{\sigma}_z \ket*{\psi}\) v/s Time ($t$) for Semi-Classical and Quantum Relational Dynamics
-    and \(\abs*{\braket*{\psi_{\mathrm{rel}}}{\psi_{\mathrm{semi}}}}\) v/s Time ($t$) for \(\oper{V} = 
-    \hbar \frac{g}{{\alpha}} \oper{\sigma}_x\left( \alpha e^{-it\omega} + \alpha e^{it\omega} \right)\). The parameters 
-    are given in \reftab{tab:numerical_values_linear}}
+    and \(\abs*{\braket*{\psi_{\mathrm{rel}}}{\psi_{\mathrm{semi}}}}\) v/s Time ($t$). The Global Eigenstates are calculated from 
+    Hamiltonian is given in \refeq{eq:chap5_JC_rotwave_hamiltonian} and the semi-classical dynamics given by the unitary operator in \refeq{eq:chap5_JC_rotwave_unitary_semi}. The parameters 
+    are given in \reftab{tab:numerical_values_JC}
+    }
     \label{fig:chap5_JCM_semi_vs_quant}
 \end{figure}
 
@@ -341,11 +341,13 @@ for three different values of \(E_c(\alpha^2)\) (depicted as red vertical lines 
 Similar to the non-rotating wave approximation, we compare the expectation values of the operator
 \(\oper{\sigma}_x + \oper{\sigma}_y\) in \reffig{fig:chap5_JCM_semi_vs_quant}, as described by the Hamiltonain in \refeq{eq:chap5_JCM_Hamiltonian_resonance}, i.e., 
 \begin{eqnarray}
+\label{eq:chap5_JC_rotwave_hamiltonian}
     \oper{H} = \frac{\hbar \omega}{2} \oper{\sigma}_z + \hbar \omega\oper{a}^\dagger \oper{a}
     + \hbar \frac{g}{\abs*{\alpha}} \left(\oper{\sigma}_+ \oper{a} + \oper{\sigma}_- \oper{a}^\dagger\right).
 \end{eqnarray}
-and the semi-classical unitary evolution operator as given in \refeq{eq:appen_JCM_V_g_limit2}, i.e.,
+and the semi-classical unitary evolution operator derived as in \refeq{eq:appen_JCM_V_g_limit2}, i.e.,
 \begin{eqnarray}
+\label{eq:chap5_JC_rotwave_unitary_semi}
     \tilde{U}(t) 
     &= \cos(\Omega t) \left(e^{-i t \frac{\omega}{2\hbar}}\ket{+}\bra{+} + 
     e^{i t \frac{\omega}{2\hbar}}\ket{-}\bra{-} \right)  \nonumber \\
@@ -362,9 +364,9 @@ variance of the absolute value of overlap \(\abs*{\braket*{\psi_{rel}}{\psi_{sem
 for three different values of \(E_c(\alpha^2)\) (depicted as red vertical lines in the plots)
 in \reffig{fig:chap5_JCM_overlap_avg}.
 
-\begin{table}[ht]
+\begin{table}[!ht]
     \centering
-    \label{tab:numerical_values}
+    \label{tab:numerical_values_JC}
         \begin{tabular}{|c|c|c|c|c|}
             \hline
             Parameter & $\Omega = g$ & $\omega$ & $N_{\text{cutoff}}$ & $\hbar$ \\
@@ -379,31 +381,35 @@ in \reffig{fig:chap5_JCM_overlap_avg}.
 \begin{figure}[!h]
     \centering
     \includegraphics{chap5/overlap_average_JC.pdf}
-    \caption{Average of $\abs*{\braket*{\psi_{rel}}{\psi_{semi}}}$ 
-    (\& variance $\abs*{\braket*{\psi_{rel}}{\psi_{semi}}}$) v/s Global Eigen Energy for 
-    \(\alpha^2 = [50, 300, 700]\) and \(\oper{V} = 
-    \hbar \frac{g}{{\alpha}} \oper{\sigma}_x\left( \alpha e^{-it\omega} 
-    + \alpha e^{it\omega} \right)\). The other numerical parameters are given in \reftab{tab:numerical_values}}
+    \caption{The plots shows the average $\abs*{\braket*{\psi_{rel}}{\psi_{semi}}}^2$ and 
+     variance $\abs*{\braket*{\psi_{rel}}{\psi_{semi}}}^2$ over \([0, 4\pi/\Omega]\) time domain 
+     v/s corresponding global Eigenenergy.
+     The Global Eigenstates are calculated from 
+    Hamiltonian is given in \refeq{eq:chap5_JC_rotwave_hamiltonian} and the semi-classical dynamics given by the unitary operator in \refeq{eq:chap5_JC_rotwave_unitary_semi}. The parameters 
+    are given in  \reftab{tab:numerical_values_JC}}
      \label{fig:chap5_JCM_overlap_avg}
 \end{figure}
 
 
+\newpage 
+
 
 \section{Discussion}
-The numerical results as presented in \refsec{sec:chap5_numerical_results} show a good the agreement 
-between the Semi-classical limit of the Quantum relational theory and the semi-classical theories
-discussed in \refchap{chap:braun_briggs_jaynes}, under approproate limits. 
+The numerical results as presented in \refsec{sec:chap5_numerical_results} show a good agreement 
+between the classical limit of the quantum relational theory and the semi-classical theories
+discussed in \refchap{chap:braun_briggs_jaynes} and \refsec{sec:chap5_large_amplitude_weak_g}, under appropriate limits. 
 The agreement is more pronounced for the non-rotating wave approximation as compared to the rotating 
-wave approximation. This is
-expected as the rotating wave approximation is a more stringent approximation, and the
+wave approximation. This is expected as the rotating wave approximation is a more stringent approximation, and the
 agreement is expected to be better for the non-rotating wave approximation.
-Additionally, as we increase the average photon number (\(\alpha^2\)) and while the energy 
+The agreement is close when the \(E_c \approx E_{\mathrm{glob}}\), 
+i.e., the energy carried by the environment state is near the energy of the global state. Additionally,  the above analysis reveals a key trend, as we increase the average photon number (\(\alpha^2\)) and while the energy 
 of the global eigenstate
-is close to the energy of the semiclassical conditional state, the agreement between the two approaches improves.
+is close to the energy of the environment conditional state, the agreement between the two approaches improves (can be seen as the graphs flatten out more around the red horizontal line as the average photon number increases.
 it can be seen both in 
-\reffig{fig:chap5_JCM_semi_vs_quant} and \reffig{fig:chap5_linear_semi_vs_quant}. 
-These numerical findings align with the conditions outlined for an 
-environment to be treated classically, as discussed in \refchap{chap:braun_briggs_jaynes} and 
-\refchap{chap:briggs_rost_semiclassic}. 
+\reffig{fig:chap5_linear_overlap_avg} and \reffig{fig:chap5_JCM_overlap_avg}. 
+Our numerical results align with the conditions outlined in previous chapters for a classical treatment of the environment. These conditions stipulate that the environment should possess most of the closed system's energy content and since, for our case, the coupling \(g \propto \frac{1}{\abs*{\alpha}}\). Hence, for \(\abs*{\alpha} \to \infty \implies g \to 0\). This signifies a weak interaction limit, where the ``back coupling", or the influence of the quantum system on the environment, becomes negligible.
+
+\paragraph{Coherent states as clock states:} Our research identified coherent states as the optimal candidates for ``clock states" within the quantum relational approach.  In this context, the classical limit of the quantum approach aligns seamlessly with established semi-classical theories.  As discussed in~\cite{braun2004classical}, coherent states offer a significant advantage in semi-classical theory. They elegantly overcome the challenge of defining time derivatives near classical turning points, leading to a more robust treatment of the problem. 
+Another intriguing aspect of coherent states is their potential connection to decoherence. Theoretical studies have conclusively demonstrated that when a single-mode boson field interacts with its environment and undergoes decoherence – the process by which quantum systems lose their superposition and entanglement properties – the field transitions naturally to a coherent state.  Remarkably, the only solution of the ``master equation" that remains pure in the presence of decoherence are coherent states (gaussian states)~\cite{dutra1998decoherence, zuerk_coherent_state_1993}
 
 
