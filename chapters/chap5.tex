@@ -57,13 +57,13 @@ simplifying calculations. This adjustment doesn't affect our analysis.}
         \oper{H} = \frac{\hbar\omega}{2} \oper{\sigma}_z + \hbar \omega \oper{a}^\dagger \oper{a}
         + \hbar g \left(\oper{\sigma}_+ \oper{a} + \oper{\sigma}_- \oper{a}^\dagger\right). 
 \end{equation}
-Here, it portrays the resonant interaction between two energy levels of an atom and a single mode within a cavity.
-To investigate the dynamics of the JC-model, we initially aim to determine the evolution operator 
-$U(t) = e^{-i t H/\hbar}$ through the diagonalization of $H$. If we achieve an eigenvalue decomposition 
-$H = \sum_k a_k \lvert a_k \rangle \langle a_k \rvert$, it follows that:
+It portrays the resonant interaction between two energy levels of an atom and a single boson field mode.
+To understand how this system evolves over time, we initially aim to compute the unitary evolution operator 
+$U(t) = e^{-i t H/\hbar}$ through the diagonalization of $H$. Once we achieve an eigenvalue decomposition 
+$H = \sum_n \epsilon_n \lvert \epsilon_n \rangle \langle \epsilon_n \rvert$, it follows that:
 
 \begin{equation}
-U(t) = \sum_k e^{-i t a_k/\hbar} \lvert a_k \rangle \langle a_k \rvert
+U(t) = \sum_n e^{-i t \epsilon_n/\hbar} \lvert \epsilon_n \rangle \langle \epsilon_n \rvert
 \end{equation}
 
 Finding such an eigenvalue decomposition is not trivial, particularly in this context, 
@@ -132,16 +132,16 @@ To elaborate, we can expect this to happen under specific conditions~\cite{semic
     \item \textbf{Weak Atom-Mode Coupling}: If the coupling between the atom and the mode (field) is weak, 
     the quantum effects become less pronounced, favouring semi-classical behaviour.
 \end{itemize}
-Here, we will attempt to make this idea more concrete by considering the 
-limit where $g = \frac{\Omega}{|\alpha|}$, and $|\alpha| \rightarrow \infty$, where 
-$\Omega$ is a constant. In the following discussion, we will argue, albeit not in a particularly rigorous manner, that we can regain a unitary evolution on the atom in this limit. Let's first recall the form of coherent states:
+In this section, we'll explore an interesting limit of the system. We'll consider what happens when a factor, $g = \frac{\Omega}{|\alpha|}$, and approaches $|\alpha| \rightarrow \infty$. Here, $\Omega$ represents a fixed constant. While we won't delve into rigorous proofs, the following discussion will argue that, under these conditions, the atomic system can still be described by unitary evolution. To begin, let's recall the form of coherent states
+%Here, we will attempt to make this idea more concrete by considering the  limit where $g = \frac{\Omega}{|\alpha|}$, and $|\alpha| \rightarrow \infty$, where $\Omega$ is a constant. In the following discussion, we will argue, albeit not in a particularly rigorous manner, that we can regain a unitary evolution on the atom in this limit. Let's first recall the form of coherent states:
 \begin{equation}
     \ket{\alpha} = e^{-\frac{1}{2}|\alpha|^2} \sum_{n=0}^{\infty} \frac{\alpha^n}{\sqrt{n!}} \ket{n}
 \end{equation}
     
-One particular property of coherent states is that the particle number is Poisson distributed. In other words, the probability to find $n$ photons in the mode is given by:
+A unique feature of these states is that the particle number has a Poisson Distribution. In other words, the probability of finding the system in photon number state, \(\ket{n}\) is given by:
 \begin{equation}
-    p_n = \abs*{\bra*{n}\ket*{\alpha}}^2 = \frac{e^{-\gamma} \gamma^n}{n!}, \text{ where } \gamma = |\alpha|^2
+    \mathrm{p}_n = \abs*{\bra*{n}\ket*{\alpha}}^2 
+    = e^{-\abs*{\alpha}^2}\frac{(\abs*{\alpha}^2)^n}{n!}
 \end{equation}
 Our objective is to understand the evolution of the atom when it interacts with a coherent state. 
 Therefore, we aim to compute the reduced density operator of the atom, which is given by:
@@ -149,10 +149,10 @@ Therefore, we aim to compute the reduced density operator of the atom, which is 
 \begin{align}
 \oper{\rho}_{\text{atom}}(t) &= 
 \text{Tr}_{\text{mode}} \left( U(t)[\oper{\rho} \otimes \ket{\alpha}\bra{\alpha}]U^\dagger(t) \right) \nonumber \\
- &= \sum_n e^{-\abs{\alpha}^2} \abs{\alpha}^{2n} \frac{V_g(n)\oper{\rho} V_g^\dagger(n)}{n!},
+ &= \sum_n e^{-\gamma} \gamma^n \frac{V_g(n)\oper{\rho} V_g^\dagger(n)}{n!},
 \end{align}
 
-where [Refer to \refapp{appen:chap5_JC_calculations} for explicit form of \(U(t)\)]:
+where \(\gamma = \abs{\alpha}\) and\footnote{[Refer to \refapp{appen:chap5_JC_calculations} for explicit form of \(U(t)\)]}:
 \begin{align}
         \label{eq:appen_JCM_V_g}
     V_g (n) &=e^{-it\omega\frac{1}{2}}  \cos(tg\sqrt{n + 1})\ket{+}\bra{+}\\
@@ -165,7 +165,7 @@ Let's discuss a few key points. Firstly, as \( x \) increases, the function
 for large values of \( |\alpha| \), the Poisson distribution is approximately 
 equivalent to the normal distribution, 
 \begin{equation}
-f(x) = \frac{1}{\sqrt{2\pi\sigma^2}} e^{-\frac{(x-\mu)^2}{2\sigma^2}}.
+\mathfrak{N}_{\mu, \sigma}(x) = \frac{1}{\sqrt{2\pi\sigma^2}} e^{-\frac{(x-\mu)^2}{2\sigma^2}}.
 \end{equation}
 
 In this context, the approximate normal distribution has a mean of \( |\alpha|^2 \) and a 
@@ -176,26 +176,26 @@ distribution is significant. Considering these observations, the subsequent reas
 for approximation might be easier to grasp.
 
 \begin{equation}
-\oper{\rho}_{\text{atom}}(t) = \sum_{n} e^{-|\alpha|^2} \frac{|\alpha|^{2n}}{n!} V(t, n) \oper{\rho} V(t, n)^{\dagger}
+\oper{\rho}_{\text{atom}}(t) = \sum_n e^{-\gamma} \gamma^n \frac{V_g(n)\oper{\rho} V_g^\dagger(n)}{n!}
 \end{equation}
 By approximating the weighted sum over the Poisson distribution with the integral weighted by 
-the normal distribution \( f_{|\alpha|^2, |\alpha|}(x) \), having a mean (\( \mu = |\alpha|^2 \)) 
+the normal distribution \( \mathfrak{N}_{\mu, \sigma}(x)\), having a mean (\( \mu =  |\alpha|^2 \)) 
 and standard deviation (\( \sigma = |\alpha| \)), we obtain
 
 \begin{equation}
-    \oper{\rho}_{\text{atom}}(t)\approx \int f_{|\alpha|^2, |\alpha|}(x) V(t, x) \oper{\rho} V(t, x)^{\dagger} dx
+    \oper{\rho}_{\text{atom}}(t)\approx \int \mathfrak{N}_{\mu, \sigma}(x) V(t, x) \oper{\rho} V(t, x)^{\dagger} dx
 \end{equation}
 We cut away the tails of the integral at (\( s \)) standard deviations
 
 \begin{equation}
-    \oper{\rho}_{\text{atom}}(t)\approx \int_{|\alpha|^2 - s|\alpha|}^{|\alpha|^2 + s|\alpha|} f_{|\alpha|^2, |\alpha|}(x) V(t, x) \oper{\rho} V(t, x)^{\dagger} dx
+    \oper{\rho}_{\text{atom}}(t)\approx \int_{|\alpha|^2 - s|\alpha|}^{|\alpha|^2 + s|\alpha|}\mathfrak{N}_{\mu, \sigma}(x) V(t, x) \oper{\rho} V(t, x)^{\dagger} dx
 \end{equation}
 Change of variables (\( x \to x|\alpha| + |\alpha|^2 \))
 
 \begin{equation}
     \label{eq:appen_JCM_rho_atom_t}
     \begin{aligned}
-        \oper{\rho}_{\text{atom}}(t)= \int_{-s}^{s} f_{0,1}(x) V(x|\alpha| + |\alpha|^2) 
+        \oper{\rho}_{\text{atom}}(t)= \int_{-s}^{s} \mathfrak{N}_{0, 1}(x) V(x|\alpha| + |\alpha|^2) 
     \oper{\rho} V(x|\alpha| + |\alpha|^2)^{\dagger} dx
     \end{aligned}
 \end{equation}
@@ -221,7 +221,7 @@ Since, \(-s < x < s\), with \(s\) constant, in the limit of \(|\alpha| \to \inft
 \end{align}
 Inserting this limit back into \refeq{eq:appen_JCM_rho_atom_t}, we obtain
 \begin{align}
-    \oper{\rho}_{\text{atom}}(t) &\approx \int_{-s}^{s} f_{0,1}(x) \tilde{U}(t) \oper{\rho} \tilde{U}(t)^{\dagger} dx \nonumber\\
+    \oper{\rho}_{\text{atom}}(t) &\approx \int_{-s}^{s} \mathfrak{N}_{0, 1}(x) \tilde{U}(t) \oper{\rho} \tilde{U}(t)^{\dagger} dx \nonumber\\
         &\approx \tilde{U}(t) \oper{\rho} \tilde{U}(t)^{\dagger}.
 \end{align}
 
@@ -250,7 +250,7 @@ semiclassical limit. The final form of the evolution operator is given in \refeq
     \caption{Expectation value
         \(\bra*{\psi} \oper{\sigma}_x + \oper{\sigma}_z \ket*{\psi}\) v/s Time ($t$) for Semi-Classical and Quantum Relational Dynamics
     and \(\abs*{\braket*{\psi_{\mathrm{rel}}}{\psi_{\mathrm{semi}}}}\) v/s Time ($t$). The Global Eigenstates are calculated from 
-    Hamiltonian is given in \refeq{eq:chap5_JCM_Hamiltonian_linear} and the semi-classical dynamics given by \refeq{eq:chap5_semi_classical_JC_Linear}. The parameters 
+    Hamiltonian as given in \refeq{eq:chap5_JCM_Hamiltonian_linear} and the semi-classical dynamics given by \refeq{eq:chap5_semi_classical_JC_Linear}. The parameters 
     are given in \reftab{tab:numerical_values_linear}
     }
      \label{fig:chap5_linear_semi_vs_quant}
@@ -269,10 +269,9 @@ computed using the relational evolution described by the Hamiltonian in Equation
     \includegraphics{chap5/overlap_average_linear.pdf}
     \caption{
      The plots shows the average $\abs*{\braket*{\psi_{rel}}{\psi_{semi}}}^2$ and 
-     variance $\abs*{\braket*{\psi_{rel}}{\psi_{semi}}}^2$ over \([0, 4\pi/\omega]\) time domain 
-     v/s corresponding global Eigenenergy.
+     variance $\abs*{\braket*{\psi_{rel}}{\psi_{semi}}}^2$ over \([0, 4\pi/\omega]\) Time domain v/s corresponding global eigenenergy. The red lines represent \(E_c\).
      The Global Eigenstates are calculated from 
-    Hamiltonian is given in \refeq{eq:chap5_JCM_Hamiltonian_linear} and the semi-classical dynamics given by \refeq{eq:chap5_semi_classical_JC_Linear}. The parameters 
+    Hamiltonian as given in \refeq{eq:chap5_JCM_Hamiltonian_linear} and the semi-classical dynamics given by \refeq{eq:chap5_semi_classical_JC_Linear}. The parameters 
     are given in \reftab{tab:numerical_values_linear}}
      \label{fig:chap5_linear_overlap_avg}
 \end{figure}
@@ -294,10 +293,10 @@ the coherent states \(\ket*{\alpha (t)}\), where \(\alpha(t) = \alpha e^{-i\omeg
 \end{equation}
 where \(\ket*{\Psi_{E_{glob}}}\) is an eigenstate of \refeq{eq:chap5_JCM_Hamiltonian_linear}. 
 
-The initial state is taken as \(N\innerGlob{\alpha(t)}{\Psi_{E_{glob}}}\), where $N$ denotes normalization, for the semiclassical time evolution and plots are shown 
+The initial state is taken as \(\ket*{\psi_{semi}(0)} = N\innerGlob{\alpha(0)}{\Psi_{E_{glob}}}\), where $N$ denotes normalization, for the semiclassical time evolution and plots are shown 
 for three different global energy eigenstates and a fixed \(E_c(\alpha^2) = \hbar \omega \abs*{\alpha}^2\). \reffig{fig:chap5_linear_semi_vs_quant} also shows the overlap \(\abs*{\braket*{\psi_{rel}}{\psi_{semi}}}\)
 for same time evolution. \reffig{fig:chap5_linear_overlap_avg} illustrates the average and the 
-variance of the absolute value of overlap \(\abs*{\braket*{\psi_{rel}}{\psi_{semi}}}\) over one time period, 
+variance of the absolute value of overlap \(\abs*{\braket*{\psi_{rel}}{\psi_{semi}}}\) over two time period, 
 for three different values of \(E_c(\alpha^2)\) (depicted as red vertical lines in the plots). 
 
 The parameters utilized for the numerical calculations are listed in \reftab{tab:numerical_values_linear} below.
@@ -331,7 +330,7 @@ The parameters utilized for the numerical calculations are listed in \reftab{tab
     Expectation value
         \(\bra*{\psi} \oper{\sigma}_x + \oper{\sigma}_z \ket*{\psi}\) v/s Time ($t$) for Semi-Classical and Quantum Relational Dynamics
     and \(\abs*{\braket*{\psi_{\mathrm{rel}}}{\psi_{\mathrm{semi}}}}\) v/s Time ($t$). The Global Eigenstates are calculated from 
-    Hamiltonian is given in \refeq{eq:chap5_JC_rotwave_hamiltonian} and the semi-classical dynamics given by the unitary operator in \refeq{eq:chap5_JC_rotwave_unitary_semi}. The parameters 
+    Hamiltonian as given in \refeq{eq:chap5_JC_rotwave_hamiltonian} and the semi-classical dynamics given by the unitary operator in \refeq{eq:chap5_JC_rotwave_unitary_semi}. The parameters 
     are given in \reftab{tab:numerical_values_JC}
     }
     \label{fig:chap5_JCM_semi_vs_quant}
@@ -359,8 +358,8 @@ and the semi-classical unitary evolution operator derived as in \refeq{eq:appen_
 
 
 
-Similar to the non-rotating wave approximation, we compute the average and the 
-variance of the absolute value of overlap \(\abs*{\braket*{\psi_{rel}}{\psi_{semi}}}\) over one time period, 
+Similar to the case of non-rotating wave approximation, we compute the average and the 
+variance of the absolute value of overlap \(\abs*{\braket*{\psi_{rel}}{\psi_{semi}}}\) over two time period, 
 for three different values of \(E_c(\alpha^2)\) (depicted as red vertical lines in the plots)
 in \reffig{fig:chap5_JCM_overlap_avg}.
 
@@ -382,10 +381,9 @@ in \reffig{fig:chap5_JCM_overlap_avg}.
     \centering
     \includegraphics{chap5/overlap_average_JC.pdf}
     \caption{The plots shows the average $\abs*{\braket*{\psi_{rel}}{\psi_{semi}}}^2$ and 
-     variance $\abs*{\braket*{\psi_{rel}}{\psi_{semi}}}^2$ over \([0, 4\pi/\Omega]\) time domain 
-     v/s corresponding global Eigenenergy.
+     variance $\abs*{\braket*{\psi_{rel}}{\psi_{semi}}}^2$ over \([0, 4\pi/\Omega]\) Time domain v/s corresponding global eigenenergy. The red lines represent \(E_c\).
      The Global Eigenstates are calculated from 
-    Hamiltonian is given in \refeq{eq:chap5_JC_rotwave_hamiltonian} and the semi-classical dynamics given by the unitary operator in \refeq{eq:chap5_JC_rotwave_unitary_semi}. The parameters 
+    Hamiltonian as given in \refeq{eq:chap5_JC_rotwave_hamiltonian} and the semi-classical dynamics given by the unitary operator in \refeq{eq:chap5_JC_rotwave_unitary_semi}. The parameters 
     are given in  \reftab{tab:numerical_values_JC}}
      \label{fig:chap5_JCM_overlap_avg}
 \end{figure}
@@ -404,7 +402,7 @@ agreement is expected to be better for the non-rotating wave approximation.
 The agreement is close when the \(E_c \approx E_{\mathrm{glob}}\), 
 i.e., the energy carried by the environment state is near the energy of the global state. Additionally,  the above analysis reveals a key trend, as we increase the average photon number (\(\alpha^2\)) and while the energy 
 of the global eigenstate
-is close to the energy of the environment conditional state, the agreement between the two approaches improves (can be seen as the graphs flatten out more around the red horizontal line as the average photon number increases.
+is close to the energy of the environment conditional state, the agreement between the two approaches improves (can be seen as the graphs flatten out more around the red vertical line as the average photon number increases.
 it can be seen both in 
 \reffig{fig:chap5_linear_overlap_avg} and \reffig{fig:chap5_JCM_overlap_avg}. 
 Our numerical results align with the conditions outlined in previous chapters for a classical treatment of the environment. These conditions stipulate that the environment should possess most of the closed system's energy content and since, for our case, the coupling \(g \propto \frac{1}{\abs*{\alpha}}\). Hence, for \(\abs*{\alpha} \to \infty \implies g \to 0\). This signifies a weak interaction limit, where the ``back coupling", or the influence of the quantum system on the environment, becomes negligible.

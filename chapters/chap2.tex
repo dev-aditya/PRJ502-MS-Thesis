@@ -14,13 +14,13 @@ for the environment's wave function, effectively treating the environment semi-c
 This analysis offers a clear physical interpretation of the time parameter, which arises from a directional gradient of 
 the classical action along the environment trajectory.
 
-To begin with , we consider a global system with Hamiltonian $\operatorname{H}$, which comprises a system $S$ and an environment $\mathcal{E}$. 
+To begin with , we consider a global system with Hamiltonian $\operatorname{H}$, which comprises a system $\mathcal{S}$ and an environment $\mathcal{E}$. 
 The TISE for this system is given by
 \begin{equation}
 \label{eqn:chap2_TISE}
-\operatorname{H}\Psi = E\Psi, \quad \operatorname{H} = \operatorname{H}_S + \operatorname{H}_{\mathcal{E}} + \operatorname{H}_{\mathcal{SE}}.
+\operatorname{H}\Psi = E\Psi, \quad \operatorname{H} = \operatorname{H}_\mathcal{S} + \operatorname{H}_{\mathcal{E}} + \operatorname{H}_{\mathcal{SE}}.
 \end{equation}
-where $\operatorname{H}_S$ and $\operatorname{H}_{\mathcal{E}}$ are the Hamiltonians of the system 
+where $\operatorname{H}_\mathcal{S}$ and $\operatorname{H}_{\mathcal{E}}$ are the Hamiltonians of the system 
 and the environment respectively and $\operatorname{H}_{\mathcal{SE}}$ is the interaction
 Hamiltonian between the system and the environment\footnote{$\operatorname{H}_{\mathcal{SE}}\equiv \operatorname{H}_{\mathcal{SE}}(x, R)$}.
 
@@ -31,7 +31,7 @@ The total wave function $\Psi$ can be written as
 \end{equation}
 Where \(\{\psi 's\}\) represent the energy eigenstates of \(\operatorname{H}_{\mathcal{S}} + \operatorname{H}_{\mathcal{SE}}\) at a fixed $R$, with \\ \(\epsilon_n (R) =  \bra{\psi_n}\operatorname{H}_{\mathcal{S}} + \operatorname{H}_{\mathcal{SE}}\ket{\psi_n}\), and $x$ and $R$ represent the coordinates of the system and the environment, respectively.
 \footnote{We have assumed that the environment is large enough so the system  has a 
-no effect on the environment's states. Furthermore, \(\braket{\chi_m}{\chi_n} \not = \delta_{mn}\).}. 
+no effect on the environment's states. Furthermore, \(\braket{\chi_m}{\chi_n} \not = \delta_{mn}\).}
 The environment Hamiltonian is assumed to be of the form
 \begin{equation}
     \label{eqn:chap2_env_hamiltonian}

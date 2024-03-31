@@ -17,7 +17,7 @@ where $(\oper{x}, \oper{p})$ and $(\oper{Q}, \oper{P})$ are (position, momentum)
 Also, $\oper{H}_s$ is the Hamiltonian of the atomic system, $\oper{H}_F$ is the field hamiltonian, and $\oper{H}_I$ is the interaction hamiltonian. 
 The boson field hamiltonian will be takes a sum over field modes, with hamiltonian given as 
 \begin{equation}
-    H_F(P, Q) = \sum_{k} \frac{1}{2}\left(P_k ^2 + \omega_k^2 Q_k^2\right)
+   \oper{H}_F(\oper{P}, \oper{Q}) = \sum_{k} \frac{1}{2}\left(\oper{P}_k ^2 + \omega_k^2 \oper{Q}_k^2\right)
 \end{equation}
 
 We write the above Hamiltonian in terms of creating and annihilation operators
@@ -34,15 +34,15 @@ interacting with a single mode of the electromagnetic field. \refeq{eq:class_jcm
 \begin{eqnarray}
     \label{eq:class_jcm_eq2}
     H = {\hbar \omega_0}\oper{\sigma}_z + \hbar \omega \left(\oper{a}^\dagger \oper{a} + \frac{1}{2}\right) 
-    + \hbar g \oper{\sigma}_x\left(a + a^\dagger\right),
+    + \hbar g \oper{\sigma}_x\left(\oper{a} + \oper{a}^\dagger\right),
 \end{eqnarray}
-where $\sigma_z$ and $\sigma_x$ are the Pauli matrices. 
+where $\oper{\sigma}_z$ and $\oper{\sigma}_x$ are the Pauli matrices. 
 This special case is known as the Jaynes-Cummings model.
 \section{Semiclassical Limit of the System\label{sec:class_jcm_sec1}}
 As done in \refeq{eqn:chap2_total_wavefunction}, one can write in general the solution of 
 TISE 
 \begin{equation}
-    \label{eq:class_jcm_eq2}
+    \label{eq:class_jcm_eq_TISE}
     (H - E)\Psi = 0
 \end{equation}
 with $H$ in the form of \refeq{eq:class_jcm_eq1} as 
@@ -57,7 +57,7 @@ This assumption has been utilized previously in \refchap{chap:briggs_rost_semicl
 and will be employed again in forthcoming derivations.
 
 Doing the same exercise as in \refeq{eqn:briggs_rost_eq5}, we substitute
-\refeq{eq:class_jcm_eq3} into \refeq{eq:class_jcm_eq2} and obtain a set of coupled equations
+\refeq{eq:class_jcm_eq3} into \refeq{eq:class_jcm_eq_TISE} and obtain a set of coupled equations
 
 \begin{align}
     \label{eq:class_jcm_eq4}
@@ -388,13 +388,13 @@ the limit of large photon number, the TDSE for state \(\ket*{\psi(t)}\) is
     \begin{equation}
         \label{eq:class_jcm_eq30}
         i\hbar \dfrac{\partial}{\partial t} \ket*{\psi(t)} = \left[
-            H_s +  \hbar S \left(\alpha_0 e^{-i \omega t} + \alpha_0 e^{i \omega t}\right) 
+            \oper{H}_s +  \hbar \oper{S} \left(\alpha_0 e^{-i \omega t} + \alpha_0 e^{i \omega t}\right) 
         \right] \ket*{\psi(t)}.
     \end{equation}
 \end{mdframed}
 
 Under the assumption of a valid two-level approximation, the system can be represented 
-by the operator $S = g\sigma_x$.  Crucially, unlike the equivalent result obtained in 
+by the operator $\oper{S} = g\oper{\sigma}_x$.  Crucially, unlike the equivalent result obtained in 
 position space representation, the derivation of \refeq{eq:class_jcm_eq30} using coherent 
 states is valid for all times.
 
