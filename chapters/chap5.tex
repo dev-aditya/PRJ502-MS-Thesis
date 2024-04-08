@@ -1,31 +1,25 @@
 \chapter{Quantum Relational Dynamics of JC Model
 \label{chap5:RDQ_JCM_chap}}
 
-In \refchap{chap:braun_briggs_jaynes}, we delved into the semi-classical approach to derive the Time-Dependent Schrödinger 
+In \refchap{chap:braun_briggs_jaynes}, we delved into the semiclassical approach to derive the Time-Dependent Schrödinger 
 Equation (TDSE) governing the Jaynes-Cummings model. 
-In \refsec{sec:class_jcm_sec1} we derived the TDSE using the position space representatian, 
-by assuming a semiclassical (WKB-like) wave function for the field mode and then 
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width=0.9\textwidth, height=0.45\textheight]{chap5/JC_model.png}
+    \caption{Illustration of the Jaynes-Cummings model. A two-level atom is coupled to an optical cavity (single field mode), shown on top. The energy levels of the atom that couple to the field mode within the cavity are shown in the box below.}
+    \label{fig:JC_illusttration}
+\end{figure}
+In \refsec{sec:class_jcm_sec1}, we derived the TDSE using the position space representation by assuming a semiclassical (WKB-like) wave function for the field mode and then 
 we presented a alternative derivation, in \refsec{sec:sec:class_jcm_sec2} making use of coherent representatian.
-However, 
-both these approaches inherits the concept of ``time" as a purely classical parameter, 
-thereby compromising its deeper and more fundamental nature.
+However,  both these approaches inherit the concept of ``time" as a purely classical parameter, compromising its deeper and more fundamental nature.
 
-In contrast, in \refchap{chap:sebgem_Rel}, we presented a purely quantum framework to 
-describe the dynamics of the general interacting system. Here, ``time" emerges as a 
-symmetry parameter stemming from the principle of global invariance of the global 
-energy eigenstate of the total Hamiltonian. A natural question arises: Are both of 
-these totally different-looking approaches to describe the dynamics of the system 
-equivalent? If yes, then in what limit? In this chapter, we aim to address these questions.
+In contrast, in \refchap{chap:sebgem_Rel}, we presented a purely quantum framework to describe the dynamics of the general interacting system. Here, ``time" emerges as a symmetry parameter stemming from the principle of global invariance of the global energy eigenstate of the total Hamiltonian. A natural question arises: Are both of these different-looking approaches to describe the dynamics of the system equivalent? If yes, then in what limit? In this chapter, we aim to address these questions.
 
-We start by adopting the Jaynes-Cummings Hamiltonian as our model system. We then 
-explores the Jaynes-Cummings model from the perspective of Quantum Relational Dynamics. 
-We aim to scrutinize the transition from a purely quantum system to semi-classical regimes, 
-as previously discussed in \refchap{chap:braun_briggs_jaynes}, and to juxtapose the dynamics as 
-characterized by the two distinct approaches. We demonstrate that, under appropriate limits
-(consistent with the semi-classical treatment in previous Chapters), the two approaches yield identical results. 
+We start by adopting the Jaynes-Cummings Hamiltonian as our model system. We then explore the Jaynes-Cummings model from the perspective of Quantum Relational Dynamics. 
+We aim to scrutinize the transition from a purely quantum system to semiclassical regimes,  as previously discussed in \refchap{chap:braun_briggs_jaynes}, and to juxtapose the dynamics as characterized by the two distinct approaches. We demonstrate that the two approaches yield identical results under appropriate limits (consistent with the semiclassical treatment in previous Chapters). 
 %Interestingly, the analysis also hints at the presence of a superselection rule.
 
-We assume our Hamiltonian to be of the form
+We assume our Hamiltonian to be of the form,
 
 \begin{mdframed}
 \begin{eqnarray}
@@ -115,24 +109,23 @@ where \(\langle a(t) \rangle = \alpha e^{-i\omega t}\). This leads to the evolut
                  \left( \ket{+}\bra{-}
                 +\ket{-}\bra{+}\right)
 \end{align}
-where \(\Omega = \frac{g\alpha}{\hbar}\). We will see in next section that the semi-classical limit can be made more rigorous
+where \(\Omega = \frac{g\alpha}{\hbar}\). We will see in the next section that the semiclassical limit can be made more rigorous
 under the limits discussed \refchap{chap:braun_briggs_jaynes}, i.e., in the limit of 
 large photon number and weak ``back-coupling'' from the quantum system.
 
 \section{Semiclassical JC-Hamiltonian  in Large Amplitude and Weak Interaction Limit\label{sec:chap5_large_amplitude_weak_g}}
 
-The emergence of the semi-classical model occurs when fields are in
-coherent states. However, it's not straightforward to recover the 
-semi-classical behavior by merely substituting coherent states, (as we did in \refeq{eq:chap5_JCM_Hamiltonian_semi}). 
+The emergence of the semiclassical model occurs when fields are in
+coherent states. However, recovering the semiclassical behavior is not straightforward by merely substituting coherent states (as we did in \refeq{eq:chap5_JCM_Hamiltonian_semi}). 
 To elaborate, we can expect this to happen under specific conditions~\cite{semiclassical_limit_JC_PRL}:
 \begin{itemize}
     \item \textbf{Large Amplitude of Coherent State}: When the amplitude of the coherent state is substantial, 
-    the quantum fluctuations (i.e. the influence of atom onto the field in our model!) become less significant, 
-    resembling classical behaviour.
+    the quantum fluctuations (i.e., the influence of atom onto the field in our model!) become less significant, 
+    resembling classical behavior.
     \item \textbf{Weak Atom-Mode Coupling}: If the coupling between the atom and the mode (field) is weak, 
-    the quantum effects become less pronounced, favouring semi-classical behaviour.
+    the quantum effects become less pronounced, favoring semiclassical behavior.
 \end{itemize}
-In this section, we'll explore an interesting limit of the system. We'll consider what happens when a factor, $g = \frac{\Omega}{|\alpha|}$, and approaches $|\alpha| \rightarrow \infty$. Here, $\Omega$ represents a fixed constant. While we won't delve into rigorous proofs, the following discussion will argue that, under these conditions, the atomic system can still be described by unitary evolution. To begin, let's recall the form of coherent states
+In this section, we'll explore an interesting limit of the system. We'll consider what happens when the factor, $g = \frac{\Omega}{|\alpha|} \to 0$, as $|\alpha| \rightarrow \infty$. Here, $\Omega$ represents a fixed constant. While we won't delve into rigorous proofs, the following discussion will argue that, under these conditions, the dynamics of the atomic system can still be described by unitary evolution. To begin, let's recall the form of coherent states
 %Here, we will attempt to make this idea more concrete by considering the  limit where $g = \frac{\Omega}{|\alpha|}$, and $|\alpha| \rightarrow \infty$, where $\Omega$ is a constant. In the following discussion, we will argue, albeit not in a particularly rigorous manner, that we can regain a unitary evolution on the atom in this limit. Let's first recall the form of coherent states:
 \begin{equation}
     \ket{\alpha} = e^{-\frac{1}{2}|\alpha|^2} \sum_{n=0}^{\infty} \frac{\alpha^n}{\sqrt{n!}} \ket{n}
@@ -161,9 +154,18 @@ where \(\gamma = \abs{\alpha}\) and\footnote{[Refer to \refapp{appen:chap5_JC_ca
 &- ie^{-t\omega\frac{1}{2}} \sin(tg\sqrt{n}) \frac{\sqrt{n}}{\alpha} \ket{-}\bra{+}.
 \end{align}
 Let's discuss a few key points. Firstly, as \( x \) increases, the function 
-\( \sqrt{x} \) becomes flatter (its derivative approaches zero). Secondly, 
+\( \sqrt{x} \) becomes flatter (its derivative approaches zero). Secondly, .2: The plot compares the Poisson dis-
+tribution for large mean values with a square
+root function. As the mean increases, the Pois-
+son distribution increasingly peaks and concen-
+trates around the mean, while the square root
+function remains nearly flat for large valu
 for large values of \( |\alpha| \), the Poisson distribution is approximately 
-equivalent to the normal distribution, 
+equivalent to the normal distribution, \begin{wrapfigure}{r}{0.5\textwidth}
+  \centering
+  \includegraphics[width=0.48\textwidth]{figures/chap5/poisson_distribution.pdf}
+  \caption{The plot compares the Poisson distribution for large mean values with a square root function. As the mean increases, the Poisson distribution increasingly peaks and concentrates around the mean, while the square root function remains nearly flat for large values. }
+\end{wrapfigure}
 \begin{equation}
 \mathfrak{N}_{\mu, \sigma}(x) = \frac{1}{\sqrt{2\pi\sigma^2}} e^{-\frac{(x-\mu)^2}{2\sigma^2}}.
 \end{equation}
@@ -240,7 +242,7 @@ semiclassical limit. The final form of the evolution operator is given in \refeq
 \end{align}
 \end{mdframed}
 
-\section{Numerical Results: Comparing Quantum Relational Dynamics with Semi-Classical Dynamics
+\section{Numerical Results: Comparing Quantum Relational Dynamics with Semiclassical Dynamics
 \label{sec:chap5_numerical_results}}
 
 \subsection*{JC-Model: Non Rotating Wave Approximation} 
@@ -250,7 +252,7 @@ semiclassical limit. The final form of the evolution operator is given in \refeq
     \caption{Expectation value
         \(\bra*{\psi} \oper{\sigma}_x + \oper{\sigma}_z \ket*{\psi}\) v/s Time ($t$) for Semi-Classical and Quantum Relational Dynamics
     and \(\abs*{\braket*{\psi_{\mathrm{rel}}}{\psi_{\mathrm{semi}}}}\) v/s Time ($t$). The Global Eigenstates are calculated from 
-    Hamiltonian as given in \refeq{eq:chap5_JCM_Hamiltonian_linear} and the semi-classical dynamics given by \refeq{eq:chap5_semi_classical_JC_Linear}. The parameters 
+    Hamiltonian as given in \refeq{eq:chap5_JCM_Hamiltonian_linear} and the semiclassical dynamics given by \refeq{eq:chap5_semi_classical_JC_Linear}. The parameters 
     are given in \reftab{tab:numerical_values_linear}
     }
      \label{fig:chap5_linear_semi_vs_quant}
@@ -271,7 +273,7 @@ computed using the relational evolution described by the Hamiltonian in Equation
      The plots shows the average $\abs*{\braket*{\psi_{rel}}{\psi_{semi}}}^2$ and 
      variance $\abs*{\braket*{\psi_{rel}}{\psi_{semi}}}^2$ over \([0, 4\pi/\omega]\) Time domain v/s corresponding global eigenenergy. The red lines represent \(E_c\).
      The Global Eigenstates are calculated from 
-    Hamiltonian as given in \refeq{eq:chap5_JCM_Hamiltonian_linear} and the semi-classical dynamics given by \refeq{eq:chap5_semi_classical_JC_Linear}. The parameters 
+    Hamiltonian as given in \refeq{eq:chap5_JCM_Hamiltonian_linear} and the semiclassical dynamics given by \refeq{eq:chap5_semi_classical_JC_Linear}. The parameters 
     are given in \reftab{tab:numerical_values_linear}}
      \label{fig:chap5_linear_overlap_avg}
 \end{figure}
@@ -284,9 +286,9 @@ and the the semi-classical Hamiltonain as given in \refeq{eq:class_jcm_eq30}, i.
 
 The clock (environment) quantum state, onto which the global eigenstate is projected 
 to extract the 
-quantum dynamics , 
+quantum dynamics, 
 are takes to be the
-the coherent states \(\ket*{\alpha (t)}\), where \(\alpha(t) = \alpha e^{-i\omega t}\). The system's quantum state then one get according to \refeq{eq:nonint_sys_evol}, i.e.,  
+the coherent states \(\ket*{\alpha (t)}\), where \(\alpha(t) = \alpha e^{-i\omega t}\). The system's quantum state then one gets according to \refeq{eq:nonint_sys_evol}, i.e.,  
 \begin{equation}
     \ket*{\psi_{rel}(t)} = \mathcal{N} \innerGlob{\alpha(t)}{\Psi_{\mathrm{glob}}},
     \mathcal{N} = \frac{1}{\sqrt{\lvert \lvert \innerGlob{\alpha(t)}{\Psi_{\mathrm{glob}}} \rvert \rvert^2}}
@@ -299,10 +301,9 @@ for same time evolution. \reffig{fig:chap5_linear_overlap_avg} illustrates the a
 variance of the absolute value of overlap \(\abs*{\braket*{\psi_{rel}}{\psi_{semi}}}\) over two time period, 
 for three different values of \(E_c(\alpha^2)\) (depicted as red vertical lines in the plots). 
 
-The parameters utilized for the numerical calculations are listed in \reftab{tab:numerical_values_linear} below.
-\begin{table}[ht]
+The parameters utilized for the numerical calculations are listed below in \reftab{tab:numerical_values_linear}.
+\begin{table}[!ht]
     \centering
-    \label{tab:numerical_values_linear}
         \begin{tabular}{|c|c|c|c|c|}
             \hline
             Parameter & $g$ & $\omega$ & $N_{\text{cutoff}}$ & $\hbar$ \\
@@ -312,6 +313,7 @@ The parameters utilized for the numerical calculations are listed in \reftab{tab
         \end{tabular}
     \caption{Parameters used for Numerical Results in \reffig{fig:chap5_linear_overlap_avg} and 
     \reffig{fig:chap5_linear_semi_vs_quant}}
+    \label{tab:numerical_values_linear}
 \end{table}
 
 
@@ -330,7 +332,7 @@ The parameters utilized for the numerical calculations are listed in \reftab{tab
     Expectation value
         \(\bra*{\psi} \oper{\sigma}_x + \oper{\sigma}_z \ket*{\psi}\) v/s Time ($t$) for Semi-Classical and Quantum Relational Dynamics
     and \(\abs*{\braket*{\psi_{\mathrm{rel}}}{\psi_{\mathrm{semi}}}}\) v/s Time ($t$). The Global Eigenstates are calculated from 
-    Hamiltonian as given in \refeq{eq:chap5_JC_rotwave_hamiltonian} and the semi-classical dynamics given by the unitary operator in \refeq{eq:chap5_JC_rotwave_unitary_semi}. The parameters 
+    Hamiltonian as given in \refeq{eq:chap5_JC_rotwave_hamiltonian} and the semiclassical dynamics given by the unitary operator in \refeq{eq:chap5_JC_rotwave_unitary_semi}. The parameters 
     are given in \reftab{tab:numerical_values_JC}
     }
     \label{fig:chap5_JCM_semi_vs_quant}
@@ -365,7 +367,6 @@ in \reffig{fig:chap5_JCM_overlap_avg}.
 
 \begin{table}[!ht]
     \centering
-    \label{tab:numerical_values_JC}
         \begin{tabular}{|c|c|c|c|c|}
             \hline
             Parameter & $\Omega = g$ & $\omega$ & $N_{\text{cutoff}}$ & $\hbar$ \\
@@ -375,6 +376,7 @@ in \reffig{fig:chap5_JCM_overlap_avg}.
         \end{tabular}
     \caption{Parameters used for Numerical Results in \reffig{fig:chap5_JCM_semi_vs_quant} and 
     \reffig{fig:chap5_JCM_overlap_avg}}
+    \label{tab:numerical_values_JC}
 \end{table}
 
 \begin{figure}[!h]
@@ -383,7 +385,7 @@ in \reffig{fig:chap5_JCM_overlap_avg}.
     \caption{The plots shows the average $\abs*{\braket*{\psi_{rel}}{\psi_{semi}}}^2$ and 
      variance $\abs*{\braket*{\psi_{rel}}{\psi_{semi}}}^2$ over \([0, 4\pi/\Omega]\) Time domain v/s corresponding global eigenenergy. The red lines represent \(E_c\).
      The Global Eigenstates are calculated from 
-    Hamiltonian as given in \refeq{eq:chap5_JC_rotwave_hamiltonian} and the semi-classical dynamics given by the unitary operator in \refeq{eq:chap5_JC_rotwave_unitary_semi}. The parameters 
+    Hamiltonian as given in \refeq{eq:chap5_JC_rotwave_hamiltonian} and the semiclassical dynamics given by the unitary operator in \refeq{eq:chap5_JC_rotwave_unitary_semi}. The parameters 
     are given in  \reftab{tab:numerical_values_JC}}
      \label{fig:chap5_JCM_overlap_avg}
 \end{figure}
@@ -394,10 +396,9 @@ in \reffig{fig:chap5_JCM_overlap_avg}.
 
 \section{Discussion}
 The numerical results presented in \refsec{sec:chap5_numerical_results} show a good agreement 
-between the classical limit of the quantum relational theory and the semi-classical theories
+between the classical limit of the quantum relational theory and the semiclassical theories
 discussed in \refchap{chap:braun_briggs_jaynes} and \refsec{sec:chap5_large_amplitude_weak_g}, under appropriate limits. 
-The agreement is more pronounced for the non-rotating wave approximation as compared to the rotating 
-wave approximation. This is expected as the rotating wave approximation is a more stringent approximation, and the
+The agreement is more pronounced for the non-rotating wave approximation than the rotating wave approximation. This is expected as the rotating wave approximation is a more stringent approximation and the
 agreement is expected to be better for the non-rotating wave approximation.
 The agreement is close when the \(E_c \approx E_{\mathrm{glob}}\), 
 i.e., the energy carried by the environment state is near the energy of the global state. Additionally,  the above analysis reveals a key trend, as we increase the average photon number (\(\alpha^2\)) and while the energy 
@@ -407,7 +408,7 @@ it can be seen both in
 \reffig{fig:chap5_linear_overlap_avg} and \reffig{fig:chap5_JCM_overlap_avg}. 
 Our numerical results align with the conditions outlined in previous chapters for a classical treatment of the environment. These conditions stipulate that the environment should possess most of the closed system's energy content and since, for our case, the coupling \(g \propto \frac{1}{\abs*{\alpha}}\). Hence, for \(\abs*{\alpha} \to \infty \implies g \to 0\). This signifies a weak interaction limit, where the ``back coupling", or the influence of the quantum system on the environment, becomes negligible.
 
-\paragraph{Coherent states as clock states:} Our research identified coherent states as the optimal candidates for ``clock states" within the quantum relational approach.  In this context, the classical limit of the quantum approach aligns seamlessly with established semi-classical theories.  As discussed in~\cite{braun2004classical}, coherent states offer a significant advantage in semi-classical theory. They elegantly overcome the challenge of defining time derivatives near classical turning points, leading to a more robust treatment of the problem. 
-Another intriguing aspect of coherent states is their potential connection to decoherence. Theoretical studies have conclusively demonstrated that when a single-mode boson field interacts with its environment and undergoes decoherence – the process by which quantum systems lose their superposition and entanglement properties – the field transitions naturally to a coherent state.  Remarkably, the only solution of the ``master equation" that remains pure in the presence of decoherence are coherent states (gaussian states)~\cite{dutra1998decoherence, zuerk_coherent_state_1993}. 
+\paragraph{Coherent states as clock states:} Our research identified coherent states as the optimal candidates for ``clock states" within the quantum relational approach. In this context, the classical limit of the quantum approach aligns seamlessly with established semiclassical theories. As discussed in~\cite{braun2004classical}, coherent states offer a significant advantage in semiclassical theory. They elegantly overcome the challenge of defining time derivatives near classical turning points, leading to a more robust treatment of the problem. 
+Another intriguing aspect of coherent states is their potential connection to decoherence. Theoretical studies have conclusively demonstrated that when a single-mode boson field interacts with its environment and undergoes decoherence – the process by which quantum systems lose their superposition and entanglement properties – the field transitions naturally to a coherent state. Remarkably, the only solution of the ``master equation" that remains pure in the presence of decoherence are coherent states (gaussian states)~\cite{dutra1998decoherence, zuerk_coherent_state_1993}. 
 
 

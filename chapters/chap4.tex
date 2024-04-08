@@ -5,17 +5,17 @@ It has been shown in \refchap{chap:briggs_rost_semiclassic} how one can reduce a
 to a TDSE for a system in the presence of a classical environment. In this chapter, 
 we will discuss the application of the previous chapter to a simple model of light-matter 
 interaction and enumerating the conditions that must be obtained in order to treat the 
-electromagnetic field classically. The upcoming sections outlines the derivations as presented 
+electromagnetic field classically. The upcoming sections outline the derivations as presented 
 in~\cite{braun2004classical}. 
 
-To get the time-dependence, we start by considerig a time-independent hamiltonian of an interacting quantum system,
+To get the time dependence, we start by considering a time-independent Hamiltonian of an interacting quantum system,
 with a Hamiltonian given as
 \begin{equation}
     \oper{H} = \oper{H}_s(\oper{p}, \oper{x}) + \oper{H}_F(\oper{Q}, \oper{P}) + \oper{H}_I(\oper{x}, \oper{Q}). 
 \end{equation}
-where $(\oper{x}, \oper{p})$ and $(\oper{Q}, \oper{P})$ are (position, momentum) operator for system and boson field, respectively. 
-Also, $\oper{H}_s$ is the Hamiltonian of the atomic system, $\oper{H}_F$ is the field hamiltonian, and $\oper{H}_I$ is the interaction hamiltonian. 
-The boson field hamiltonian will be takes a sum over field modes, with hamiltonian given as 
+where $(\oper{x}, \oper{p})$ and $(\oper{Q}, \oper{P})$ are (position, momentum) operators for the system and Boson field, respectively. 
+Also, $\oper{H}_s$ is the Hamiltonian of the atomic system, $\oper{H}_F$ is the field Hamiltonian, and $\oper{H}_I$ is the interaction Hamiltonian. 
+The Boson field Hamiltonian will be takes a sum over field modes, with Hamiltonian given as 
 \begin{equation}
    \oper{H}_F(\oper{P}, \oper{Q}) = \sum_{k} \frac{1}{2}\left(\oper{P}_k ^2 + \omega_k^2 \oper{Q}_k^2\right)
 \end{equation}
@@ -27,9 +27,9 @@ We write the above Hamiltonian in terms of creating and annihilation operators
     + \frac{1}{2}\right) + \hbar\sum_k  g_{jk}^k \oper{c}^\dagger _i \oper{c}_i\left(\oper{a}^\dagger _k + \oper{a}_k \right).
 \end{equation}
 where $c_i$ and $\oper{c}^\dagger _i$ are the annihilation and creation atomic operators for the system, 
-and $a_k$ and $a^\dagger _k$ are the annihilation and creation operators for the boson field.
+and $a_k$ and $a^\dagger _k$ are the annihilation and creation operators for the Boson field.
 
-A special case of the above Hamiltonian is when we take a two level atom (or a spin 1/2 system)
+A special case of the above Hamiltonian is when we take a two-level atom (or a spin 1/2 system)
 interacting with a single mode of the electromagnetic field. \refeq{eq:class_jcm_eq1} then reduces to
 \begin{eqnarray}
     \label{eq:class_jcm_eq2}
@@ -83,9 +83,8 @@ Doing the same exercise as in \refeq{eqn:briggs_rost_eq5}, we substitute
 \end{align}
 
 The equation above describes the ``close-coupled" form for \(\chi_j\). 
-The off-diagonal terms account for changes in the state of the boson
-field caused by changes in the system's state. Neglecting these 
-off-diagonal coupling terms simplifies the equation, providing 
+The off-diagonal terms account for changes in the state of the Boson field caused by changes in the system's state. Neglecting these 
+off-diagonal coupling terms simplify the equation, providing 
 the state of \(\chi_j\) when the system is in state \(\phi_j\), i.e., 
 \begin{equation}
     \begin{aligned}
@@ -102,17 +101,17 @@ with
 \end{eqnarray}
 The diagonal \(\bra*{\phi_j}H_s + H_I \ket*{\phi_j}\) terms on the RHS of \refeq{eq:class_jcm_eq6}
 are zero for real \(\phi_j\) or else can be eliminated by a (Berry) phase transformation~\cite{braun2004classical}.
-In addition, since we are neglecting the first order derivatives w.r.t. $Q_k$, it's consistent to neglect
-the second order derivatives as well, which gives us the following equation
+In addition, since we are neglecting the first-order derivatives w.r.t. $Q_k$, it is consistent to neglect
+the second-order derivatives as well, which gives us the following equation
 \begin{equation}
     \label{eq:class_jcm_eq7}
     \left[\sum_k \left(-\frac{\hbar^2}{2}\dfrac{\partial^2}{\partial Q_k^2}
     + \frac{1}{2} \omega_k^2 Q_k^2\right)
     + E_j(Q) - E \right]\chi_j (Q)= 0.
 \end{equation}
-this is the defining equation for the state of the boson field when the system is in state \(\phi_j\).
+this is the defining equation for the state of the Boson field when the system is in state \(\phi_j\).
 
-For, complete independence of the field from the system, we need to replace 
+For complete independence of the field from the system, we need to replace 
 \(E_j(Q)\) by some fixed average energy \(\bar{E}(Q)\) and corresponding 
 \(\chi_j(Q)\) by some ``mean''-field state \({\chi}(Q)\). Hence, we replace 
 \begin{equation}
@@ -128,11 +127,11 @@ reduces to
 \end{align}
 We've identified the key approximations needed to express the exact wave function 
 (\refeq{eq:class_jcm_eq3}) in the simpler, factorized form (\refeq{eq:class_jcm_eq9}). 
-This step is critical because it assumes the influence of the atom on the field is minimal, while the 
+This step is critical because it assumes the influence of the atom on the field is minimal while the 
 field has a strong influence on the atom. Now, we can focus on deriving the effective 
 Schrödinger equation for the wave function (denoted by \(\psi\)) representing the quantum system.
 
-Note that, one can in general, view \refeq{eq:class_jcm_eq9} as a general ansatz for the wave function
+Note that one can, in general, view \refeq{eq:class_jcm_eq9} as a general ansatz for the wave function
 and find from \refeq{eq:class_jcm_eq2}\footnote{Here we assumed only single mode of E.M field} 
 \begin{align}
     \label{eq:class_jcm_eqA}
@@ -143,21 +142,21 @@ and find from \refeq{eq:class_jcm_eq2}\footnote{Here we assumed only single mode
     +\psi(x, Q)\left[-\frac{\hbar^2}{2} \frac{\partial^2}{\partial Q^2}+\frac{\omega^2}{2} Q^2
     - E\right] \chi(Q) = 0
 \end{align}
-To streamline our analysis, we'll now focus on a single field mode. This derivation takes a 
-slightly different approach compared to both the method outlined in 
+We'll now focus on a single-field mode to streamline our analysis. This derivation takes a 
+slightly different approach compared to both the methods outlined in 
 \refchap{chap:briggs_rost_semiclassic} 
 and the one we'll use later for the Jaynes-Cummings model (our toy model universe). 
 We present this alternative approach to lay the groundwork for the new considerations 
 in the next section, which will leverage coherent states.
 
-We split the action of the total Hamiltonian on the field ad quantum system such that the 
+We split the action of the total Hamiltonian on the field and quantum system such that the 
 wave function \(\chi(Q)\) described the field with energy close to total energy \(E\), while 
-the reaming part of the equation describes the quantum system (with negligible energy in camparison).
+the reaming part of the equation describes the quantum system (with negligible energy in comparison).
 Completely ignoring the influence of the quantum system on the field (back coupling) is analogous 
 to neglecting the terms \(\bar{E}(Q)\) in the equations. This simplification allows us 
 to select a wave function for the field, which will ultimately be treated classically. 
-This is equivalet to neglecting \(\bar{E}(Q)\) and allows one to choose the wave function of the
-field which is to become classical, This wave function must be an eigenstate of the fixed-field Schrödinger equation
+This is equivalent to neglecting \(\bar{E}(Q)\) and allows one to choose the wave function of the
+the field which is to become classical, This wave function must be an eigenstate of the fixed-field Schrödinger equation
 , i.e.
 \begin{equation}
     \label{eq:class_jcm_eq10}
@@ -189,7 +188,7 @@ Using \refeq{eq:class_jcm_eqA} - \refeq{eq:class_jcm_eq11} gives
 \end{eqnarray}
 
 The above differential equation describes the dynamics of (atomic part) 
-the quantum system. We simplfy this equation by replacing the equation by a parameter $t$, 
+the quantum system. We simplify this equation by replacing the equation by a parameter $t$, 
 which parametrizes $Q(t)$ trajectory and define
 \begin{equation}
     \label{eq:class_jcm_eq14}
@@ -233,7 +232,7 @@ Hence, in comparison to the remaining terms on the right-hand side, which are of
 the order $E_s$, these additional terms are diminished by a factor approximately 
 $\frac{\hbar \omega}{E} \approx \frac{1}{n}$, where $n$ represents the number of
 photons in the field mode.
-This factor is significantly small for a classical field. Hence, we can neglet these 
+This factor is significantly small for a classical field. Hence, we can neglect these 
 terms and write
 \begin{equation}
     \label{eq:class_jcm_eq17}
@@ -242,29 +241,21 @@ terms and write
 which is the usual form of TDSE for the quantum system interacting with the classical field.
 
 The derivation relies on the Time-Independent Schrödinger Equation (TISE) for both the 
-atom and the field. Time arises as a consequence of classical motion, serving solely as 
-a derived classical parameter. It's important to note that 
-the aforementioned arguments hold true only away from turning points where 
-the velocity ${\dot{Q}}(t)$ is non-zero. But it's evident that the Time-Dependent 
-Schrödinger Equation (TDSE) of (\refeq{eq:class_jcm_eq17}) remains valid for all times. 
+atom and the field. Time arises as a consequence of classical motion, serving solely as a derived classical parameter. It's important to note that the aforementioned arguments hold true only away from classical turning points where 
+the velocity ${\dot{Q}}(t)$ is non-zero. But it's evident that the Time-Dependent  Schrödinger Equation (TDSE) of (\refeq{eq:class_jcm_eq17}) remains valid for all times. 
 The reason behind this limitation is apparent: it lies in the selection of $Q$, 
-the position representation, for the field mode. 
+the position representation for the field mode. 
 While this choice aids in diagonalizing the coupling Hamiltonian $H_I$, 
 in this representation, the real field quadrature $Q(t)$ undergoes 
 harmonic motion with periodic zeros in its time derivative $Q^{\dot{}}(t)$. 
 Consequently, the position representation fails to offer a global notion of time. 
-Next section will illustrates how this limitation can be addressed by utilizing 
+The next section will illustrate how this limitation can be addressed by utilizing 
 a coherent state representation of the field state.
 
 \section{Coherent State Derivation of TDSE\label{sec:sec:class_jcm_sec2}}
-In quantum optics, coherent states hold a special place. Representing minimal uncertainty 
-in both position $(Q)$ and momentum $(P)$ of the field mode, these states exhibit classical 
-behavior. It's therefore unsurprising that coherent states play a crucial role in deriving 
-a time-dependent Schrödinger equation for the quantum system's degrees of freedom. This 
-derivation leverages a time-independent Schrödinger equation encompassing both the coupled 
-quantum system and the field mode. 
+In quantum optics, coherent states are unique as they exhibit classical behavior while having minimal uncertainty in both position $(Q)$ and momentum $(P)$ of the field mode. It's, therefore, unsurprising that coherent states play a crucial role in deriving a time-dependent Schrödinger equation for the quantum system's degrees of freedom. This derivation leverages a Time-independent Schrödinger equation encompassing both the coupled quantum system and the field mode. 
 
-We begin by writing  the total hamiltonian for single mode of E.M field in term of usual 
+We begin by writing  the total Hamiltonian for a single mode of E.M field in term of usual 
 creation and annihilation operators as
 \begin{equation}
     \label{eq:class_jcm_eq18}
@@ -306,7 +297,7 @@ representation relative to the classical degree of freedom. We write the total w
 \end{equation}
 As before, we will consider \( \exp\left(-\abs*{\alpha}^2/2\right)\chi(\alpha^*)\) to 
 describe the classical degree of freedom, while \(\psi(\alpha^*)\) will represent the 
-quantum system without backreaction to the classical degree of freedom.
+quantum system without back-reaction to the classical degree of freedom.
 
 Another significant property of coherent states is their overlap with photon number states, expressed as 
 \( \braket*{n}{\alpha} = \exp\left(-\abs*{\alpha}/2\right) (\alpha^*)^n/\sqrt{n!} \). 
@@ -331,16 +322,16 @@ With \refeq{eq:class_jcm_eq21} in mind, the TISE with $H_F$ and $H_I$ from
         \alpha^* \dfrac{\partial}{\partial \alpha^*} + \frac{1}{2}\right) - E\right]\chi(\alpha^*) = 0. \quad \qquad
 \end{align}
 
-The above equation corresponds to \refeq{eq:class_jcm_eqA} of position space approach. 
+The above equation corresponds to \refeq{eq:class_jcm_eqA} of the position space approach. 
 Just as we did in \refsec{sec:class_jcm_sec1}, we chose \(\chi\) to be an eigenstate of the field 
 Hamiltonian, i.e., to be a number state \(\ket*{n}\) with energy \(E = \hbar \omega \left[n + 1/2\right]\).
-In coherent state representation, 
+In the coherent state representation, 
 \begin{eqnarray}
     \label{eq:class_jcm_eq24}
     \chi(\alpha^*) =  (\alpha^*)^n/\sqrt{n!}. 
 \end{eqnarray}
 
-This ensures that the second part of \refeq{eq:class_jcm_eq23} dissappears and one notices that
+This ensures that the second part of \refeq{eq:class_jcm_eq23} disappears and one notices that
 \begin{eqnarray}
     \label{eq:class_jcm_eq25}   
     \frac{\chi'(\alpha^*)}{\chi(\alpha^*)} = \frac{n}{\alpha^*} = \frac{\alpha^*\alpha}{\alpha^*} = \alpha.
@@ -361,7 +352,7 @@ in position space representation. The parameter \(t\) is defined through a compl
     \hbar \omega \alpha^* \dfrac{\partial}{\partial \alpha^*} \equiv 
     -i \hbar\dfrac{\partial}{\partial t}.
  \end{equation}
-Hence, time is determined by the classical motion of the field amplitude, which in this case is 
+Hence, time is determined by the classical motion of the field amplitude, which, in this case, is 
 \begin{equation}
     \label{eq:class_jcm_eq28}
     \alpha(t) = \alpha_0 e^{-i\omega t}.
@@ -371,7 +362,7 @@ Importantly, whereas the position space expression (\refeq{eq:class_jcm_eq14}) b
 problematic near classical turning 
 points due to $P(Q) = 0$, the coherent state expression (\refeq{eq:class_jcm_eq27}) maintains finiteness throughout all times. 
 Furthermore, it's noteworthy that the coherent state equation (\refeq{eq:class_jcm_eq26}) exclusively involves first-order 
-derivatives. This characteristic closely resembles the first-order time-dependent Schrödinger 
+derivatives. This characteristic resembles the first-order time-dependent Schrödinger 
 equation, whereas the position space expression (\refeq{eq:class_jcm_eq15}) is of second order.
 
 We see that the field part of the interaction Hamiltonian becomes, 
@@ -382,7 +373,7 @@ We see that the field part of the interaction Hamiltonian becomes,
 \end{eqnarray}
 
 In large photon number limit \(1/\abs*{\alpha}^2 \approx 1/n\), vanishes. This can be 
-compared to the similar discussion after \refeq{eq:class_jcm_eq15}. Therefore we find that, in 
+compared to the similar discussion after \refeq{eq:class_jcm_eq15}. Therefore, we find that in 
 the limit of large photon number, the TDSE for state \(\ket*{\psi(t)}\) is 
 \begin{mdframed}
     \begin{equation}
@@ -394,11 +385,8 @@ the limit of large photon number, the TDSE for state \(\ket*{\psi(t)}\) is
 \end{mdframed}
 
 Under the assumption of a valid two-level approximation, the system can be represented 
-by the operator $\oper{S} = g\oper{\sigma}_x$.  Crucially, unlike the equivalent result obtained in 
+by the operator $\oper{S} = g\oper{\sigma}_x$. Crucially, unlike the equivalent result obtained in 
 position space representation, the derivation of \refeq{eq:class_jcm_eq30} using coherent 
 states is valid for all times.
 
-Furthermore, this equation for a two-level system interacting with a single electromagnetic 
-field mode is of critical importance. We will leverage it to compare the system's dynamics 
-obtained through this approach to those obtained from a fully quantum relational dynamics 
-approach in the next section.
+Furthermore, this equation for a two-level system interacting with a single electromagnetic field mode is important as we will leverage it to compare the system's dynamics obtained through this approach to those obtained from a fully \emph{quantum relational dynamics} approach in the upcoming section.

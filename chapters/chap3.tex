@@ -10,19 +10,20 @@ Where  \(\lambda\) is any complex-valued parameter, $\H$ is the Hamiltonian of t
     \H \ketPsi = E \ketPsi.
 \end{equation*}
 
-For our analysis, we assume that \(\lambda\) is real. There is no fundamental reason on why \(\lambda\)
-should be real. However, assumption of realness of \(\lambda\) is a phenomological observation, 
-based on the fact that the time evolution operator is unitary operator for a
-closed quantum system. The unitarity of the time evolution operator and  the hermiticity of the Hamiltonian
-implies that the parameter \(\lambda\) has to to real. 
+To facilitate our analysis, we assume that the value of 
+\(\lambda\) is a real number. There is no fundamental reason why \(\lambda\)
+It should be real. However, the assumption of the realness of \(\lambda\) is a phenomenological observation 
+based on the fact that the time evolution operator is the unitary operator for a
+closed quantum system. The unitarity of the time evolution operator and the hermiticity of the Hamiltonian
+implies that the parameter \(\lambda\) has to be real. 
 
 
-We partition the total Hilbert space $\mathcal{H}$ into two components to extract the dynamics. A system \(\mathcal{H}_s\) and a clock \(\mathcal{H}_c\). We re-write 
+To extract the dynamics, we partition the total Hilbert space $\mathcal{H}$ into two components. A system \(\mathcal{H}_s\) and a clock \(\mathcal{H}_c\). We re-write 
 \begin{equation}
     \H = \H_s \otimes \I_c + \I_s \otimes \H_c + \Vinter .
 \end{equation}
 
-Since the system and environment\footnote{Please note that the words `clock' and `environment' will be used synonymous. The term ``system" denotes a subsystem (excluding the environment) of a global Hilbert space unless otherwise specified.} are embedded in the global Hilbert space, one can single
+Since the system and environment\footnote{Please note that the use of the words `clock' and `environment' will be synonymous. The term ``system" denotes a subsystem (excluding the environment) of a global Hilbert space unless otherwise specified.} are embedded in the global Hilbert space, one can single
 out the system state by projecting the global state partially onto a static state of the environment. 
 
 \paragraph{For non-interacting system and environment:} Let \(\ket{\chi}\) be a state vector 
@@ -39,7 +40,12 @@ We define
 \begin{equation}
    \ket{\chi_\lambda} = e^{-i\lambda(\H_c - E)}\ket{\chi_0}.
 \end{equation}
-
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=1\textwidth]{figures/chap3/rqm_llustration.png}
+    \caption{Illustration of the relational state formalism. The relational quantum state (\(\ket{\varphi}\)) of the system of interest is obtained once we project the Eigenstate of the Global Hilbert State onto a conditional clock state \(\ket{\chi}\)}
+    \label{fig:chap3_rel_illustration}
+\end{figure}
 By conditioning the global state \(\ketPsi\) onto a clock state \(\ket{\chi_\lambda}\),
 we utilize the state \(\ket{\chi_\lambda}\) as a label to associate the system state with the particular value of \(\lambda\), i.e., 
 \begin{equation}
@@ -53,8 +59,8 @@ So,
 \end{equation}
 
 Notice that the choice of \(\ket{\chi_0}\) fixes the system's initial state.
-Since, \(\lambda\) in (\refeq{eq:nonint_sys_evol}) is assumed to be a continuous 
- parameter, the above equation can be interpreted as a solution to the differential equation
+Since \(\lambda\) in (\refeq{eq:nonint_sys_evol}) is assumed to be a continuous 
+ parameter, the above e equation can be interpreted as a solution to the differential equation
 \begin{equation}
     i \dfrac{d}{d\lambda} \ket{\varphi(\lambda)}_s = \H_s \ket{\varphi(\lambda)}_s.
 \end{equation}
@@ -115,7 +121,7 @@ where \(\mathcal{N}_\lambda = \bbra{\Psi}\oper{P}_\chi\ketPsi\). One observes th
 \oper{P}_{\Psi \chi}\ketPsi = \frac{\oper{P}_\Psi\oper{P}_\chi}{\mathcal{N}_\lambda} \ketPsi
     = \ketPsi
 \end{equation}
- Using above defined operators, we decompose the 
+ Using above-defined operators, we decompose the 
  \begin{equation}
  \label{eq:effective_Vs}
      \begin{aligned}
@@ -140,7 +146,7 @@ Inserting (\refeq{eq:effective_Vs}) into (\refeq{eq:TISE_undecomposed_simp}) and
 \end{mdframed}
 where we defined \(\innerGlob{\chi_\lambda}{\Psi} = \ket{\varphi(\lambda)}_s\).  The phase factor  \(S(\lambda) = \int^\lambda \xi(\tau)d\tau \) introduced helps eliminate the c-number after the decomposition of the ``effective'' potential. 
 
-We find that the final form of the Equation is equivalent to the TDSE for the remaining sub-system (\(\mathcal{H}_s\)) of the
+We find that the final form of the Equation is equivalent to the TDSE for the remaining subsystem (\(\mathcal{H}_s\)) of the
 global Hilbert space \(\mathcal{H}\).
 
 \section{Example: Dynamics of two interacting two level system\label{sec:chap3_2spin_interact}}

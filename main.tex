@@ -8,23 +8,22 @@
 	top=1in,
 	bottom=1in
 }
-\usepackage{draftwatermark}
-\SetWatermarkLightness{0.9}
-\SetWatermarkScale{1.8}
+%\usepackage{draftwatermark}
+%\SetWatermarkLightness{0.9}
+%\SetWatermarkScale{1.8}
 \usepackage[svgnames]{xcolor}
-\usepackage{graphicx, pdfpages}
+\usepackage{graphicx, pdfpages, wrapfig, float}
 % Set path/directory where all figures are stored.
 \graphicspath{ {figures/} }
 %%
 \usepackage{titlesec}
 \usepackage{fancyhdr}
 % Format section, chapter, subsection, and subsubsection headings with sans-serif font
-\titleformat{\section}{\Large\bfseries\sffamily}{\thesection}{1em}{}
 \titleformat{\chapter}[display]{\Huge\bfseries\sffamily}{\chaptertitlename\ \thechapter}{20pt}{\Huge}
+\titleformat{\section}{\Large\bfseries\sffamily}{\S~\thesection}{1em}{}
 \titleformat{\subsection}{\large\bfseries\sffamily}{\thesubsection}{1em}{}
 \titleformat{\subsubsection}{\bfseries\sffamily}{\thesubsubsection}{1em}{}
 
-\usepackage{float}
 \input{styles/custom_quoation}
 \input{styles/custom_frame}
 \usepackage{mathtools, amssymb, physics, cancel}
@@ -35,10 +34,15 @@
 \usepackage[
 	pdfauthor={Aditya Dev},
 	pdftitle={Relational Dynamics From Entangled Eigenstates},
-	pdfsubject={PRJ502_MS_THESIS_IISER_Mohali},
+	pdfsubject={PRJ502 MS THESIS IISER Mohali},
+    pdfkeywords={Relational Quantum Mechanics, Jaynes-Cummings Model},
+    pdfproducer={LaTeX with hyperref},
+    pdfcreator={xelatex},
 	backref=page,
 	hypertexnames=false
 ]{hyperref}
+\usepackage{caption}
+\captionsetup{font=footnotesize}
 \renewcommand*{\backref}[1]{}
 \renewcommand*{\backrefalt}[4]{{\footnotesize [%
     \ifcase #1 Not cited.%
@@ -77,7 +81,7 @@
 \cleardoublepage
 {\sffamily \include{misce/declaration}}
 \cleardoublepage
-{\sffamily \include{misce/acknowledgement}}
+{\include{misce/acknowledgements}}
 
 % Include abstract and acronyms
 \thispagestyle{empty}
