@@ -13,6 +13,7 @@
 %\SetWatermarkScale{1.8}
 \usepackage[svgnames]{xcolor}
 \usepackage{graphicx, pdfpages, wrapfig, float}
+\usepackage[protrusion=true, final]{microtype}
 % Set path/directory where all figures are stored.
 \graphicspath{ {figures/} }
 %%
@@ -32,7 +33,7 @@
 \usepackage[final]{microtype}
 \linespread{1.32}
 \usepackage[
-	pdfauthor={Aditya Dev},
+	pdfauthor={Aditya Dev (MS19022)},
 	pdftitle={Relational Dynamics From Entangled Eigenstates},
 	pdfsubject={PRJ502 MS THESIS IISER Mohali},
     pdfkeywords={Relational Quantum Mechanics, Jaynes-Cummings Model},
@@ -77,9 +78,11 @@
 \pagenumbering{Roman}
 
 % Include certificate, declaration, and acknowledgement
-{\sffamily \include{misce/certificate}}
+%{\sffamily \include{misce/certificate}}
+{\includepdf{misce/certificate.pdf}}
 \cleardoublepage
-{\sffamily \include{misce/declaration}}
+{\includepdf{misce/declaration.pdf}}
+%{\sffamily \include{misce/declaration}}
 \cleardoublepage
 {\include{misce/acknowledgements}}
 

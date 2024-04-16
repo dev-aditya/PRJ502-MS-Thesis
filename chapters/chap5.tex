@@ -51,7 +51,7 @@ simplifying calculations. This adjustment doesn't affect our analysis.}
         \oper{H} = \frac{\hbar\omega}{2} \oper{\sigma}_z + \hbar \omega \oper{a}^\dagger \oper{a}
         + \hbar g \left(\oper{\sigma}_+ \oper{a} + \oper{\sigma}_- \oper{a}^\dagger\right). 
 \end{equation}
-It portrays the resonant interaction between two energy levels of an atom and a single boson field mode.
+It portrays the resonant interaction between two energy levels of an atom and a single Boson field mode.
 To understand how this system evolves over time, we initially aim to compute the unitary evolution operator 
 $U(t) = e^{-i t H/\hbar}$ through the diagonalization of $H$. Once we achieve an eigenvalue decomposition 
 $H = \sum_n \epsilon_n \lvert \epsilon_n \rangle \langle \epsilon_n \rvert$, it follows that:
@@ -398,17 +398,22 @@ in \reffig{fig:chap5_JCM_overlap_avg}.
 The numerical results presented in \refsec{sec:chap5_numerical_results} show a good agreement 
 between the classical limit of the quantum relational theory and the semiclassical theories
 discussed in \refchap{chap:braun_briggs_jaynes} and \refsec{sec:chap5_large_amplitude_weak_g}, under appropriate limits. 
-The agreement is more pronounced for the non-rotating wave approximation than the rotating wave approximation. This is expected as the rotating wave approximation is a more stringent approximation and the
+The agreement is more pronounced for the non-rotating wave approximation than for the rotating wave approximation. This is expected as the rotating wave approximation is a more stringent approximation, and the
 agreement is expected to be better for the non-rotating wave approximation.
 The agreement is close when the \(E_c \approx E_{\mathrm{glob}}\), 
-i.e., the energy carried by the environment state is near the energy of the global state. Additionally,  the above analysis reveals a key trend, as we increase the average photon number (\(\alpha^2\)) and while the energy 
-of the global eigenstate
-is close to the energy of the environment conditional state, the agreement between the two approaches improves (can be seen as the graphs flatten out more around the red vertical line as the average photon number increases.
-it can be seen both in 
-\reffig{fig:chap5_linear_overlap_avg} and \reffig{fig:chap5_JCM_overlap_avg}. 
-Our numerical results align with the conditions outlined in previous chapters for a classical treatment of the environment. These conditions stipulate that the environment should possess most of the closed system's energy content and since, for our case, the coupling \(g \propto \frac{1}{\abs*{\alpha}}\). Hence, for \(\abs*{\alpha} \to \infty \implies g \to 0\). This signifies a weak interaction limit, where the ``back coupling", or the influence of the quantum system on the environment, becomes negligible.
+i.e., the energy carried by the environment state is near the energy of the global state. 
 
-\paragraph{Coherent states as clock states:} Our research identified coherent states as the optimal candidates for ``clock states" within the quantum relational approach. In this context, the classical limit of the quantum approach aligns seamlessly with established semiclassical theories. As discussed in~\cite{braun2004classical}, coherent states offer a significant advantage in semiclassical theory. They elegantly overcome the challenge of defining time derivatives near classical turning points, leading to a more robust treatment of the problem. 
-Another intriguing aspect of coherent states is their potential connection to decoherence. Theoretical studies have conclusively demonstrated that when a single-mode boson field interacts with its environment and undergoes decoherence – the process by which quantum systems lose their superposition and entanglement properties – the field transitions naturally to a coherent state. Remarkably, the only solution of the ``master equation" that remains pure in the presence of decoherence are coherent states (gaussian states)~\cite{dutra1998decoherence, zuerk_coherent_state_1993}. 
+Additionally,  the above analysis reveals a key trend; as we increase the average photon number (\(\alpha^2\)), and while the energy 
+of the global eigenstate is close to the energy of the environment conditional state, the average overlap curve flattens, indicating better agreement even for larger fluctuations of \(E_c\) around the \(E_{\mathrm{glob}}\). This implies that the weak back-coupling limit maintains the semi-classical behaviors even for a larger deviation of \(E_c\) about the global system's energy, which can be seen both in 
+\reffig{fig:chap5_linear_overlap_avg} and \reffig{fig:chap5_JCM_overlap_avg}. 
+
+Our numerical results align with the conditions outlined in previous chapters for a classical treatment of the environment. These conditions stipulate that the environment should possess most of the global system's energy content and since, for our case, the coupling \(g \propto \frac{1}{\abs*{\alpha}}\). Hence, for \(\abs*{\alpha} \to \infty \implies g \to 0\). This signifies a weak interaction limit, where the ``back coupling", or the influence of the quantum system on the environment, becomes negligible.
+
+\paragraph{Coherent states as clock states:} Our work suggests that coherent states are the most suitable candidates for ``clock states" in the quantum relational framework, particularly when considering the classical limit of the theory. In this context, the classical limit of the quantum approach aligns seamlessly with established semiclassical theories. As discussed in~\cite{braun2004classical}, coherent states offer a significant advantage in semi-classical theory. They elegantly overcome the challenge of defining time derivatives near classical turning points, leading to a more robust treatment of the problem. 
+
+Another intriguing aspect of coherent states is their potential connection to decoherence. Theoretical studies have conclusively demonstrated that when a single-mode Boson field interacts with its environment and undergoes decoherence – the process by which quantum systems lose their superposition and entanglement properties – the field transitions naturally to a coherent state. Remarkably, the only solution of the ``master equation" that remains pure in the presence of decoherence are coherent states (Gaussian states)~\cite{dutra1998decoherence, zuerk_coherent_state_1993}. 
+
+\paragraph{Potential Connection with Entanglement measure: } As discussed in previous chapters, \textit{disentangling} the environment from the quantum subsystem is crucial for extracting the subsystem dynamics in semi-classical theory.  In a simplified sense, this \textit{disentanglement} can be achieved by substituting the degrees of freedom of the environment with their classical trajectories (replacing operators such as $\oper{Q}$ with $Q (t)$ within the interaction potential. In other words, $\oper{V}(\oper{x}, \oper{Q})$ becomes $\oper{V}(\oper{x}, Q(t))$. . By comparing the resulting ``emergent potential" (\refeq{eq:effective_Vs}) with this ``semi-classical" potential, a measure of entanglement could potentially be established.
+
 
 
