@@ -9,7 +9,6 @@ Where  \(\lambda\) is any complex-valued parameter, $\H$ is the Hamiltonian of t
 \begin{equation*}
     \H \ketPsi = E \ketPsi.
 \end{equation*}
-
 To facilitate our analysis, we assume that the value of 
 \(\lambda\) is a real number. There is no fundamental reason why \(\lambda\)
 It should be real. However, the assumption of the realness of \(\lambda\) is a phenomenological observation 
@@ -22,7 +21,6 @@ To extract the dynamics, we partition the total Hilbert space $\mathcal{H}$ into
 \begin{equation}
     \H = \H_s \otimes \I_c + \I_s \otimes \H_c + \Vinter .
 \end{equation}
-
 Since the system and environment\footnote{Please note that the use of the words `clock' and `environment' will be synonymous. The term ``system" denotes a subsystem (excluding the environment) of a global Hilbert space unless otherwise specified.} are embedded in the global Hilbert space, one can single
 out the system state by projecting the global state partially onto a static state of the environment. 
 
@@ -57,35 +55,31 @@ So,
 \label{eq:nonint_sys_evol2}
     \ket{\varphi(\lambda)}_s = e^{-i\lambda \H_s} \innerGlob{\chi_0}{\Psi} \equiv e^{-i\lambda \H_s}\ket{\varphi(0)}_s.
 \end{equation}
-
 Notice that the choice of \(\ket{\chi_0}\) fixes the system's initial state.
-Since \(\lambda\) in (\refeq{eq:nonint_sys_evol}) is assumed to be a continuous 
- parameter, the above e equation can be interpreted as a solution to the differential equation
+Since \(\lambda\) in (\refeq{eq:nonint_sys_evol}) is assumed to be a continuous parameter, the above equation can be interpreted as a solution to the differential equation
 \begin{equation}
     i \dfrac{d}{d\lambda} \ket{\varphi(\lambda)}_s = \H_s \ket{\varphi(\lambda)}_s.
 \end{equation}
-Which is equivalent to (Time-dependent Schr\"odinger Equation) TDSE in units 
+This is equivalent to (Time-dependent Schr\"odinger Equation) TDSE in units
 \(\hbar = 1\). It is crucial for the system and the environment within the global Hilbert space to exhibit entanglement. Otherwise, the system and the environment would uphold separate ``global" invariance principles, each with its own parameter, \(\lambda_s\) and \(\lambda_c\), respectively. This would leave the relationship between \(\lambda_s\) and \(\lambda_c\) unresolved~\cite{Gemsheim:2023izg}.
 
 \paragraph{Role of parameter \(\lambda\):} The variable \(\lambda\) introduced 
 in the above derivation has no physical significance. It only serves as a parameter
 to track the evolution of our system. Any reparametrization of \(\lambda \to t(\lambda)\) 
-has no change in the equation of the system state evolution, highlighting
+has no change one the equation governing the the system's state evolution, highlighting
 the time reparametrization invariance of the global system. One can, in principle 
 \footnote{As one does it always. We never measure time directly; rather, we measure
-the angular position of a clock dial or the no of transition electrons made in a cesium atom.}
- parameterize the evolution using an observable of our environment 
- \(\operatorname{A}_c(\lambda)\equiv \bra{\chi_\lambda}\oper{A}_c\ket{\chi_\lambda}\). 
+the angular position of a clock dial or the number of transition electrons made in a cesium atom.}
+ parameterize the evolution using an observable of our environment \(\operatorname{A}_c(\lambda)\equiv \bra{\chi_\lambda}\oper{A}_c\ket{\chi_\lambda}\). 
  An ideal choice would be to use such a $\oper{A}_c$ for which the relation between $\lambda $ and $\operatorname{A}_c$ is simple, for example, linear.
 
-High-resolution clock states $\ket{\chi_\lambda} \propto \sum_k a_k \exp (-i\lambda E_c ^k)\ket{E_c}_k$ require a broad 
-distribution over the clock energy eigenstates, ideally with uniform coefficients 
+High-resolution clock states $\ket{\chi_\lambda} \propto \sum_k a_k \exp (-i\lambda E_c ^k)\ket{E_c}_k$ require a broad
+distribution over the clock energy eigenstates, ideally with uniform coefficients
 ($a_k$)~\cite{Gemsheim:2023izg, Smith:2017pwx}. This condition is readily met when the clock's physical dimensions exceed those of the system.
 
 
-\paragraph{For interacting system and environment:} So far in our analysis, we have assumed 
-no interaction, i.e., \(\Vinter = \oper{0}\). However, in real scenarios, one always has some
-interaction within components of a global closed system. To extend the derivation to 
+\paragraph{For interacting system and environment:} So far in our analysis, we have assumed no interaction, i.e. \(\Vinter = \oper{0}\). However, in real scenarios, there is always some
+interaction within components of a global closed system. To extend the derivation to
 non-zero \(\Vinter\), we modify our clock state as
 \begin{equation}
    \begin{gathered}
@@ -108,7 +102,6 @@ We can rearrange the above equation to write it as
           \H_s\innerGlob{\chi_\lambda}{\Psi} - \xi(\lambda)\innerGlob{\chi_\lambda}{\Psi}  + \bra{\chi_\lambda}\Vinter\ketPsi.
     \end{gathered}
 \end{equation}
-
 We now decompose $\bra{\chi_\lambda}\Vinter\ketPsi$ into a Hermitian potential and a c-number. To facilitate the decomposition, we define the following:
  \begin{equation}
      \begin{gathered}
@@ -136,7 +129,6 @@ where
         \Vs(\lambda) = \frac{\bra{\chi_\lambda} \left(\Vinter\oper{P}_{\Psi} + \oper{P}_{\Psi}\Vinter\right)\ket{\chi_\lambda}}{\mathcal{N}_\lambda}
     \end{equation}
 \end{mdframed}
-
 Inserting (\refeq{eq:effective_Vs}) into (\refeq{eq:TISE_undecomposed_simp}) and setting \(\xi(\lambda) = -\bbra{\Psi} \oper{V}\oper{P}_\chi \ketPsi/\mathcal{N}_\lambda\) we obtain
 \begin{mdframed}
     \begin{equation}
@@ -168,14 +160,12 @@ with eigenvalues \(E = \left\{-\sqrt{3}, \sqrt{3}\right\}\),
 where both of them are doubly degenerate. One of the eigenvector
 corresponding to \(E_- = -\sqrt{3}\), in the standard basis, is
 \(\vec{\Psi} = \left(1, 0, -1, -(1 + \sqrt{3})\right)^T\)[refer to ~\refapp{app:chap3_appendix} for detailed calculations].
-\begin{figure}[!h]
+\begin{figure}[!ht]
     \centering
     \includegraphics[width=1.0\textwidth]{chap3/Vx_Vy_Vz.pdf}
     \caption{Components of the effective potential \(\vec{V}_S(\lambda)\) for the two interacting spin-1/2 particles.}
     \label{fig:chap3_effective_potential}
 \end{figure}
-
-
 Taking
 \begin{equation}
     \ket*{\chi(\lambda)} = 
@@ -183,18 +173,15 @@ Taking
         2\sqrt{1 + a \cos^2(\lambda)}} \left(e^{-i\lambda} \ket*{\uparrow} + e^{i\lambda} \ket*{\downarrow} \right)
 \end{equation} 
 where \(a = \sqrt{3} + 1\), we obtain from \refeq{eq:effective_Vs}, the effective potential
-
 \begin{equation}
     \oper{V}_s = \vec{V}_S(\lambda)\cdot\vec{\oper{\sigma}}_S. 
 \end{equation}
-
 \begin{figure}[!ht]
     \centering
     \includegraphics[]{chap3/psi_c1_c2.pdf}
     \caption{Evolution of the system state \(\ket{\varphi(\lambda)}_s\) for the two interacting spin-1/2 particles. }
     \label{fig:2spin_interact_RQM}
 \end{figure}
-
 The components of \(\vec{V}_S(\lambda)\) are shown in \reffig{fig:chap3_effective_potential} and 
 are explicitly given by 
 \begin{equation}
@@ -203,9 +190,6 @@ are explicitly given by
         V_y(\lambda) = -\frac{(a/2)\sin(2\lambda)}{1 + a \cos^2(\lambda)}
     \end{gathered}
 \end{equation}
-
-
-
 One can calculate the evolution of the system state by projecting the global state onto the clock state,
 which gives
 \begin{equation}

@@ -19,7 +19,6 @@ The Boson field Hamiltonian will be takes a sum over field modes, with Hamiltoni
 \begin{equation}
    \oper{H}_F(\oper{P}, \oper{Q}) = \sum_{k} \frac{1}{2}\left(\oper{P}_k ^2 + \omega_k^2 \oper{Q}_k^2\right)
 \end{equation}
-
 We write the above Hamiltonian in terms of creating and annihilation operators
 \begin{equation}
     \label{eq:class_jcm_eq1}
@@ -50,7 +49,6 @@ with $H$ in the form of \refeq{eq:class_jcm_eq1} as
     \label{eq:class_jcm_eq3}
     \Psi(x, Q) = \sum_{k} \chi_k(Q) \phi_k(x, Q).
 \end{equation}
-
 We employ this particular form, wherein $\chi_k(Q)$ displays no reliance on $x$, 
 under the assumption that the system exerts minimal back-reaction on the field.
 This assumption has been utilized previously in \refchap{chap:briggs_rost_semiclassic} 
@@ -69,7 +67,6 @@ Doing the same exercise as in \refeq{eqn:briggs_rost_eq5}, we substitute
         \frac{-\hbar^2}{\chi_i}\dfrac{\partial}{\partial Q_k}\chi_i\dfrac{\partial}{\partial Q_k}
     \right]\phi_i (x, Q) = 0.
 \end{align}
-
 \refeq{eq:class_jcm_eq4} when projected onto state \(\phi_j\) gives
 \begin{align}
     \label{eq:class_jcm_eq5}
@@ -81,7 +78,6 @@ Doing the same exercise as in \refeq{eqn:briggs_rost_eq5}, we substitute
     + \bra{\phi_j}{\hbar^2}\dfrac{\partial}{\partial Q_k}\ket{\phi_i}\dfrac{\partial}{\partial Q_k}
    \right]\chi_i = E \chi_j.
 \end{align}
-
 The equation above describes the ``close-coupled" form for \(\chi_j\). 
 The off-diagonal terms account for changes in the state of the Boson field caused by changes in the system's state. Neglecting these 
 off-diagonal coupling terms simplify the equation, providing 
@@ -127,10 +123,9 @@ reduces to
 \end{align}
 We've identified the key approximations needed to express the exact wave function 
 (\refeq{eq:class_jcm_eq3}) in the simpler, factorized form (\refeq{eq:class_jcm_eq9}). 
-This step is critical because it assumes the influence of the atom on the field is minimal while the 
-field has a strong influence on the atom. Now, we can focus on deriving the effective 
-Schrödinger equation for the wave function (denoted by \(\psi\)) representing the quantum system.
-
+This step is critical because it assumes that the influence of the atom on the field is minimal while the
+field has a strong influence on the atom. Now, we can focus on deriving the effective
+Schrödinger equation for the wave function (denoted by \(\psi\)) that represents the quantum system.
 Note that one can, in general, view \refeq{eq:class_jcm_eq9} as a general ansatz for the wave function
 and find from \refeq{eq:class_jcm_eq2}\footnote{Here we assumed only single mode of E.M field} 
 \begin{align}
@@ -186,7 +181,6 @@ Using \refeq{eq:class_jcm_eqA} - \refeq{eq:class_jcm_eq11} gives
         H_s + H_I(x, Q) - \frac{\hbar^2}{2} \dfrac{\partial^2}{\partial Q^2}
     - i\hbar P(Q) \dfrac{\partial}{\partial Q}\right] \psi(x, Q) = 0. 
 \end{eqnarray}
-
 The above differential equation describes the dynamics of (atomic part) 
 the quantum system. We simplify this equation by replacing the equation by a parameter $t$, 
 which parametrizes $Q(t)$ trajectory and define
@@ -207,7 +201,6 @@ We define \(\psi(x, t) = \psi(x, Q(t))\) and find from \refeq{eq:class_jcm_eq13}
     - \frac{1}{\dot{Q}^2(t)} 
     \frac{\partial^2}{\partial t^2}\right)\right]\psi(x, t).
 \end{equation}
-
 The derivatives appearing on the right-hand side stem from the second-order derivative 
 $\frac{\partial^2}{\partial Q^2}$ wrt position, when expressed in terms 
 of time derivatives. In the scenario of a substantial (``classical") amount of 
@@ -276,14 +269,12 @@ where \(\alpha\) is a complex number, is an eigenstate of the annihilation opera
         \bra*{\alpha}\oper{a} = \left(\dfrac{\partial}{\partial \alpha^*} + \frac{\alpha}{2}\right)\bra*{\alpha}.
     \end{aligned}
 \end{equation}
-
 Coherent states form an overcomplete basis, i.e., any state \(\ket{\psi}\) can be expanded as
 \begin{equation}
     \label{eq:class_jcm_eq20}
     \ket{\psi} = \int \frac{d^2\alpha}{\pi} \ket{\alpha}\bra*{\alpha}\ket{\psi} \equiv 
     \int \frac{d^2\alpha}{\pi} \ket{\alpha}\Tilde{\chi}(\alpha, \alpha^*).
 \end{equation}
-
 where \(\Tilde{\chi}(\alpha, \alpha^*) = \bra*{\alpha}\ket{\psi}\). Note that we can 
 always write  
 \[\Tilde{\chi}(\alpha, \alpha^*) = \chi(\alpha^*)\exp\left(-\abs*{\alpha}/2\right)\]
@@ -321,7 +312,6 @@ With \refeq{eq:class_jcm_eq21} in mind, the TISE with $H_F$ and $H_I$ from
     \left[\hbar \omega \left(
         \alpha^* \dfrac{\partial}{\partial \alpha^*} + \frac{1}{2}\right) - E\right]\chi(\alpha^*) = 0. \quad \qquad
 \end{align}
-
 The above equation corresponds to \refeq{eq:class_jcm_eqA} of the position space approach. 
 Just as we did in \refsec{sec:class_jcm_sec1}, we chose \(\chi\) to be an eigenstate of the field 
 Hamiltonian, i.e., to be a number state \(\ket*{n}\) with energy \(E = \hbar \omega \left[n + 1/2\right]\).
@@ -330,13 +320,11 @@ In the coherent state representation,
     \label{eq:class_jcm_eq24}
     \chi(\alpha^*) =  (\alpha^*)^n/\sqrt{n!}. 
 \end{eqnarray}
-
 This ensures that the second part of \refeq{eq:class_jcm_eq23} disappears and one notices that
 \begin{eqnarray}
     \label{eq:class_jcm_eq25}   
     \frac{\chi'(\alpha^*)}{\chi(\alpha^*)} = \frac{n}{\alpha^*} = \frac{\alpha^*\alpha}{\alpha^*} = \alpha.
 \end{eqnarray}
-
 Using \refeq{eq:class_jcm_eq24} and \refeq{eq:class_jcm_eq25} in \refeq{eq:class_jcm_eq23} gives
 \begin{equation}
     \label{eq:class_jcm_eq26}
@@ -357,7 +345,6 @@ Hence, time is determined by the classical motion of the field amplitude, which,
     \label{eq:class_jcm_eq28}
     \alpha(t) = \alpha_0 e^{-i\omega t}.
 \end{equation}
-
 Importantly, whereas the position space expression (\refeq{eq:class_jcm_eq14}) becomes 
 problematic near classical turning 
 points due to $P(Q) = 0$, the coherent state expression (\refeq{eq:class_jcm_eq27}) maintains finiteness throughout all times. 
@@ -371,7 +358,6 @@ We see that the field part of the interaction Hamiltonian becomes,
     \left[\alpha^* + \alpha - \alpha \left(\hbar \omega \abs*{\alpha}^2\right)^{-1}
     \left(i \hbar \partial / \partial t\right) \right]
 \end{eqnarray}
-
 In large photon number limit \(1/\abs*{\alpha}^2 \approx 1/n\), vanishes. This can be 
 compared to the similar discussion after \refeq{eq:class_jcm_eq15}. Therefore, we find that in 
 the limit of large photon number, the TDSE for state \(\ket*{\psi(t)}\) is 
@@ -383,7 +369,6 @@ the limit of large photon number, the TDSE for state \(\ket*{\psi(t)}\) is
         \right] \ket*{\psi(t)}.
     \end{equation}
 \end{mdframed}
-
 Under the assumption of a valid two-level approximation, the system can be represented 
 by the operator $\oper{S} = g\oper{\sigma}_x$. Crucially, unlike the equivalent result obtained in 
 position space representation, the derivation of \refeq{eq:class_jcm_eq30} using coherent 
