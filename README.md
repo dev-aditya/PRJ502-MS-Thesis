@@ -1,6 +1,6 @@
 This repository contains the $\TeX$ source code of my MS Thesis at IISER Mohali, India.
 
-The thesis is titled "**Relational Dynamics from Entangled Eigenstates**". The programs used to generate the data and plots featured in this thesis can be found [here](https://github.com/dev-aditya/Relational_Quantum_Dynamics.)
+The thesis is titled "**Relational Dynamics from Entangled Eigenstates**". The programs used to generate the data and plots featured in this thesis can be found [here](https://github.com/dev-aditya/Relational_Quantum_Dynamics)
 
 
 ### Abstract:
